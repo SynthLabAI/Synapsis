@@ -34,8 +34,6 @@ Check out our [website](http://synapsis.net).
 
 - ZeroRPC server to report to Javascript or React **
 
-- Paper trading system **
-
 - Easy access to raw API calls
 
 - Interface that allows calls to each supported exchange to be identical:
@@ -58,6 +56,7 @@ Check out our [website](http://synapsis.net).
 
 ## Coming Features
 
+- Paper trading system
 - Backtesting (`bot.backtest(time_frame)`)
 - Deployment (`> Synapsis push bot/*`)
 - Online GUI and hosting
