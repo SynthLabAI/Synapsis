@@ -18,7 +18,9 @@ class Bot(SynapsisBot):
         self.update_state("Heartbeat", 0)
 
         # Example on how to interact with API
-        print(self.Interface.get_account())
+        print(self.__dir__())
+        print(self._SynapsisBot__coin_id)
+        print(self.Interface.get_product_history(self._SynapsisBot__coin_id, 1611029486, 1616123507, 10000))
 
         while True:
             """ Demo interface call """
