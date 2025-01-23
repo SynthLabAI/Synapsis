@@ -16,7 +16,7 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
 
-from Synapsis.Exchange import Exchange
+from Synapsis.exchange import Exchange
 from Synapsis.Coinbase_Pro.Coinbase_Pro_API import API
 from Synapsis.API_Interface import APIInterface as Interface
 import Synapsis.auth_constructor

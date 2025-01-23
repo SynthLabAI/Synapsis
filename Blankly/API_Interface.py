@@ -20,7 +20,7 @@ import time
 import warnings
 import pandas as pd
 
-import Synapsis.Utils
+import Synapsis.utils
 from Synapsis.Purchase import Purchase
 
 
