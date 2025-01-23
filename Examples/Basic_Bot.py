@@ -1,9 +1,8 @@
 import time
 import Synapsis
-from Synapsis import SynapsisBot
 
 
-class Bot(SynapsisBot):
+class Bot(Synapsis.SynapsisBot):
     def __init__(self):
         super().__init__()
 
@@ -13,14 +12,15 @@ class Bot(SynapsisBot):
         """
         # Use this to get IDE autofill
         assert isinstance(self.Interface, Synapsis.Interface)
+        assert isinstance(self.Ticker_Manager, Synapsis.TickerInterface)
 
         # Add a heartbeat example to report to GUI
         self.update_state("Heartbeat", 0)
 
         # Example on how to interact with API
         print(self.__dir__())
-        print(self._SynapsisBot__coin_id)
-        print(self.Interface.get_product_history(self._SynapsisBot__coin_id, 1611029486, 1616123507, 10000))
+        print(self.coin_id)
+        print(self.Interface.get_product_history(self.coin_id, 1611029486, 1616123507, 10000))
 
         while True:
             """ Demo interface call """
