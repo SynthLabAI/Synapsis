@@ -18,7 +18,6 @@
 
 
 from Synapsis.Coinbase_Pro.Coinbase_Pro_Tickers import Tickers as Coinbase_Pro_Ticker
-
 import Synapsis.Coinbase_Pro.Coinbase_Pro_Utils as Coinbase_Pro_Utils
 
 

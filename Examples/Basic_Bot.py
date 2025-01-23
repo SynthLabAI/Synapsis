@@ -12,7 +12,7 @@ class Bot(SynapsisBot):
         Main function to write the trading logic
         """
         # Use this to get IDE autofill
-        assert isinstance(self.Interface, Synapsis.APIInterface)
+        assert isinstance(self.Interface, Synapsis.Interface)
 
         # Add a heartbeat example to report to GUI
         self.update_state("Heartbeat", 0)
