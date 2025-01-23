@@ -81,7 +81,7 @@ class SynapsisBot:
         if args is None:
             p = Process(target=self.main)
         else:
-            p = Process(target=self.main, args=args)
+            p = Process(target=self.main, args=(args,))
         self.process = p
         self.process.start()
 
