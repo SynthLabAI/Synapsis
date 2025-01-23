@@ -17,7 +17,7 @@
 """
 
 import Synapsis.Local_Account.Trade_Local as Trade_Local
-from Synapsis.Utils import Utils
+import Synapsis.Utils
 
 
 class Purchase:
