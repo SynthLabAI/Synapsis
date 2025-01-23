@@ -21,4 +21,4 @@ from Synapsis.API_Interface import APIInterface as Interface
 from Synapsis.SynapsisBot import SynapsisBot as SynapsisBot
 
 from Synapsis.Coinbase_Pro.Coinbase_Pro_API import API as Direct_Coinbase_Pro_API
-from Synapsis.TickerInterface import TickerInterface as TickerInterface
+from Synapsis.TickerManager import TickerManager as TickerManager
