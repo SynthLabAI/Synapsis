@@ -18,8 +18,8 @@
 
 from Synapsis.Coinbase_Pro.Coinbase_Pro import Coinbase_Pro as Coinbase_Pro
 from Synapsis.API_Interface import APIInterface as Interface
-from Synapsis.SynapsisBot import SynapsisBot as SynapsisBot
+from Synapsis.SynapsisBot import SynapsisBot
 
 from Synapsis.Coinbase_Pro.Coinbase_Pro_API import API as Direct_Coinbase_Pro_API
-from Synapsis.TickerManager import TickerManager as TickerManager
+from Synapsis.ticker_manager import TickerManager as TickerManager
 import Synapsis.Utils
