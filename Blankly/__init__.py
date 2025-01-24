@@ -17,6 +17,7 @@
 """
 
 from Synapsis.Coinbase_Pro.Coinbase_Pro import Coinbase_Pro as Coinbase_Pro
+from Synapsis.Binance.Binance import Binance as Binance
 from Synapsis.API_Interface import APIInterface as Interface
 from Synapsis.synapsis_bot import SynapsisBot
 
