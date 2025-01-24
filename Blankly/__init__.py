@@ -23,5 +23,5 @@ from Synapsis.synapsis_bot import SynapsisBot
 
 from Synapsis.Coinbase_Pro.Coinbase_Pro_API import API as Direct_Coinbase_Pro_API
 from Synapsis.ticker_manager import TickerManager as TickerManager
-from Synapsis.Coinbase_Pro.orderbook import OrderBook as Coinbase_Pro_OrderBook
+from Synapsis.Coinbase_Pro.orderbook_websocket import OrderBook as Coinbase_Pro_OrderBook
 import Synapsis.utils
