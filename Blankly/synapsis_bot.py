@@ -18,7 +18,6 @@
 
 from multiprocessing import Process, Manager
 import Synapsis
-import time
 
 
 class SynapsisBot(object):
