@@ -18,9 +18,10 @@
 
 from multiprocessing import Process, Manager
 import Synapsis
+import abc
 
 
-class SynapsisBot(object):
+class SynapsisBot(abc.ABC):
     def __init__(self):
         """
         Initialize state variables when the bot is created
@@ -107,3 +108,15 @@ class SynapsisBot(object):
             key: This specifies the key value to remove from the state dictionary
         """
         self.__state.pop(key)
+
+    @abc.abstractmethod
+    def main(self, args):
+        pass
+
+    @abc.abstractmethod
+    def price_event(self, tick):
+        pass
+
+    @abc.abstractmethod
+    def orderbook_event(self, tick):
+        pass
