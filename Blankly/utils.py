@@ -149,10 +149,17 @@ def fit_parabola(ticker, point_number):
     return numpy.polyfit(times, prices, 2, full=True)
 
 
-def convert_coin_id(coin_id, exchange, base_currency):
+def to_synapsis_coin_id(coin_id, exchange, base_currency):
     if exchange == "binance":
         index = int(coin_id.find(base_currency))
         coin_id = coin_id[0:index]
         return coin_id + "-" + base_currency
     if exchange == "coinbase_pro":
         return coin_id
+
+
+def to_exchange_coin_id(synapsis_coin_id, exchange):
+    if exchange == "binance":
+        return synapsis_coin_id.replace('-', '')
+    if exchange == "coinbase_pro":
+        return synapsis_coin_id
