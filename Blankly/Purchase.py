@@ -16,7 +16,6 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
 
-import Synapsis.Local_Account.Trade_Local as Trade_Local
 import Synapsis.utils
 import Synapsis.Constants
 
