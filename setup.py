@@ -21,7 +21,7 @@ setup(
     long_description_content_type='text/markdown',
     author='Emerson Dove',  # Type in your name
     # author_email = 'your.email@domain.com',      # Type in your E-Mail
-    url='https://github.com/EmersonDove/Synapsis',  # Provide either the link to your github or to your website
+    url='https://github.com/Synapsis-Finance/Synapsis',  # Provide either the link to your github or to your website
     # download_url='https://github.com/EmersonDove/Synapsis/archive/v0.1.1-alpha.tar.gz',
     keywords=['Crypto', 'Exchanges', 'Bot'],  # Keywords that define your package best
     install_requires=[
