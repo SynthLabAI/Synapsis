@@ -17,15 +17,19 @@
 """
 import Synapsis
 from Synapsis.exchanges.IExchange import IExchange
+from Synapsis.API_Interface import APIInterface as Interface
 import time
 
 
 class Exchange(IExchange):
 
-    def __init__(self, exchange_type, exchange_name):
-        self.__name = exchange_name
-        self.__type = exchange_type
+    def __init__(self, exchange_type, exchange_name, calls):
+        self.__name = exchange_name # my_cool_portfolio
+        self.__type = exchange_type # coinbasepro, binance,
         self.preferences = Synapsis.utils.load_user_preferences()
+
+        self.__calls = calls
+        self.Interface = Interface(self.__type, self.__calls)
 
         # Create the model container
         self.models = {}
