@@ -25,3 +25,4 @@ from Synapsis.exchanges.Coinbase_Pro.Coinbase_Pro_API import API as Direct_Coinb
 from Synapsis.exchanges.ticker_manager import TickerManager as TickerManager
 from Synapsis.exchanges.orderbook_manager import OrderbookManger as OrderbookManager
 import Synapsis.utils.utils as utils
+from Synapsis.utils.utils import scheduler
