@@ -19,8 +19,8 @@
 import utils
 import time
 from Server import TradeInterface as TI
-from Coinbase_Pro.Coinbase_Pro_API import API
-from Coinbase_Pro.Coinbase_Pro import Coinbase_Pro
+from Synapsis.exchanges.Coinbase_Pro.Coinbase_Pro_API import API
+from Synapsis.exchanges.Coinbase_Pro.Coinbase_Pro import Coinbase_Pro
 
 
 """ Define secret keys """

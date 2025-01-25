@@ -17,7 +17,7 @@
 """
 
 
-from Synapsis.Coinbase_Pro.Coinbase_Pro_Tickers import Tickers as Coinbase_Pro_Ticker
+from Synapsis.exchanges.Coinbase_Pro.Coinbase_Pro_Tickers import Tickers as Coinbase_Pro_Ticker
 
 
 class TickerManager:

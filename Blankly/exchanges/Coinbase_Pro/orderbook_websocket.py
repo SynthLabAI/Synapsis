@@ -23,7 +23,7 @@ import time
 import traceback
 import Synapsis
 import collections
-from Synapsis.IExchange_Orderbook import IExchangeOrderbook
+from Synapsis.exchanges.IExchange_Orderbook import IExchangeOrderbook
 
 from websocket import create_connection
 

@@ -15,7 +15,7 @@
     You should have received a copy of the GNU Lesser General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
-from Synapsis.Coinbase_Pro.orderbook_websocket import OrderBook as Coinbase_Pro_Orderbook
+from Synapsis.exchanges.Coinbase_Pro.orderbook_websocket import OrderBook as Coinbase_Pro_Orderbook
 
 
 class OrderbookManger:

@@ -16,7 +16,7 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
 
-from Synapsis.exchange import Exchange
+from Synapsis.exchanges.exchange import Exchange
 from Synapsis.API_Interface import APIInterface as Interface
 import Synapsis.auth_constructor
 

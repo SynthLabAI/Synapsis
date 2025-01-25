@@ -22,7 +22,7 @@ import json
 import ssl
 import time
 import traceback
-from Synapsis.IExchange_Ticker import IExchangeTicker
+from Synapsis.exchanges.IExchange_Ticker import IExchangeTicker
 import collections
 
 from websocket import create_connection

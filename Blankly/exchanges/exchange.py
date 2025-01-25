@@ -16,7 +16,7 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
 import Synapsis
-from Synapsis.IExchange import IExchange
+from Synapsis.exchanges.IExchange import IExchange
 
 
 class Exchange(IExchange):

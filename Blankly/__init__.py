@@ -16,12 +16,12 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
 
-from Synapsis.Coinbase_Pro.Coinbase_Pro import Coinbase_Pro as Coinbase_Pro
-from Synapsis.Binance.Binance import Binance as Binance
+from Synapsis.exchanges.Coinbase_Pro.Coinbase_Pro import Coinbase_Pro as Coinbase_Pro
+from Synapsis.exchanges.Binance.Binance import Binance as Binance
 from Synapsis.API_Interface import APIInterface as Interface
 from Synapsis.synapsis_bot import SynapsisBot
 
-from Synapsis.Coinbase_Pro.Coinbase_Pro_API import API as Direct_Coinbase_Pro_API
-from Synapsis.ticker_manager import TickerManager as TickerManager
-from Synapsis.orderbook_manager import OrderbookManger as OrderbookManager
+from Synapsis.exchanges.Coinbase_Pro.Coinbase_Pro_API import API as Direct_Coinbase_Pro_API
+from Synapsis.exchanges.ticker_manager import TickerManager as TickerManager
+from Synapsis.exchanges.orderbook_manager import OrderbookManger as OrderbookManager
 import Synapsis.utils
