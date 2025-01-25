@@ -15,7 +15,7 @@ class Bot(Synapsis.SynapsisBot):
         assert isinstance(self.Interface, Synapsis.Interface)
         assert isinstance(self.Ticker_Manager, Synapsis.TickerManager)
 
-        # Add a heartbeat example to report to GUI
+        # Add a heartbeat example to report to GUI or main
         self.update_state("Heartbeat", 0)
 
         # Dataframe price history (commented because it takes time to run)
