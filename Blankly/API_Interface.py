@@ -267,6 +267,7 @@ class APIInterface:
         Coinbase Pro: get_account
         Binance: get_account["balances"]
         """
+        currency = Synapsis.utils.get_base_currency(currency)
         needed = [["currency", str],
                   ["available", float],
                   ["hold", float]]

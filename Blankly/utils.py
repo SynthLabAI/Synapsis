@@ -61,7 +61,6 @@ default_settings = {
     "settings": {
         "account_update_time": 5000,
         "paper_trade": True,
-        "base_currency": "USD",
         "binance_tld": "us",
         "orderbook_buffer_size": 100000,
         "ticker_buffer_size": 10000
@@ -163,3 +162,13 @@ def to_exchange_coin_id(synapsis_coin_id, exchange):
         return synapsis_coin_id.replace('-', '')
     if exchange == "coinbase_pro":
         return synapsis_coin_id
+
+
+def get_base_currency(synapsis_coin_id):
+    # Gets the BTC of the BTC-USD
+    return synapsis_coin_id.split('-')[0]
+
+
+def get_quote_currency(synapsis_coin_id):
+    # Gets the USD of the BTC-USD
+    return synapsis_coin_id.split('-')[1]
