@@ -18,7 +18,7 @@
 import Synapsis.utils
 
 from Synapsis.exchanges.Coinbase_Pro.Coinbase_Pro_Tickers import Tickers as Coinbase_Pro_Ticker
-from Synapsis.exchanges.Binance.Biance_Tickers import Tickers as Binance_Ticker
+from Synapsis.exchanges.Binance.Binance_Tickers import Tickers as Binance_Ticker
 
 
 class TickerManager:
