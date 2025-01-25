@@ -16,7 +16,7 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
 
-import Synapsis.utils
+import Synapsis.utils.utils
 import Synapsis.Constants
 
 
