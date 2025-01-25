@@ -14,7 +14,7 @@ setup(
     name='Synapsis',  # How you named your package folder (MyLib)
     packages=find_packages(),
     # packages=['Synapsis'],  # Chose the same as "name"
-    version='v0.1.9-alpha',
+    version='v0.1.10-alpha',
     license='lgpl-3.0',  # Chose a license from here: https://help.github.com/articles/licensing-a-repository
     description='Cryptocurrency bot development platform',  # Give a short description about your library
     long_description=long_description,
