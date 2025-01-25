@@ -9,11 +9,8 @@ class Bot(Synapsis.SynapsisBot):
 
     def main(self, args):
         """
-        Main function to write the trading logic
+        Main function to write any general analysis or bot management logic
         """
-        # Use this to get IDE autofill
-        assert isinstance(self.Interface, Synapsis.Interface)
-        assert isinstance(self.Ticker_Manager, Synapsis.TickerManager)
 
         # Add a heartbeat example to report to GUI or main
         self.update_state("Heartbeat", 0)

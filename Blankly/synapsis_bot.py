@@ -22,8 +22,16 @@ import abc
 import copy
 import warnings
 
+from Synapsis.exchanges.orderbook_manager import OrderbookManger
+from Synapsis.exchanges.ticker_manager import TickerManager
+from Synapsis.API_Interface import APIInterface
+
 
 class SynapsisBot(abc.ABC):
+    Orderbook_Manager: OrderbookManger
+    Ticker_Manager: TickerManager
+    Interface: APIInterface
+
     def __init__(self):
         """
         Initialize state variables when the bot is created
@@ -34,10 +42,8 @@ class SynapsisBot(abc.ABC):
         self.exchange_type = ""
         self.coin = ""
         self.user_preferences = {}
-        self.Interface = None
         self.coin_id = ""
         self.default_ticker = None
-        self.Ticker_Manager = None
         self.direct_calls = None
         self.process = Process(target=self.setup_process)
 
@@ -85,6 +91,7 @@ class SynapsisBot(abc.ABC):
         Create any objects that need to be process-specific in the other process
         """
         self.Ticker_Manager = Synapsis.TickerManager(self.exchange_type, self.coin_id)
+        self.Orderbook_Manager = Synapsis.OrderbookManager(self.exchange_type, self.coin_id)
         self.default_ticker = self.Ticker_Manager.create_ticker(self.price_event)
         self.Interface.append_ticker_manager(self.Ticker_Manager)
         self.main(args)
