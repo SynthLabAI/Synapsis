@@ -56,7 +56,7 @@ if __name__ == "__main__":
     """
 
     # This creates an authenticated exchange. Now we can append models.
-    portfolio = Synapsis.Coinbase_Pro()
+    portfolio = Synapsis.Coinbase_Pro()  # You could also use Synapsis.Binance()
     # Imagine this:
     #   Coinbase Pro <-- Choosing to assign this bot to this exchange
     #   Kraken
