@@ -24,7 +24,8 @@ import warnings
 from Synapsis.exchanges.orderbook_manager import OrderbookManger
 from Synapsis.exchanges.ticker_manager import TickerManager
 from Synapsis.API_Interface import APIInterface
-from Synapsis.exchanges.IExchange_Websocket import IExchangeWebsocket
+from Synapsis.exchanges.Coinbase_Pro.Coinbase_Pro_API import API as Coinbase_Pro_API
+from binance.client import Client as Binance_API
 
 
 class SynapsisBot:
@@ -36,6 +37,8 @@ class SynapsisBot:
     Orderbook_Manager: OrderbookManger
     Ticker_Manager: TickerManager
     Interface: APIInterface
+    coinbase_pro_direct: Coinbase_Pro_API
+    binance_direct: Binance_API
 
     def __init__(self):
         """
@@ -73,6 +76,8 @@ class SynapsisBot:
         # Coin id is the currency and which market its on
         self.currency_pair = currency_pair
         self.direct_calls = interface.get_calls()
+        self.coinbase_pro_direct = self.direct_calls
+        self.binance_direct = self.direct_calls
 
     def is_running(self):
         """
