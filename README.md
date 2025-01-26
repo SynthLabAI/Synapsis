@@ -1,5 +1,7 @@
 ![Synapsis_Github_Logo](./Images/Synapsis_Github_Logo.svg)
-
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=Synapsis-Finance_Synapsis&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=Synapsis-Finance_Synapsis)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=Synapsis-Finance_Synapsis&metric=security_rating)](https://sonarcloud.io/dashboard?id=Synapsis-Finance_Synapsis)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Synapsis-Finance_Synapsis&metric=alert_status)](https://sonarcloud.io/dashboard?id=Synapsis-Finance_Synapsis)
 ## What is it?
 
 ​	Synapsis is an elegant python library for interacting with many different crypto exchanges on multiple portfolios in a consistent way. Synapsis offers a powerful feature-set, optimized for speed and ease of use.
