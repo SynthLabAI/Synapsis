@@ -19,7 +19,6 @@
 from Synapsis.exchanges.exchange import Exchange
 import Synapsis.auth_constructor
 from Synapsis.exchanges.Coinbase_Pro.Coinbase_Pro_API import API as Coinbase_Pro_API
-import Synapsis.utils.utils as utils
 
 
 class Coinbase_Pro(Exchange):
