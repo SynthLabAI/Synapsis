@@ -27,4 +27,4 @@ from Synapsis.exchanges.orderbook_manager import OrderbookManger as OrderbookMan
 import Synapsis.utils.utils as utils
 from Synapsis.utils.scheduler import Scheduler
 import Synapsis.analysis as analysis
-
+from Synapsis.utils import time_builder
