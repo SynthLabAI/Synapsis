@@ -19,8 +19,10 @@
 from Synapsis.exchanges.exchange import Exchange
 from Synapsis.API_Interface import APIInterface as Interface
 import Synapsis.auth_constructor
+import Synapsis.utils.utils as utils
 
 from binance.client import Client
+import warnings
 
 
 class Binance(Exchange):
@@ -30,6 +32,11 @@ class Binance(Exchange):
 
         Exchange.__init__(self, "binance", defined_name)
 
+        preferences = utils.load_user_preferences()
+        if preferences["settings"]["use_sandbox"]:
+            warnings.warn("Binance sandbox authentication not yet supported")
+        else:
+            pass
         self.__calls = Client(api_key=auth[0], api_secret=auth[1],
                               tld=self.get_preferences()["settings"]["binance_tld"])
 
