@@ -1,4 +1,4 @@
-![Synapsis_Github_Logo](./Images/Synapsis_Github_Logo.svg)
+![Synapsis_Github_Logo](https://synapsis.finance/remote_hosting/logo-dark.svg)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=Synapsis-Finance_Synapsis&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=Synapsis-Finance_Synapsis)
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=Synapsis-Finance_Synapsis&metric=security_rating)](https://sonarcloud.io/dashboard?id=Synapsis-Finance_Synapsis)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Synapsis-Finance_Synapsis&metric=alert_status)](https://sonarcloud.io/dashboard?id=Synapsis-Finance_Synapsis)
