@@ -1,2 +1,2 @@
-from Synapsis.indicators.basic_indicators import *
-from Synapsis.indicators.basic_functions import *
+from Synapsis.indicators.indicators import *
+from Synapsis.indicators.utils import *
