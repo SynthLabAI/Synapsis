@@ -15,16 +15,15 @@ if __name__ == "__main__":
     print("Downloading...")
     history = interface.get_product_history(market, time.time() - Synapsis.time_builder.build_day() * 300,
                                             time.time(),
-                                            Synapsis.time_builder.build_day()
-                                           )
+                                            Synapsis.time_builder.build_day())
     # Create X-axis
     x = range(len(history['close']))
     # Plot 100 day moving average
     p.line(x, Synapsis.analysis.calculate_sma(history["close"], 100, offset=True), line_width=2, line_color='pink',
-           legend_label="100d MA")
+           legend_label="100d SMA")
     # Plot 50 day moving average
     p.line(x, Synapsis.analysis.calculate_sma(history["close"], 50, offset=True), line_width=2, line_color='yellow',
-           legend_label="50d MA")
+           legend_label="50d SMA")
 
     # Plot close price
     p.line(x, history["close"], line_width=2)
