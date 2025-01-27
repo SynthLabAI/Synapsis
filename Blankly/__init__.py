@@ -28,3 +28,5 @@ import Synapsis.utils.utils as utils
 from Synapsis.utils.scheduler import Scheduler
 import Synapsis.analysis as analysis
 from Synapsis.utils import time_builder
+
+from Synapsis.strategy.strategy_base import Strategy as StrategyHelper

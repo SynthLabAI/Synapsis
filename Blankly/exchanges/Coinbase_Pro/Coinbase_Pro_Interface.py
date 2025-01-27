@@ -20,10 +20,12 @@
 import time
 import warnings
 import pandas as pd
+
 import Synapsis.utils.utils as utils
 import Synapsis.utils.paper_trading.utils as paper_trade
 import Synapsis.utils.paper_trading.local_account.trade_local as trade_local
 from Synapsis.utils.exceptions import InvalidOrder
+from Synapsis.utils.exceptions import APIException
 from Synapsis.utils.purchases.limit_order import LimitOrder
 from Synapsis.utils.purchases.market_order import MarketOrder
 
@@ -541,4 +543,6 @@ class CoinbaseProInterface(CurrencyInterface):
         }
         """
         response = self.calls.get_product_ticker(currency_pair)
+        if 'message' in response:
+            raise APIException("Error: " + response['message'])
         return float(response['price'])
