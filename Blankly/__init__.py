@@ -18,7 +18,7 @@
 
 from Synapsis.exchanges.Coinbase_Pro.Coinbase_Pro import Coinbase_Pro as Coinbase_Pro
 from Synapsis.exchanges.Binance.Binance import Binance as Binance
-from Synapsis.API_Interface import APIInterface as Interface
+from Synapsis.interface.currency_Interface import CurrencyInterface as Interface
 from Synapsis.synapsis_bot import SynapsisBot
 
 from Synapsis.exchanges.Coinbase_Pro.Coinbase_Pro_API import API as Direct_Coinbase_Pro_API

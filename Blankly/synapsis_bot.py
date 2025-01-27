@@ -23,7 +23,7 @@ import warnings
 
 from Synapsis.exchanges.orderbook_manager import OrderbookManger
 from Synapsis.exchanges.ticker_manager import TickerManager
-from Synapsis.API_Interface import APIInterface
+from Synapsis.interface.abc_currency_interface import ICurrencyInterface
 from Synapsis.exchanges.Coinbase_Pro.Coinbase_Pro_API import API as Coinbase_Pro_API
 from binance.client import Client as Binance_API
 
@@ -36,7 +36,7 @@ class SynapsisBot:
     # Define the given types for the user
     Orderbook_Manager: OrderbookManger
     Ticker_Manager: TickerManager
-    Interface: APIInterface
+    Interface: ICurrencyInterface
     coinbase_pro_direct: Coinbase_Pro_API
     binance_direct: Binance_API
 
