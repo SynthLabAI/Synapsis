@@ -1,3 +1,4 @@
+from Synapsis.strategy.order import Order
 import Synapsis
 from Synapsis.utils.time_builder import time_interval_to_seconds
 
