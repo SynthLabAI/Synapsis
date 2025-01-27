@@ -4,7 +4,7 @@
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Synapsis-Finance_Synapsis&metric=alert_status)](https://sonarcloud.io/dashboard?id=Synapsis-Finance_Synapsis)
 ## What is it?
 
-​	Synapsis is an elegant python library for interacting with many different crypto exchanges on multiple portfolios in a consistent way. Synapsis offers a powerful feature-set, optimized for speed and ease of use.
+​	Synapsis is an elegant python library for interacting with many crypto exchanges on multiple portfolios in a consistent way. Synapsis offers a powerful feature-set, optimized for speed and ease of use.
 
 
 
@@ -38,7 +38,9 @@ Check out our [website](http://synapsis.finance).
 
 - Customizable circular buffer websocket feeds
 
-- Support for coinbase pro's sandbox mode
+- Support for coinbase pro & binance sandbox modes
+
+- Instant paper trade wrapper for supported exchanges
 
 - Run scheduled functions natively
 
