@@ -26,7 +26,7 @@ from Synapsis.exchanges.ticker_manager import TickerManager as TickerManager
 from Synapsis.exchanges.orderbook_manager import OrderbookManger as OrderbookManager
 import Synapsis.utils.utils as utils
 from Synapsis.utils.scheduler import Scheduler
-import Synapsis.analysis as analysis
+import Synapsis.indicators as indicators
 from Synapsis.utils import time_builder
 
 from Synapsis.strategy.strategy_base import Strategy as StrategyHelper
