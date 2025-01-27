@@ -15,6 +15,7 @@
     You should have received a copy of the GNU Lesser General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
+
 import time
 import warnings
 import pandas as pd
@@ -27,7 +28,7 @@ from Synapsis.utils.purchases.limit_order import LimitOrder
 from Synapsis.utils.purchases.market_order import MarketOrder
 
 
-class APIInterface:
+class CurrencyInterface:
     def __init__(self, exchange_name, authenticated_API):
         self.__exchange_name = exchange_name
         self.__calls = authenticated_API
@@ -57,7 +58,6 @@ class APIInterface:
         if self.__paper_trading:
             # TODO, this process could use variable update time/websocket usage, poll time and a variety of settings
             #  to create a robust trading system
-
             # Create the watchdog for watching limit orders
             self.__thread = threading.Thread(target=self.__paper_trade_watchdog())
             self.__thread.start()
@@ -151,7 +151,7 @@ class APIInterface:
             try:
                 if fees['message'] == "Invalid API Key":
                     raise LookupError("Invalid API Key - are you trying to use your normal exchange keys "
-                                     "while in sandbox mode?")
+                                      "while in sandbox mode?")
             except KeyError:
                 pass
             self.__exchange_properties = {
@@ -161,10 +161,10 @@ class APIInterface:
         if self.__exchange_name == "binance":
             account = self.__calls.get_account()
             self.__exchange_properties = {
-                "maker_fee_rate": account['makerCommission']/100,
-                "taker_fee_rate": account['takerCommission']/100,
-                "buyer_fee_rate": account['buyerCommission']/100,  # I'm not sure of the case when these are nonzero
-                "seller_fee_rate": account['sellerCommission']/100,
+                "maker_fee_rate": account['makerCommission'] / 100,
+                "taker_fee_rate": account['takerCommission'] / 100,
+                "buyer_fee_rate": account['buyerCommission'] / 100,  # I'm not sure of the case when these are nonzero
+                "seller_fee_rate": account['sellerCommission'] / 100,
             }
             symbols = self.__calls.get_exchange_info()["symbols"]
             base_assets = []
@@ -508,7 +508,7 @@ class APIInterface:
                 if funds < min_funds:
                     raise InvalidOrder("Invalid Order: funds is too small. Minimum is: " + str(min_funds))
 
-                if not trade_local.test_trade(product_id, side, funds/price, price):
+                if not trade_local.test_trade(product_id, side, funds / price, price):
                     raise InvalidOrder("Invalid Order: Insufficient funds")
                 # Create coinbase pro-like id
                 coinbase_pro_id = paper_trade.generate_coinbase_pro_id()
@@ -518,15 +518,15 @@ class APIInterface:
                     'type': 'market',
                     'status': 'done',
                     'product_id': str(product_id),
-                    'funds': str(funds-funds*float((self.__exchange_properties["maker_fee_rate"]))),
+                    'funds': str(funds - funds * float((self.__exchange_properties["maker_fee_rate"]))),
                     'specified_funds': str(funds),
                     'post_only': 'false',
                     'created_at': str(creation_time),
                     'done_at': str(time.time()),
                     'done_reason': 'filled',
-                    'fill_fees': str(funds*float((self.__exchange_properties["maker_fee_rate"]))),
-                    'filled_size': str(funds-funds*float((self.__exchange_properties["maker_fee_rate"]))/price),
-                    'executed_value': str(funds-funds*float((self.__exchange_properties["maker_fee_rate"]))),
+                    'fill_fees': str(funds * float((self.__exchange_properties["maker_fee_rate"]))),
+                    'filled_size': str(funds - funds * float((self.__exchange_properties["maker_fee_rate"])) / price),
+                    'executed_value': str(funds - funds * float((self.__exchange_properties["maker_fee_rate"]))),
                     'settled': 'true'
                 }
                 self.__paper_trade_orders.append(response)
@@ -570,7 +570,7 @@ class APIInterface:
             response = self.__calls.order_market(symbol=modified_product_id, side=side, quoteOrderQty=funds)
             response = utils.rename_to(renames, response)
             response = utils.isolate_specific(needed, response)
-            response["transactTime"] = response["transactTime"]/1000
+            response["transactTime"] = response["transactTime"] / 1000
         return MarketOrder(order, response, self)
 
     def limit_order(self, product_id, side, price, size, **kwargs) -> LimitOrder:
@@ -718,6 +718,7 @@ class APIInterface:
     ATM it doesn't seem like the Binance library supports stop orders. 
     We need to add this when we implement our own.
     """
+
     # def stop_order(self, product_id, side, price, size, **kwargs):
     #     """
     #     Used for placing stop orders
@@ -1003,7 +1004,7 @@ class APIInterface:
             :type origClientOrderId: str
             :param recvWindow: the number of milliseconds the request is valid for
             :type recvWindow: int
-            
+
             {
                 "symbol": "LTCBTC",
                 "orderId": 1,
@@ -1033,6 +1034,7 @@ class APIInterface:
     Coinbase Pro: get_fees
     Binance: get_trade_fee
     """
+
     def get_fees(self):
         needed = [
             ['maker_fee_rate', float],
@@ -1080,8 +1082,8 @@ class APIInterface:
             account.pop('canDeposit')
             account.pop('balances')
             # Rename makers and takers
-            account['maker_fee_rate'] = account.pop('makerCommission')/100
-            account['taker_fee_rate'] = account.pop('takerCommission')/100
+            account['maker_fee_rate'] = account.pop('makerCommission') / 100
+            account['taker_fee_rate'] = account.pop('takerCommission') / 100
             # Isolate
             return utils.isolate_specific(needed, account)
 
@@ -1090,8 +1092,9 @@ class APIInterface:
     Binance: 
         get_deposit_history
         get_withdraw_history
-        
+
     """
+
     def get_product_history(self, product_id, epoch_start, epoch_stop, granularity):
         """
         Returns the product history from an exchange
@@ -1114,7 +1117,7 @@ class APIInterface:
             if granularity not in accepted_grans:
                 warnings.warn("Granularity is not an accepted granularity...rounding to nearest valid value.")
                 granularity = accepted_grans[min(range(len(accepted_grans)),
-                                                 key=lambda i: abs(accepted_grans[i]-granularity))]
+                                                 key=lambda i: abs(accepted_grans[i] - granularity))]
 
             # Figure out how many points are needed
             need = int((epoch_stop - epoch_start) / granularity)
@@ -1147,7 +1150,7 @@ class APIInterface:
             if granularity not in accepted_grans:
                 warnings.warn("Granularity is not an accepted granularity...rounding to nearest valid value.")
                 granularity = accepted_grans[min(range(len(accepted_grans)),
-                                                 key=lambda i: abs(accepted_grans[i]-granularity))]
+                                                 key=lambda i: abs(accepted_grans[i] - granularity))]
             lookup_dict = {
                 60: "1m",
                 180: "3m",
@@ -1177,16 +1180,18 @@ class APIInterface:
             while need > 1000:
                 # Close is always 300 points ahead
                 window_close = window_open + 1000 * granularity
-                history = history + self.__calls.get_klines(symbol=product_id, startTime=window_open*1000,
-                                                            endTime=window_close*1000, interval=gran_string, limit=1000)
+                history = history + self.__calls.get_klines(symbol=product_id, startTime=window_open * 1000,
+                                                            endTime=window_close * 1000, interval=gran_string,
+                                                            limit=1000)
 
                 window_open = window_close
                 need -= 1000
                 time.sleep(1)
 
             # Fill the remainder
-            history_block = history + self.__calls.get_klines(symbol=product_id, startTime=window_open*1000,
-                                                              endTime=epoch_stop*1000, interval=gran_string, limit=1000)
+            history_block = history + self.__calls.get_klines(symbol=product_id, startTime=window_open * 1000,
+                                                              endTime=epoch_stop * 1000, interval=gran_string,
+                                                              limit=1000)
 
             data_frame = pd.DataFrame(history_block, columns=['time', 'open', 'high', 'low', 'close', 'volume',
                                                               'close time', 'quote asset volume', 'number of trades',
@@ -1202,6 +1207,7 @@ class APIInterface:
     Coinbase Pro: Get Currencies
     Binance: get_products
     """
+
     def get_market_limits(self, product_id):
         needed = [
             ["market", str],
