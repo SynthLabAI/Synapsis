@@ -98,8 +98,6 @@ class SynapsisBot:
         """
         self.Ticker_Manager = Synapsis.TickerManager(self.exchange_type, self.currency_pair)
         self.Orderbook_Manager = Synapsis.OrderbookManager(self.exchange_type, self.currency_pair)
-
-        self.Interface.append_ticker_manager(self.Ticker_Manager)
         self.main(args)
 
     """

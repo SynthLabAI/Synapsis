@@ -16,7 +16,7 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
 
-import Synapsis.Local_Account.LocalAccount as Local_Account
+import Synapsis.local_account.LocalAccount as Local_Account
 import Synapsis.Constants as Constants
 
 
