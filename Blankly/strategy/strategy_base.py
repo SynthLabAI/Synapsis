@@ -1,6 +1,6 @@
 import Synapsis
 
-class Strategy(Synapsis.Bot):
+class Strategy(Synapsis.SynapsisBot):
     def main(self, args):
         self.ticker = self.Ticker_manager.get_ticker()
         self.orderbook = self.Orderbook_manager.get_ticker()
