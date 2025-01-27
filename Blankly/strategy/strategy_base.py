@@ -9,7 +9,7 @@ class Strategy(Synapsis.Bot):
 
     def price_event(self, tick):
         for func in self.price_event_funcs:
-            func(tick, self.coin)
+            func(tick, self.currency_pair)
 
     def add_price_event(self, func, resolution):
         self.price_event_funcs.append(Synapsis.Scheduler(func, resolution))
