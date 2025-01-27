@@ -18,7 +18,7 @@
 import Synapsis.utils.paper_trading.local_account.local_account as local_account
 
 
-def trade_local(currency, side, base_delta, quote_delta):
+def trade_local(currency_pair, side, base_delta, quote_delta):
     if side == "sell":
         pass
     elif side == "buy":
