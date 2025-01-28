@@ -30,4 +30,4 @@ from Synapsis.utils.scheduler import Scheduler
 import Synapsis.indicators as indicators
 from Synapsis.utils import time_builder
 
-from Synapsis.strategy.strategy_base import Strategy as StrategyHelper
+from Synapsis.strategy.strategy_base import Strategy
