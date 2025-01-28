@@ -25,6 +25,7 @@ from Synapsis.synapsis_bot import SynapsisBot
 from Synapsis.exchanges.Coinbase_Pro.Coinbase_Pro_API import API as Direct_Coinbase_Pro_API
 from Synapsis.exchanges.ticker_manager import TickerManager as TickerManager
 from Synapsis.exchanges.orderbook_manager import OrderbookManger as OrderbookManager
+from Synapsis.exchanges.general_stream_manager import GeneralManager as GeneralManager
 from Synapsis.interface.abc_currency_interface import ICurrencyInterface as Interface
 import Synapsis.utils.utils as utils
 from Synapsis.utils.scheduler import Scheduler

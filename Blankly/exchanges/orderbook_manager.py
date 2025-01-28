@@ -19,7 +19,7 @@ import Synapsis.utils.utils
 import Synapsis.auth_constructor
 import requests
 
-from Synapsis.exchanges.Coinbase_Pro.orderbook_websocket import OrderBook as Coinbase_Pro_Orderbook
+from Synapsis.exchanges.Coinbase_Pro.Coinbase_Pro_Websocket import Tickers as Coinbase_Pro_Orderbook
 from Synapsis.exchanges.Binance.Binance_Websocket import Tickers as Binance_Orderbook
 
 from Synapsis.exchanges.websocket_manager import WebsocketManager
@@ -84,10 +84,10 @@ class OrderbookManger(WebsocketManager):
         if exchange_name == "coinbase_pro":
             if currency_id is None:
                 currency_id = self.__default_currency
-            websocket = Coinbase_Pro_Orderbook(currency_id)
+            websocket = Coinbase_Pro_Orderbook(currency_id, "level2", pre_event_callback=self.coinbase_snapshot_update)
             # This is where the sorting magic happens
             websocket.append_callback(self.coinbase_update)
-            websocket.append_snapshot_callback(self.coinbase_snapshot_update)
+
             # Store this object
             self.__websockets['coinbase_pro'][currency_id] = websocket
             self.__websockets_callbacks['coinbase_pro'][currency_id] = callback
