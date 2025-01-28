@@ -19,12 +19,12 @@
 
 from Synapsis.utils.utils import AttributeDict
 from Synapsis import Interface
-from Synapsis.strategy.strategy_base import Strategy
+# from Synapsis.strategy.strategy_base import Strategy
 
 
 class StrategyState:
     """Strategy State"""
-    def __init__(self, strategy: Strategy, interface: Interface, variables: AttributeDict, resolution: str = None):
+    def __init__(self, strategy, interface: Interface, variables: AttributeDict, resolution: str = None):
         self.strategy = strategy
         self.interface = interface
         self.variables = variables
