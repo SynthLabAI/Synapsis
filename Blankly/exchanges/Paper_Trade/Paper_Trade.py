@@ -15,17 +15,10 @@
     You should have received a copy of the GNU Lesser General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
-import typing
 
-import pandas
 
-from Synapsis.utils.time_builder import time_interval_to_seconds
-from Synapsis.exchanges.exchange import Exchange
 from Synapsis.exchanges.Paper_Trade.Paper_Trade_Interface import PaperTradeInterface
-from Synapsis.exchanges.Paper_Trade.backtest_controller import BackTestController
 from Synapsis.exchanges.exchange import Exchange
-
-import pandas as pd
 
 
 class PaperTrade(Exchange):
