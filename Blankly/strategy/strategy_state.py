@@ -19,8 +19,6 @@
 
 from Synapsis.utils.utils import AttributeDict
 from Synapsis import Interface
-# from Synapsis.strategy.strategy_base import Strategy
-
 
 class StrategyState:
     """Strategy State"""
