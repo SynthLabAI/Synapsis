@@ -18,6 +18,7 @@
 
 from Synapsis.exchanges.Coinbase_Pro.Coinbase_Pro import Coinbase_Pro as Coinbase_Pro
 from Synapsis.exchanges.Binance.Binance import Binance as Binance
+from Synapsis.exchanges.Alpaca.Alpaca import Alpaca as Alpaca
 from Synapsis.exchanges.Paper_Trade.Paper_Trade import PaperTrade
 from Synapsis.interface.currency_Interface import CurrencyInterface as Interface
 from Synapsis.synapsis_bot import SynapsisBot
