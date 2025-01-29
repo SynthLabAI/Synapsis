@@ -3,10 +3,11 @@ import Synapsis
 from Synapsis.strategy.strategy_base import Strategy, StrategyState
 
 
-def golden_cross(price, ticker, interface: Synapsis.Interface, state: StrategyState):
+def golden_cross(price, ticker, state: StrategyState):
     resolution: str = state.resolution # get the resolution that this price event is stored at
     variables = state.variables # each price event has it's own local variable state
-
+    interface: Synapsis.Interface = state.interface
+    
     account = interface.account # get account holdings
 
     historical_prices = Synapsis.historical(ticker, 50, resolution=resolution)
