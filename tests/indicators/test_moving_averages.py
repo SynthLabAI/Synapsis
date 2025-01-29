@@ -6,7 +6,7 @@ from Synapsis.indicators import ema, vwma, wma, zlema, sma, hma, kaufman_adaptiv
 
 def compare_equal(a, b):
     # compares two numpy arrays
-    return (a == b).all()
+    return np.array_equal(a, b)
 
 class MovingAverages(unittest.TestCase):
     @classmethod
