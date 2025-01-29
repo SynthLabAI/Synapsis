@@ -1,5 +1,5 @@
 from Synapsis.auth.Alpaca.auth import alpaca_auth
-from Synapsis.interface.currency_factory import InterfaceFactory
+from Synapsis.auth.direct_calls_factory import InterfaceFactory
 import pytest
 from pytest_mock import MockerFixture
 

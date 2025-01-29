@@ -1,16 +1,18 @@
-from Synapsis.auth.Alpaca.auth import alpaca_auth
-from Synapsis.auth.Binance.auth import binance_auth
-from Synapsis.auth.Coinbase.auth import coinbase_auth
+from Synapsis.auth.Alpaca.auth import AlpacaAuth
+from Synapsis.auth.Binance.auth import BinanceAuth
+from Synapsis.auth.Coinbase.auth import CoinbaseAuth
 
 
 class AuthFactory:
     @staticmethod
-    def create_auth(self, keys_file, exchange_name, portfolio_name):
+    def create_auth(keys_file, exchange_name, portfolio_name):
         if exchange_name == 'alpaca':
-            return alpaca_auth(keys_file, portfolio_name)
+            return AlpacaAuth(keys_file, portfolio_name)
         elif exchange_name == 'binance':
-            return binance_auth(keys_file, portfolio_name)
+            return BinanceAuth(keys_file, portfolio_name)
         elif exchange_name == 'coinbase_pro':
-            return coinbase_auth(keys_file, portfolio_name)
+            return CoinbaseAuth(keys_file, portfolio_name)
+        elif exchange_name == 'paper_trade':
+            return None
         else:
             raise KeyError("Exchange not supported")
