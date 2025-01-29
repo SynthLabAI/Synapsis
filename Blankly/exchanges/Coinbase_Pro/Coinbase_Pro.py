@@ -15,7 +15,7 @@
     You should have received a copy of the GNU Lesser General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
-
+from Synapsis.auth.utils import default_first_portfolio
 from Synapsis.exchanges.exchange import Exchange
 import Synapsis.auth_constructor
 from Synapsis.exchanges.Coinbase_Pro.Coinbase_Pro_API import API as Coinbase_Pro_API
@@ -23,22 +23,10 @@ from Synapsis.exchanges.Coinbase_Pro.Coinbase_Pro_API import API as Coinbase_Pro
 
 class Coinbase_Pro(Exchange):
     def __init__(self, portfolio_name=None, keys_path="keys.json", settings_path=None):
-        # Load the auth from the keys file
-        auth, defined_name = Synapsis.auth_constructor.load_auth_coinbase_pro(keys_path, portfolio_name)
-
+        if not portfolio_name:
+            portfolio_name = default_first_portfolio(keys_path, 'coinbase_pro')
         # Giving the preferences path as none allows us to create a default
-        Exchange.__init__(self, "coinbase_pro", defined_name, settings_path)
-
-        if self.preferences["settings"]["use_sandbox"]:
-            self.__calls = Coinbase_Pro_API(auth[0], auth[1], auth[2],
-                                            API_URL="https://api-public.sandbox.pro.coinbase.com/")
-        else:
-            # Create the authenticated object
-            self.__calls = Coinbase_Pro_API(auth[0], auth[1], auth[2])
-
-        Synapsis.auth_constructor.write_auth_cache("coinbase_pro", defined_name, self.__calls)
-
-        self.construct_interface(self.__calls)
+        Exchange.__init__(self, "coinbase_pro", portfolio_name, keys_path, settings_path)
 
     """
     Builds information about the currency on this exchange by making particular API calls
