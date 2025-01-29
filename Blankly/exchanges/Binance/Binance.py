@@ -17,7 +17,7 @@
 """
 from Synapsis.auth.utils import default_first_portfolio
 from Synapsis.exchanges.exchange import Exchange
-import Synapsis.auth_constructor
+import Synapsis.auth.auth_constructor
 
 from binance.client import Client
 

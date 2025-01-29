@@ -16,7 +16,7 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
 import Synapsis.utils.utils
-import Synapsis.auth_constructor
+import Synapsis.auth.auth_constructor
 import requests
 
 from Synapsis.exchanges.Coinbase_Pro.Coinbase_Pro_Websocket import Tickers as Coinbase_Pro_Orderbook
