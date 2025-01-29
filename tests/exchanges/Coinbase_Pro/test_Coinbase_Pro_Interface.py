@@ -1,5 +1,5 @@
 """
-    Unit tests for Binance.
+    Unit tests for Coinbase Pro.
     Copyright (C) 2021  Emerson Dove
 
     This program is free software: you can redistribute it and/or modify
@@ -17,15 +17,21 @@
 """
 import Synapsis
 import unittest
-from Synapsis.utils.utils import compare_dictionaries
 
 
-class BinanceInterface(unittest.TestCase):
+class CoinbaseInterface(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
-        cls.Binance = Synapsis.Binance(portfolio_name="Spot Test Key")
-        cls.Binance_Interface = cls.Binance.get_interface()
+        cls.Coinbase_Pro = Synapsis.Coinbase_Pro(portfolio_name="Sandbox Portfolio",
+                                                keys_path='./tests/config/keys.json',
+                                                settings_path="./tests/config/settings.json")
+        cls.Coinbase_Pro_Interface = cls.Coinbase_Pro.get_interface()
 
     def test_get_exchange_type(self):
-        binance = self.Binance_Interface.get_exchange_type()
-        self.assertEqual(binance, "binance")
+        coinbase_pro = self.Coinbase_Pro_Interface.get_exchange_type()
+        self.assertEqual(coinbase_pro, "coinbase_pro")
+
+    # def test_market_order(self):
+    #     cbp_status = self.Coinbase_Pro_Interface.get_paper_trading_status()
+    #
+    #     self.assertTrue(cbp_status)
