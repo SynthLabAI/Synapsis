@@ -1,4 +1,4 @@
-![Synapsis_Github_Logo](https://firebasestorage.googleapis.com/v0/b/synapsis-6ada5.appspot.com/o/logo.png?alt=media&token=7b582b7a-25c3-4c6b-8b04-becdee3d3551)
+![Synapsis_Github_Logo](https://firebasestorage.googleapis.com/v0/b/synapsis-6ada5.appspot.com/o/synapsis-white.svg?alt=media&token=d5d57c15-4c55-422f-9b06-2e578288fa14)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=Synapsis-Finance_Synapsis&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=Synapsis-Finance_Synapsis)
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=Synapsis-Finance_Synapsis&metric=security_rating)](https://sonarcloud.io/dashboard?id=Synapsis-Finance_Synapsis)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Synapsis-Finance_Synapsis&metric=alert_status)](https://sonarcloud.io/dashboard?id=Synapsis-Finance_Synapsis)
