@@ -22,7 +22,7 @@ from Synapsis.exchanges.Coinbase_Pro.Coinbase_Pro_API import API as Coinbase_Pro
 
 
 class Coinbase_Pro(Exchange):
-    def __init__(self, portfolio_name=None, auth_path="Keys.json", preferences_path=None):
+    def __init__(self, portfolio_name=None, auth_path="keys.json", preferences_path=None):
         # Load the auth from the keys file
         auth, defined_name = Synapsis.auth_constructor.load_auth_coinbase_pro(auth_path, portfolio_name)
 
