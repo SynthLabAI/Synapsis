@@ -16,14 +16,12 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
 
+
 from Synapsis.exchanges.exchange import Exchange
-from Synapsis.auth.utils import default_first_portfolio
 
 
 class Alpaca(Exchange):
     def __init__(self, portfolio_name=None, keys_path="keys.json", preferences_path=None):
-        if not portfolio_name:
-            portfolio_name = default_first_portfolio(keys_path, 'alpaca')
         Exchange.__init__(self, 'alpaca', portfolio_name, keys_path, preferences_path)
 
     def get_exchange_state(self):

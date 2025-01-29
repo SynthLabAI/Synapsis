@@ -15,6 +15,8 @@
     You should have received a copy of the GNU Lesser General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
+
+
 from Synapsis.exchanges.exchange import Exchange
 from Synapsis.exchanges.Coinbase_Pro.Coinbase_Pro_API import API as Coinbase_Pro_API
 
