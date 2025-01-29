@@ -1,6 +1,6 @@
 from Synapsis.strategy.order import Order
 import Synapsis
-from Synapsis.strategy.strategy_base import Strategy, StrategyState
+from Synapsis.strategy import Strategy, StrategyState
 
 
 def golden_cross(price, ticker, state: StrategyState):
