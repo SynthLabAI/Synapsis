@@ -18,16 +18,18 @@
 
 from Synapsis.exchanges.Coinbase_Pro.Coinbase_Pro import Coinbase_Pro as Coinbase_Pro
 from Synapsis.exchanges.Binance.Binance import Binance as Binance
+from Synapsis.exchanges.Alpaca.Alpaca import Alpaca as Alpaca
 from Synapsis.exchanges.Paper_Trade.Paper_Trade import PaperTrade
-from Synapsis.interface.currency_Interface import CurrencyInterface as Interface
 from Synapsis.synapsis_bot import SynapsisBot
 
 from Synapsis.exchanges.Coinbase_Pro.Coinbase_Pro_API import API as Direct_Coinbase_Pro_API
 from Synapsis.exchanges.ticker_manager import TickerManager as TickerManager
 from Synapsis.exchanges.orderbook_manager import OrderbookManger as OrderbookManager
+from Synapsis.exchanges.general_stream_manager import GeneralManager as GeneralManager
+from Synapsis.interface.abc_currency_interface import ICurrencyInterface as Interface
 import Synapsis.utils.utils as utils
 from Synapsis.utils.scheduler import Scheduler
 import Synapsis.indicators as indicators
 from Synapsis.utils import time_builder
 
-from Synapsis.strategy.strategy_base import Strategy as StrategyHelper
+from Synapsis.strategy.strategy_base import Strategy
