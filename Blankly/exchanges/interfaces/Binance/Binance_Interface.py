@@ -26,7 +26,7 @@ import Synapsis.utils.utils
 import Synapsis.utils.utils as utils
 from Synapsis.exchanges.orders.limit_order import LimitOrder
 from Synapsis.exchanges.orders.market_order import MarketOrder
-from Synapsis.interface.currency_Interface import CurrencyInterface
+from Synapsis.exchanges.interfaces.currency_Interface import CurrencyInterface
 
 
 class BinanceInterface(CurrencyInterface):

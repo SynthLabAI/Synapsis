@@ -30,7 +30,7 @@ from Synapsis.exchanges.orders.market_order import MarketOrder
 from Synapsis.exchanges.orders.stop_limit import StopLimit
 
 
-from Synapsis.interface.currency_Interface import CurrencyInterface
+from Synapsis.exchanges.interfaces.currency_Interface import CurrencyInterface
 
 
 class CoinbaseProInterface(CurrencyInterface):

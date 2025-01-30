@@ -19,7 +19,7 @@ import warnings
 
 from Synapsis.strategy.strategy_state import StrategyState
 from Synapsis.utils.utils import AttributeDict
-from Synapsis.exchanges.interfaces.Paper_Trade import BacktestResult
+from Synapsis.exchanges.interfaces.Paper_Trade.backtest_result import BacktestResult
 import typing
 import time
 

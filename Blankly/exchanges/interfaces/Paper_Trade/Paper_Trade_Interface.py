@@ -17,8 +17,8 @@
 """
 
 
-from Synapsis.interface.currency_Interface import CurrencyInterface
-from Synapsis.interface.abc_currency_interface import ICurrencyInterface
+from Synapsis.exchanges.interfaces.currency_Interface import CurrencyInterface
+from Synapsis.exchanges.interfaces.abc_currency_interface import ICurrencyInterface
 from Synapsis.exchanges.interfaces.Paper_Trade.backtesting_wrapper import BacktestingWrapper
 
 

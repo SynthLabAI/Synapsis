@@ -18,7 +18,7 @@
 
 import Synapsis.utils.utils as utils
 from Synapsis.utils.time_builder import time_interval_to_seconds
-from Synapsis.interface.abc_currency_interface import ICurrencyInterface
+from Synapsis.exchanges.interfaces.abc_currency_interface import ICurrencyInterface
 import abc
 import time
 

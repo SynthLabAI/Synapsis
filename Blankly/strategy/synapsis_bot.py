@@ -23,7 +23,7 @@ import warnings
 
 from Synapsis.exchanges.managers.orderbook_manager import OrderbookManger
 from Synapsis.exchanges.managers.ticker_manager import TickerManager
-from Synapsis.interface.abc_currency_interface import ICurrencyInterface
+from Synapsis.exchanges.interfaces.abc_currency_interface import ICurrencyInterface
 from Synapsis.exchanges.interfaces.Coinbase_Pro.Coinbase_Pro_API import API as Coinbase_Pro_API
 from binance.client import Client as Binance_API
 

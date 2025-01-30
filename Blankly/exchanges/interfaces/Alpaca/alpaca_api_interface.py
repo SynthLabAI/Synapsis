@@ -23,7 +23,7 @@ from alpaca_trade_api.rest import TimeFrame
 
 from Synapsis.utils import utils as utils
 from Synapsis.exchanges.interfaces.Alpaca.Alpaca_API import API
-from Synapsis.interface.currency_Interface import CurrencyInterface
+from Synapsis.exchanges.interfaces.currency_Interface import CurrencyInterface
 import alpaca_trade_api
 
 from Synapsis.exchanges.orders.limit_order import LimitOrder

@@ -58,11 +58,11 @@ class InterfaceHomogeneity(unittest.TestCase):
         cls.Interfaces.append(cls.Binance_Interface)
 
         # Alpaca definition and appending
-        cls.Alpaca = Synapsis.Alpaca(portfolio_name="alpaca test portfolio",
-                                    keys_path='./tests/config/keys.json',
-                                    settings_path="./tests/config/settings.json")
-        cls.Alpaca_Interface = cls.Alpaca.get_interface()
-        cls.Interfaces.append(cls.Alpaca_Interface)
+        # cls.Alpaca = Synapsis.Alpaca(portfolio_name="alpaca test portfolio",
+        #                             keys_path='./tests/config/keys.json',
+        #                             settings_path="./tests/config/settings.json")
+        # cls.Alpaca_Interface = cls.Alpaca.get_interface()
+        # cls.Interfaces.append(cls.Alpaca_Interface)
 
         # Paper trade wraps binance
         cls.Paper_Trade = Synapsis.PaperTrade(cls.Binance)

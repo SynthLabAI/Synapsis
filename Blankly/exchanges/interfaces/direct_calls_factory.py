@@ -22,7 +22,7 @@ from Synapsis.exchanges.interfaces.Alpaca.alpaca_api_interface import AlpacaInte
 from Synapsis.exchanges.interfaces.Coinbase_Pro.Coinbase_Pro_API import API as Coinbase_Pro_API
 from binance.client import Client
 from Synapsis.exchanges.interfaces.Alpaca.Alpaca_API import create_alpaca_client
-from Synapsis.exchanges.interfaces.Coinbase_Pro import CoinbaseProInterface
+from Synapsis.exchanges.interfaces.Coinbase_Pro.Coinbase_Pro_Interface import CoinbaseProInterface
 from Synapsis.exchanges.interfaces.Binance.Binance_Interface import BinanceInterface
 import Synapsis.utils.utils as utils
 

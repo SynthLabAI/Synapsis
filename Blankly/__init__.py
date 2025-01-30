@@ -16,10 +16,16 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
 
+from Synapsis.exchanges.interfaces.Coinbase_Pro.Coinbase_Pro import Coinbase_Pro as Coinbase_Pro
+from Synapsis.exchanges.interfaces.Binance.Binance import Binance as Binance
 from Synapsis.exchanges.interfaces.Alpaca.Alpaca import Alpaca as Alpaca
-from Synapsis.strategy.synapsis_bot import SynapsisBot
+from Synapsis.exchanges.interfaces.Paper_Trade.Paper_Trade import PaperTrade
 
+from Synapsis.exchanges.managers.ticker_manager import TickerManager as TickerManager
 from Synapsis.exchanges.managers.orderbook_manager import OrderbookManger as OrderbookManager
+from Synapsis.exchanges.managers.general_stream_manager import GeneralManager as GeneralManager
+from Synapsis.exchanges.interfaces.abc_currency_interface import ICurrencyInterface as Interface
+from Synapsis.strategy.synapsis_bot import SynapsisBot
 import Synapsis.utils.utils as utils
 from Synapsis.utils.scheduler import Scheduler
 import Synapsis.indicators as indicators

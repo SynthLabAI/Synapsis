@@ -23,7 +23,7 @@ from pathlib import Path
 
 from Synapsis.exchanges.interfaces.Coinbase_Pro.coinbase_pro_auth import CoinbaseAuth
 from Synapsis.exchanges.interfaces.direct_calls_factory import DirectCallsFactory
-from Synapsis.exchanges.interfaces.Coinbase_Pro import CoinbaseProInterface
+from Synapsis.exchanges.interfaces.Coinbase_Pro.Coinbase_Pro_Interface import CoinbaseProInterface
 
 
 class CoinbaseInterface2(unittest.TestCase):

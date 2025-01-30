@@ -17,12 +17,12 @@
 """
 import Synapsis
 from Synapsis.exchanges.IExchange import IExchange
-from Synapsis.exchanges.interfaces.Coinbase_Pro import CoinbaseProInterface
+from Synapsis.exchanges.interfaces.Coinbase_Pro.Coinbase_Pro_Interface import CoinbaseProInterface
 from Synapsis.exchanges.interfaces.Binance.Binance_Interface import BinanceInterface
 from Synapsis.exchanges.auth.auth_factory import AuthFactory
 from Synapsis.exchanges.interfaces.direct_calls_factory import DirectCallsFactory
 
-from Synapsis.interface.abc_currency_interface import ICurrencyInterface
+from Synapsis.exchanges.interfaces.abc_currency_interface import ICurrencyInterface
 import time
 import abc
 
