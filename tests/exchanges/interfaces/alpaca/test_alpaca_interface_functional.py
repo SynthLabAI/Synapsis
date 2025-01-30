@@ -1,8 +1,8 @@
-from Synapsis.exchanges.interfaces.Alpaca.alpaca_auth import AlpacaAuth
+from Synapsis.exchanges.interfaces.alpaca.alpaca_auth import AlpacaAuth
 from Synapsis.exchanges.interfaces.direct_calls_factory import DirectCallsFactory
 import pytest
 
-from Synapsis.exchanges.interfaces.Alpaca.alpaca_api_interface import AlpacaInterface
+from Synapsis.exchanges.interfaces.alpaca.alpaca_interface import AlpacaInterface
 from pathlib import Path
 import datetime
 import time
