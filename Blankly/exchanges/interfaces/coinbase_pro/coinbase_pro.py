@@ -18,7 +18,7 @@
 
 
 from Synapsis.exchanges.exchange import Exchange
-from Synapsis.exchanges.interfaces.coinbase_pro.coinbase_pro_api import API as Coinbase_Pro_API
+from Synapsis.exchanges.interfaces.coinbase_pro.coinbase_pro_api import API as CoinbaseProAPI
 
 
 class CoinbasePro(Exchange):
@@ -44,7 +44,7 @@ class CoinbasePro(Exchange):
         # TODO Populate this with useful information
         return self.Interface.get_fees()
 
-    def get_direct_calls(self) -> Coinbase_Pro_API:
+    def get_direct_calls(self) -> CoinbaseProAPI:
         return self.calls
 
     """
