@@ -3,3 +3,4 @@
 - Update base and quote asset in get products
 - Update currency_id to symbol across the interface key docs
 - Rename all `Synapsis` imports to `synapsis`
+- Change websocket arguments to include symbol
