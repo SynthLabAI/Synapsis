@@ -22,8 +22,8 @@ from Synapsis.utils.utils import compare_dictionaries
 import unittest
 import time
 
-from Synapsis.utils.purchases.market_order import MarketOrder
-from Synapsis.utils.purchases.limit_order import LimitOrder
+from Synapsis.exchanges.orders.market_order import MarketOrder
+from Synapsis.exchanges.orders.limit_order import LimitOrder
 
 
 def compare_responses(response_list, force_exchange_specific=True):

@@ -21,9 +21,9 @@ import pytest
 
 from pathlib import Path
 
-from Synapsis.auth.Coinbase.auth import CoinbaseAuth
-from Synapsis.auth.direct_calls_factory import DirectCallsFactory
-from Synapsis.exchanges.Coinbase_Pro.Coinbase_Pro_Interface import CoinbaseProInterface
+from Synapsis.exchanges.interfaces.Coinbase_Pro.coinbase_pro_auth import CoinbaseAuth
+from Synapsis.exchanges.interfaces.direct_calls_factory import DirectCallsFactory
+from Synapsis.exchanges.interfaces.Coinbase_Pro import CoinbaseProInterface
 
 
 class CoinbaseInterface2(unittest.TestCase):

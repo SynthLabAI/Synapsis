@@ -1,11 +1,9 @@
-from Synapsis.auth.Alpaca.auth import AlpacaAuth
-from Synapsis.auth.direct_calls_factory import DirectCallsFactory
+from Synapsis.exchanges.interfaces.Alpaca.alpaca_auth import AlpacaAuth
+from Synapsis.exchanges.interfaces.direct_calls_factory import DirectCallsFactory
 import pytest
 
-from Synapsis.exchanges.Alpaca.alpaca_api_interface import AlpacaInterface
-from tests.helpers.comparisons import is_sub_dict
+from Synapsis.exchanges.interfaces.Alpaca.alpaca_api_interface import AlpacaInterface
 from pathlib import Path
-import logging
 import datetime
 import time
 import pytz

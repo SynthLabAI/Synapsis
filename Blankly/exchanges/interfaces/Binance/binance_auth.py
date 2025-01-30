@@ -1,6 +1,6 @@
 """
-    __init__ file to give the module access to the libraries.
-    Copyright (C) 2021  Emerson Dove
+    Binance authentication base class
+    Copyright (C) 2021  Arun Annamalai, Emerson Dove
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU Lesser General Public License as published
@@ -16,13 +16,12 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
 
-from Synapsis.exchanges.interfaces.Alpaca.Alpaca import Alpaca as Alpaca
-from Synapsis.synapsis_bot import SynapsisBot
 
-from Synapsis.exchanges.managers.orderbook_manager import OrderbookManger as OrderbookManager
-import Synapsis.utils.utils as utils
-from Synapsis.utils.scheduler import Scheduler
-import Synapsis.indicators as indicators
-from Synapsis.utils import time_builder
+from Synapsis.exchanges.auth.abc_auth import AuthInterface
 
-from Synapsis.strategy.strategy_base import Strategy
+
+class BinanceAuth(AuthInterface):
+    def __init__(self, keys_file, portfolio_name):
+        super().__init__(keys_file, portfolio_name, 'binance')
+        needed_keys = ['API_KEY', 'API_SECRET']
+        self.validate_credentials(needed_keys)

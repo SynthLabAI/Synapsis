@@ -20,10 +20,10 @@ import pytest
 import Synapsis
 import unittest
 
-from Synapsis.auth.Binance.auth import BinanceAuth
-from Synapsis.auth.direct_calls_factory import DirectCallsFactory
-from Synapsis.exchanges.Binance.Binance_Interface import BinanceInterface
-from Synapsis.utils.utils import compare_dictionaries, AttributeDict
+from Synapsis.exchanges.interfaces.Binance.binance_auth import BinanceAuth
+from Synapsis.exchanges.interfaces.direct_calls_factory import DirectCallsFactory
+from Synapsis.exchanges.interfaces.Binance.Binance_Interface import BinanceInterface
+from Synapsis.utils.utils import AttributeDict
 from pathlib import Path
 import time
 
