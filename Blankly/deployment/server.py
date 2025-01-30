@@ -19,7 +19,7 @@
 from __future__ import print_function
 
 import Synapsis
-from calc import calc as real_calc
+from Synapsis.utils.calc import calc as real_calc
 import sys
 import zerorpc
 

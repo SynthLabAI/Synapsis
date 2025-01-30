@@ -17,7 +17,7 @@
 """
 
 from Synapsis.exchanges.interfaces.Alpaca.Alpaca import Alpaca as Alpaca
-from Synapsis.synapsis_bot import SynapsisBot
+from Synapsis.strategy.synapsis_bot import SynapsisBot
 
 from Synapsis.exchanges.managers.orderbook_manager import OrderbookManger as OrderbookManager
 import Synapsis.utils.utils as utils

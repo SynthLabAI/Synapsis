@@ -25,8 +25,8 @@ from Synapsis.exchanges.interfaces.Paper_Trade.backtesting_wrapper import Backte
 from Synapsis.utils.exceptions import InvalidOrder
 from Synapsis.utils.exceptions import APIException
 
-import Synapsis.utils.paper_trading.local_account.trade_local as trade_local
-import Synapsis.utils.paper_trading.utils as paper_trade
+import Synapsis.exchanges.interfaces.Paper_Trade.local_account.trade_local as trade_local
+import Synapsis.exchanges.interfaces.Paper_Trade.utils as paper_trade
 import Synapsis.utils.utils as utils
 
 
@@ -386,11 +386,11 @@ class PaperTradeInterface(CurrencyInterface, BacktestingWrapper):
         if side == "buy":
             available = trade_local.get_account(quote)['available']
             # Loose the funds when buying
-            trade_local.update_available(quote, available - (size*price))
+            trade_local.update_available(quote, available - (size * price))
 
             # Gain the funds on hold when buying
             hold = trade_local.get_account(quote)['hold']
-            trade_local.update_hold(quote, hold + (size*price))
+            trade_local.update_hold(quote, hold + (size * price))
         elif side == "sell":
             available = trade_local.get_account(base)['available']
             # Loose the size when selling
