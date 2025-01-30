@@ -20,7 +20,7 @@ from Synapsis.exchanges.IExchange import IExchange
 from Synapsis.exchanges.Coinbase_Pro.Coinbase_Pro_Interface import CoinbaseProInterface
 from Synapsis.exchanges.Binance.Binance_Interface import BinanceInterface
 from Synapsis.auth.auth_factory import AuthFactory
-from Synapsis.auth.direct_calls_factory import InterfaceFactory
+from Synapsis.auth.direct_calls_factory import DirectCallsFactory
 
 from Synapsis.interface.abc_currency_interface import ICurrencyInterface
 import time
@@ -35,7 +35,7 @@ class Exchange(IExchange, abc.ABC):
         self.__factory = AuthFactory()
 
         self.__auth = self.__factory.create_auth(keys_path, self.__type, self.__name)
-        self.__direct_calls_factory = InterfaceFactory()
+        self.__direct_calls_factory = DirectCallsFactory()
         self.calls, self.Interface = self.__direct_calls_factory.create(self.__type, self.__auth, preferences_path)
 
         self.preferences = Synapsis.utils.load_user_preferences(preferences_path)

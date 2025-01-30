@@ -1,5 +1,5 @@
 from Synapsis.auth.Alpaca.auth import AlpacaAuth
-from Synapsis.auth.direct_calls_factory import InterfaceFactory
+from Synapsis.auth.direct_calls_factory import DirectCallsFactory
 import pytest
 
 from Synapsis.exchanges.Alpaca.alpaca_api_interface import AlpacaInterface
@@ -21,7 +21,7 @@ def alpaca_interface():
     settings_file_path = Path("tests/config/settings.json").resolve()
 
     auth_obj = AlpacaAuth(str(keys_file_path), "alpaca test portfolio")
-    _, alpaca_interface = InterfaceFactory.create("alpaca", auth_obj, str(settings_file_path))
+    _, alpaca_interface = DirectCallsFactory.create("alpaca", auth_obj, str(settings_file_path))
     return alpaca_interface
 
 

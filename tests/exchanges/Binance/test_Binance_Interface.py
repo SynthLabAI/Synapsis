@@ -21,7 +21,7 @@ import Synapsis
 import unittest
 
 from Synapsis.auth.Binance.auth import BinanceAuth
-from Synapsis.auth.direct_calls_factory import InterfaceFactory
+from Synapsis.auth.direct_calls_factory import DirectCallsFactory
 from Synapsis.exchanges.Binance.Binance_Interface import BinanceInterface
 from Synapsis.utils.utils import compare_dictionaries, AttributeDict
 from pathlib import Path
@@ -47,7 +47,7 @@ def binance_interface():
     settings_file_path = Path("tests/config/settings.json").resolve()
 
     auth_obj = BinanceAuth(str(keys_file_path), "Spot Test Key")
-    _, binance_interface = InterfaceFactory.create("binance", auth_obj, str(settings_file_path))
+    _, binance_interface = DirectCallsFactory.create("binance", auth_obj, str(settings_file_path))
     return binance_interface
 
 
