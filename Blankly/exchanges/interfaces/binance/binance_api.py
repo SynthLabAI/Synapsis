@@ -25,7 +25,7 @@ from collections import OrderedDict
 
 
 # Create custom authentication for Exchange
-from Synapsis.exchanges.interfaces.Binance.binance_auth import BinanceAuth
+from Synapsis.exchanges.interfaces.binance.binance_auth import BinanceAuth
 
 
 class BinanceExchangeAuth(AuthBase):

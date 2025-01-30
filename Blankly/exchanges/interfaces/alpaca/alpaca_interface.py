@@ -22,7 +22,7 @@ import warnings
 from alpaca_trade_api.rest import TimeFrame
 
 from Synapsis.utils import utils as utils
-from Synapsis.exchanges.interfaces.Alpaca.alpaca_api import API
+from Synapsis.exchanges.interfaces.alpaca.alpaca_api import API
 from Synapsis.exchanges.interfaces.exchange_interface import ExchangeInterface
 import alpaca_trade_api
 

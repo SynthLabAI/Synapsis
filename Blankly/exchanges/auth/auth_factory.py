@@ -16,9 +16,9 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
 
-from Synapsis.exchanges.interfaces.Alpaca.alpaca_auth import AlpacaAuth
-from Synapsis.exchanges.interfaces.Binance.binance_auth import BinanceAuth
-from Synapsis.exchanges.interfaces.Coinbase_Pro.coinbase_pro_auth import CoinbaseAuth
+from Synapsis.exchanges.interfaces.alpaca.alpaca_auth import AlpacaAuth
+from Synapsis.exchanges.interfaces.binance.binance_auth import BinanceAuth
+from Synapsis.exchanges.interfaces.coinbase_pro.coinbase_pro_auth import CoinbaseProAuth
 
 
 class AuthFactory:
@@ -29,7 +29,7 @@ class AuthFactory:
         elif exchange_name == 'binance':
             return BinanceAuth(keys_file, portfolio_name)
         elif exchange_name == 'coinbase_pro':
-            return CoinbaseAuth(keys_file, portfolio_name)
+            return CoinbaseProAuth(keys_file, portfolio_name)
         elif exchange_name == 'paper_trade':
             return None
         else:

@@ -18,12 +18,12 @@
 
 
 from Synapsis.exchanges.auth.abc_auth import ABCAuth
-from Synapsis.exchanges.interfaces.Alpaca.alpaca_api_interface import AlpacaInterface
-from Synapsis.exchanges.interfaces.Coinbase_Pro.Coinbase_Pro_API import API as Coinbase_Pro_API
+from Synapsis.exchanges.interfaces.alpaca.alpaca_interface import AlpacaInterface
+from Synapsis.exchanges.interfaces.coinbase_pro.coinbase_pro_api import API as Coinbase_Pro_API
 from binance.client import Client
-from Synapsis.exchanges.interfaces.Alpaca.alpaca_api import create_alpaca_client
-from Synapsis.exchanges.interfaces.Coinbase_Pro.Coinbase_Pro_Interface import CoinbaseProInterface
-from Synapsis.exchanges.interfaces.Binance.Binance_Interface import BinanceInterface
+from Synapsis.exchanges.interfaces.alpaca.alpaca_api import create_alpaca_client
+from Synapsis.exchanges.interfaces.coinbase_pro.coinbase_pro_interface import CoinbaseProInterface
+from Synapsis.exchanges.interfaces.binance.binance_interface import BinanceInterface
 import Synapsis.utils.utils as utils
 
 

@@ -17,8 +17,8 @@
 """
 import Synapsis.utils.utils
 
-from Synapsis.exchanges.interfaces.Coinbase_Pro.Coinbase_Pro_Websocket import Tickers as Coinbase_Pro_Ticker
-from Synapsis.exchanges.interfaces.Binance.Binance_Websocket import Tickers as Binance_Ticker
+from Synapsis.exchanges.interfaces.coinbase_pro.coinbase_pro_websocket import Tickers as Coinbase_Pro_Ticker
+from Synapsis.exchanges.interfaces.binance.binance_websocket import Tickers as Binance_Ticker
 
 from Synapsis.exchanges.managers.websocket_manager import WebsocketManager
 

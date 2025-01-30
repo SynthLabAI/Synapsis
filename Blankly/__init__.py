@@ -17,14 +17,14 @@
 """
 
 from Synapsis.exchanges.interfaces.coinbase_pro.coinbase_pro import CoinbasePro
-from Synapsis.exchanges.interfaces.Binance.Binance import Binance
-from Synapsis.exchanges.interfaces.Alpaca.alpaca import Alpaca
+from Synapsis.exchanges.interfaces.binance.binance import Binance
+from Synapsis.exchanges.interfaces.alpaca.alpaca import Alpaca
 from Synapsis.exchanges.interfaces.paper_trade.paper_trade import PaperTrade
 from Synapsis.strategy import Strategy as Strategy
 from Synapsis.strategy import StrategyState as StrategyState
 
 from Synapsis.exchanges.managers.ticker_manager import TickerManager
-from Synapsis.exchanges.managers.orderbook_manager import OrderbookManger
+from Synapsis.exchanges.managers.orderbook_manager import OrderbookManager
 from Synapsis.exchanges.managers.general_stream_manager import GeneralManager
 from Synapsis.exchanges.interfaces.abc_exchange_interface import ABCExchangeInterface as Interface
 from Synapsis.strategy.synapsis_bot import SynapsisBot

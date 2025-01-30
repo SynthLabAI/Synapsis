@@ -18,7 +18,7 @@
 
 
 from Synapsis.exchanges.exchange import Exchange
-from Synapsis.exchanges.interfaces.Coinbase_Pro.Coinbase_Pro_API import API as Coinbase_Pro_API
+from Synapsis.exchanges.interfaces.coinbase_pro.coinbase_pro_api import API as Coinbase_Pro_API
 
 
 class CoinbasePro(Exchange):

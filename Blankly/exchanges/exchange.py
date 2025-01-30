@@ -17,8 +17,8 @@
 """
 import Synapsis
 from Synapsis.exchanges.abc_exchange import ABCExchange
-from Synapsis.exchanges.interfaces.Coinbase_Pro.Coinbase_Pro_Interface import CoinbaseProInterface
-from Synapsis.exchanges.interfaces.Binance.Binance_Interface import BinanceInterface
+from Synapsis.exchanges.interfaces.coinbase_pro.coinbase_pro_interface import CoinbaseProInterface
+from Synapsis.exchanges.interfaces.binance.binance_interface import BinanceInterface
 from Synapsis.exchanges.auth.auth_factory import AuthFactory
 from Synapsis.exchanges.interfaces.direct_calls_factory import DirectCallsFactory
 

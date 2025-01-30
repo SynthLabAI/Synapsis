@@ -18,7 +18,7 @@
 
 import websocket
 from Synapsis.exchanges.abc_exchange_websocket import ABCExchangeWebsocket
-import Synapsis.exchanges.interfaces.Binance.websocket_utils as websocket_utils
+import Synapsis.exchanges.interfaces.binance.binance_websocket_utils as websocket_utils
 import collections
 import json
 import Synapsis
