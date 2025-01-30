@@ -2,7 +2,7 @@ import numpy as np
 import pickle
 from pathlib import Path
 import unittest
-from Synapsis.indicators import ema, vwma, wma, zlema, sma, hma, kaufman_adaptive_ma, trima, macd
+from synapsis.indicators import ema, vwma, wma, zlema, sma, hma, kaufman_adaptive_ma, trima, macd
 
 def compare_equal(a, b):
     # compares two numpy arrays

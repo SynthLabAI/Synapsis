@@ -69,8 +69,8 @@ We have a pre-built cookbook examples that implement strategies such as RSI, MAC
 We have made Synapsis extremely easy to integrate with any existing models and price events so that you can focus on develpoing a better model.
 
 ```python
-import Synapsis
-from Synapsis.strategy import Strategy, StrategyState
+import synapsis
+from synapsis.strategy import Strategy, StrategyState
 from model import my_awesome_model
 
 
@@ -105,7 +105,7 @@ def strategy_init(currency_pair, state: StrategyState):
 
 if __name__ == "__main__":
     # All authentication is done in this line
-    exchange = Synapsis.CoinbasePro()
+    exchange = synapsis.CoinbasePro()
 
     # Now just wrap it into a strategy to gain a huge amount of functionality
     strategy = Strategy(exchange)

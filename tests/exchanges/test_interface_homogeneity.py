@@ -17,16 +17,16 @@
 """
 
 
-import Synapsis
-from Synapsis.utils.utils import compare_dictionaries
-from Synapsis.utils.time_builder import build_hour
+import synapsis
+from synapsis.utils.utils import compare_dictionaries
+from synapsis.utils.time_builder import build_hour
 import unittest
 import time
 import pandas as pd
 import numpy
 
-from Synapsis.exchanges.orders.market_order import MarketOrder
-from Synapsis.exchanges.orders.limit_order import LimitOrder
+from synapsis.exchanges.orders.market_order import MarketOrder
+from synapsis.exchanges.orders.limit_order import LimitOrder
 
 
 def compare_responses(response_list, force_exchange_specific=True):
@@ -47,33 +47,33 @@ class InterfaceHomogeneity(unittest.TestCase):
         cls.interfaces = []
 
         # Coinbase Pro definition and appending
-        cls.Coinbase_Pro = Synapsis.CoinbasePro(portfolio_name="Sandbox Portfolio",
+        cls.Coinbase_Pro = synapsis.CoinbasePro(portfolio_name="Sandbox Portfolio",
                                                keys_path='./tests/config/keys.json',
                                                settings_path="./tests/config/settings.json")
         cls.Coinbase_Pro_Interface = cls.Coinbase_Pro.get_interface()
         cls.interfaces.append(cls.Coinbase_Pro_Interface)
 
         # binance definition and appending
-        cls.Binance = Synapsis.Binance(portfolio_name="Spot Test Key",
+        cls.Binance = synapsis.Binance(portfolio_name="Spot Test Key",
                                       keys_path='./tests/config/keys.json',
                                       settings_path="./tests/config/settings.json")
         cls.Binance_Interface = cls.Binance.get_interface()
         cls.interfaces.append(cls.Binance_Interface)
 
         # alpaca definition and appending
-        # cls.alpaca = Synapsis.alpaca(portfolio_name="alpaca test portfolio",
+        # cls.alpaca = synapsis.alpaca(portfolio_name="alpaca test portfolio",
         #                             keys_path='./tests/config/keys.json',
         #                             settings_path="./tests/config/settings.json")
         # cls.Alpaca_Interface = cls.alpaca.get_interface()
         # cls.Interfaces.append(cls.Alpaca_Interface)
 
         # Paper trade wraps binance
-        cls.paper_trade_binance = Synapsis.PaperTrade(cls.Binance)
+        cls.paper_trade_binance = synapsis.PaperTrade(cls.Binance)
         cls.paper_trade_binance_interface = cls.paper_trade_binance.get_interface()
         cls.interfaces.append(cls.paper_trade_binance_interface)
 
         # Another wraps coinbase pro
-        cls.paper_trade_coinbase_pro = Synapsis.PaperTrade(cls.Coinbase_Pro)
+        cls.paper_trade_coinbase_pro = synapsis.PaperTrade(cls.Coinbase_Pro)
         cls.paper_trade_coinbase_pro_interface = cls.paper_trade_coinbase_pro.get_interface()
         cls.interfaces.append(cls.paper_trade_coinbase_pro_interface)
 

@@ -1,4 +1,4 @@
-import Synapsis
+import synapsis
 
 
 def price_event(price, product_id, state):
@@ -22,10 +22,10 @@ if __name__ == "__main__":
     """
     print("Authenticating...")
     # Create an authenticated coinbase pro object
-    coinbase_pro = Synapsis.CoinbasePro()
+    coinbase_pro = synapsis.CoinbasePro()
 
     # Create a strategy object
-    strategy = Synapsis.Strategy(coinbase_pro)
+    strategy = synapsis.Strategy(coinbase_pro)
 
     """
     Backtest

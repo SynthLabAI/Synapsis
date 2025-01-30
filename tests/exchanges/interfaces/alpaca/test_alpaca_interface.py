@@ -1,5 +1,5 @@
-from Synapsis.exchanges.interfaces.alpaca.alpaca_auth import AlpacaAuth
-from Synapsis.exchanges.interfaces.direct_calls_factory import DirectCallsFactory
+from synapsis.exchanges.interfaces.alpaca.alpaca_auth import AlpacaAuth
+from synapsis.exchanges.interfaces.direct_calls_factory import DirectCallsFactory
 import pytest
 from pytest_mock import MockerFixture
 

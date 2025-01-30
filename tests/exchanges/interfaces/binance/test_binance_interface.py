@@ -17,13 +17,13 @@
 """
 import pytest
 
-import Synapsis
+import synapsis
 import unittest
 
-from Synapsis.exchanges.interfaces.binance.binance_auth import BinanceAuth
-from Synapsis.exchanges.interfaces.direct_calls_factory import DirectCallsFactory
-from Synapsis.exchanges.interfaces.binance.binance_interface import BinanceInterface
-from Synapsis.utils.utils import AttributeDict
+from synapsis.exchanges.interfaces.binance.binance_auth import BinanceAuth
+from synapsis.exchanges.interfaces.direct_calls_factory import DirectCallsFactory
+from synapsis.exchanges.interfaces.binance.binance_interface import BinanceInterface
+from synapsis.utils.utils import AttributeDict
 from pathlib import Path
 import time
 
@@ -31,7 +31,7 @@ import time
 class BinanceInterface_test(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
-        cls.Binance = Synapsis.Binance(portfolio_name="Spot Test Key",
+        cls.Binance = synapsis.Binance(portfolio_name="Spot Test Key",
                                       keys_path="./tests/config/keys.json",
                                       settings_path="./tests/config/settings.json")
         cls.Binance_Interface = cls.Binance.get_interface()

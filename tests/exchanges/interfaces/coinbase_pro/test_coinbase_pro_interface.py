@@ -15,21 +15,21 @@
     You should have received a copy of the GNU Lesser General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
-import Synapsis
+import synapsis
 import unittest
 import pytest
 
 from pathlib import Path
 
-from Synapsis.exchanges.interfaces.coinbase_pro.coinbase_pro_auth import CoinbaseProAuth
-from Synapsis.exchanges.interfaces.direct_calls_factory import DirectCallsFactory
-from Synapsis.exchanges.interfaces.coinbase_pro.coinbase_pro_interface import CoinbaseProInterface
+from synapsis.exchanges.interfaces.coinbase_pro.coinbase_pro_auth import CoinbaseProAuth
+from synapsis.exchanges.interfaces.direct_calls_factory import DirectCallsFactory
+from synapsis.exchanges.interfaces.coinbase_pro.coinbase_pro_interface import CoinbaseProInterface
 
 
 class CoinbaseInterface2(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
-        cls.Coinbase_Pro = Synapsis.CoinbasePro(portfolio_name="Sandbox Portfolio",
+        cls.Coinbase_Pro = synapsis.CoinbasePro(portfolio_name="Sandbox Portfolio",
                                                keys_path='./tests/config/keys.json',
                                                settings_path="./tests/config/settings.json")
         cls.Coinbase_Pro_Interface = cls.Coinbase_Pro.get_interface()

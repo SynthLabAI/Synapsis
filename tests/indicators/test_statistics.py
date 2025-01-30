@@ -2,7 +2,7 @@ import pickle
 import numpy as np
 from pathlib import Path
 import unittest
-from Synapsis.indicators import stddev_period, var_period, stderr_period, min_period, max_period
+from synapsis.indicators import stddev_period, var_period, stderr_period, min_period, max_period
 
 def compare_equal(a, b):
     # compares two numpy arrays
