@@ -1,7 +1,8 @@
+<br />
 <div style="text-align: center; margin-top: 25px" align="center">
-   <img style="margin: 0 auto; padding-bottom: 15px; padding-top: 30px" width="50%" src="https://firebasestorage.googleapis.com/v0/b/synapsis-6ada5.appspot.com/o/synapsis-github-logo.png?alt=media&token=8f436cd2-3d28-432c-867a-afef780f4260">
+   <img style="margin: 0 auto; padding-bottom: 15px; padding-top: 30px" width=70%" src="https://firebasestorage.googleapis.com/v0/b/synapsis-6ada5.appspot.com/o/synapsis-github-logo.png?alt=media&token=8f436cd2-3d28-432c-867a-afef780f4260">
 </div>
-
+<br />
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=Synapsis-Finance_Synapsis&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=Synapsis-Finance_Synapsis)
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=Synapsis-Finance_Synapsis&metric=security_rating)](https://sonarcloud.io/dashboard?id=Synapsis-Finance_Synapsis)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Synapsis-Finance_Synapsis&metric=alert_status)](https://sonarcloud.io/dashboard?id=Synapsis-Finance_Synapsis)
