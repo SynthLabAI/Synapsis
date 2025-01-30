@@ -21,6 +21,7 @@ import time
 import warnings
 import pandas as pd
 
+import Synapsis.utils.time_builder
 import Synapsis.utils.utils as utils
 from Synapsis.utils.exceptions import InvalidOrder
 from Synapsis.utils.exceptions import APIException
@@ -413,6 +414,9 @@ class CoinbaseProInterface(CurrencyInterface):
         Returns:
             Dataframe with *at least* 'time (epoch)', 'low', 'high', 'open', 'close', 'volume' as columns.
         """
+
+        granularity = Synapsis.time_builder.time_interval_to_seconds(granularity)
+
         epoch_start, epoch_stop = super().get_product_history(product_id, epoch_start, epoch_stop, granularity)
 
         accepted_grans = [60, 300, 900, 3600, 21600, 86400]
