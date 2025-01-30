@@ -20,6 +20,7 @@ setup(
     long_description=long_description,
     long_description_content_type='text/markdown',
     author='Synapsis',
+    entry_points={'console_scripts': ['synapsis = Synapsis.command.cli:main']},
     author_email='contact@synapsis.finance',
     url='https://github.com/Synapsis-Finance/Synapsis',  # Could be github or website
     # download_url='https://github.com/EmersonDove/Synapsis/archive/v0.1.1-alpha.tar.gz',
