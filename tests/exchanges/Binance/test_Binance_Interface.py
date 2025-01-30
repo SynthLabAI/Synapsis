@@ -23,7 +23,7 @@ import unittest
 from Synapsis.auth.Binance.auth import BinanceAuth
 from Synapsis.auth.direct_calls_factory import InterfaceFactory
 from Synapsis.exchanges.Binance.Binance_Interface import BinanceInterface
-from Synapsis.utils.utils import compare_dictionaries
+from Synapsis.utils.utils import compare_dictionaries, AttributeDict
 from pathlib import Path
 import time
 
@@ -57,7 +57,7 @@ def test_get_exchange(binance_interface: BinanceInterface) -> None:
 
 def test_get_account(binance_interface: BinanceInterface) -> None:
     resp = binance_interface.get_account()
-    assert type(resp) is dict
+    assert type(resp) is AttributeDict
 
     found_btc = False
     for asset in resp.keys():
