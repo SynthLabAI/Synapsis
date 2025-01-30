@@ -17,7 +17,7 @@
 """
 import warnings
 
-from Synapsis.strategy import StrategyState
+from Synapsis.strategy.strategy_state import StrategyState
 from Synapsis.utils.utils import AttributeDict
 from Synapsis.exchanges.interfaces.Paper_Trade.backtest_result import BacktestResult
 import typing

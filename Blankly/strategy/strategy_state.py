@@ -18,7 +18,7 @@
 
 
 from Synapsis.utils.utils import AttributeDict
-from Synapsis import Interface
+from Synapsis.exchanges.interfaces.abc_currency_interface import ICurrencyInterface as Interface
 
 
 class StrategyState:
