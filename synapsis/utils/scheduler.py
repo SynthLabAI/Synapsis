@@ -18,7 +18,7 @@
 import warnings
 
 from synapsis.utils.time_builder import time_interval_to_seconds
-from synapsis.utils import ceil_date
+from synapsis.utils.utils import ceil_date
 from datetime import datetime
 import threading
 import time
