@@ -1,5 +1,5 @@
 <div style="text-align: center">
-   <img style="margin: 0 auto; padding-bottom: 15px;" width="50%" src="https://firebasestorage.googleapis.com/v0/b/synapsis-6ada5.appspot.com/o/synapsis-white.svg?alt=media&token=d5d57c15-4c55-422f-9b06-2e578288fa14">
+   <img style="margin: 0 auto; padding-bottom: 15px; padding-top: 30px" width="40%" src="https://firebasestorage.googleapis.com/v0/b/synapsis-6ada5.appspot.com/o/synapsis-github-logo.png?alt=media&token=8f436cd2-3d28-432c-867a-afef780f4260">
 </div>
 
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=Synapsis-Finance_Synapsis&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=Synapsis-Finance_Synapsis)
