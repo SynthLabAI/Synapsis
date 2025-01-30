@@ -31,7 +31,7 @@ Check out our [website](https://synapsis.finance) and our [docs](https://docs.sy
 
 ## Getting Started
 
-For more info, and ways to do more advanced things, check our [getting started docs](https://docs.synapsis.finance).
+For more info, and ways to do more advanced things, check out our [getting started docs](https://docs.synapsis.finance).
 ### Installation
 
 First install Synapsis using `pip`. Synapsis is hosted on [PyPi](https://pypi.org/project/Synapsis/).
