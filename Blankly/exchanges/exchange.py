@@ -16,18 +16,18 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
 import Synapsis
-from Synapsis.exchanges.IExchange import IExchange
+from Synapsis.exchanges.abc_exchange import ABCExchange
 from Synapsis.exchanges.interfaces.Coinbase_Pro.Coinbase_Pro_Interface import CoinbaseProInterface
 from Synapsis.exchanges.interfaces.Binance.Binance_Interface import BinanceInterface
 from Synapsis.exchanges.auth.auth_factory import AuthFactory
 from Synapsis.exchanges.interfaces.direct_calls_factory import DirectCallsFactory
 
-from Synapsis.exchanges.interfaces.abc_currency_interface import ICurrencyInterface
+from Synapsis.exchanges.interfaces.abc_exchange_interface import ABCExchangeInterface
 import time
 import abc
 
 
-class Exchange(IExchange, abc.ABC):
+class Exchange(ABCExchange, abc.ABC):
 
     def __init__(self, exchange_type, portfolio_name, keys_path, preferences_path):
         self.__type = exchange_type  # coinbase_pro, binance, alpaca
@@ -58,7 +58,7 @@ class Exchange(IExchange, abc.ABC):
         elif self.__type == "binance":
             self.Interface = BinanceInterface(self.__type, calls)
 
-    def get_interface(self) -> ICurrencyInterface:
+    def get_interface(self) -> ABCExchangeInterface:
         """
         Get the the authenticated interface for the object. This will provide authenticated API calls.
         """

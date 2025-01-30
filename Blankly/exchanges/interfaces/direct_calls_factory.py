@@ -17,11 +17,11 @@
 """
 
 
-from Synapsis.exchanges.auth.abc_auth import AuthInterface
+from Synapsis.exchanges.auth.abc_auth import ABCAuth
 from Synapsis.exchanges.interfaces.Alpaca.alpaca_api_interface import AlpacaInterface
 from Synapsis.exchanges.interfaces.Coinbase_Pro.Coinbase_Pro_API import API as Coinbase_Pro_API
 from binance.client import Client
-from Synapsis.exchanges.interfaces.Alpaca.Alpaca_API import create_alpaca_client
+from Synapsis.exchanges.interfaces.Alpaca.alpaca_api import create_alpaca_client
 from Synapsis.exchanges.interfaces.Coinbase_Pro.Coinbase_Pro_Interface import CoinbaseProInterface
 from Synapsis.exchanges.interfaces.Binance.Binance_Interface import BinanceInterface
 import Synapsis.utils.utils as utils
@@ -29,7 +29,7 @@ import Synapsis.utils.utils as utils
 
 class DirectCallsFactory:
     @staticmethod
-    def create(exchange_name: str, auth: AuthInterface, preferences_path: str = None):
+    def create(exchange_name: str, auth: ABCAuth, preferences_path: str = None):
         preferences = utils.load_user_preferences(preferences_path)
         if exchange_name == 'coinbase_pro':
             if preferences["settings"]["use_sandbox"]:

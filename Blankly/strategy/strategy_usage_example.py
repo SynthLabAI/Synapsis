@@ -41,7 +41,7 @@ def rsi(price, ticker, interface: Synapsis.Interface, state: StrategyState):
 
 
 if __name__ == "__main__":
-    coinbase_pro = Synapsis.Coinbase_Pro()
+    coinbase_pro = Synapsis.CoinbasePro()
     alpaca = Synapsis.Alpaca()
 
     coinbase_strategy = Strategy(coinbase_pro)

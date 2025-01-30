@@ -29,9 +29,9 @@ from Synapsis.exchanges.interfaces.Coinbase_Pro.Coinbase_Pro_Interface import Co
 class CoinbaseInterface2(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
-        cls.Coinbase_Pro = Synapsis.Coinbase_Pro(portfolio_name="Sandbox Portfolio",
-                                                keys_path='./tests/config/keys.json',
-                                                settings_path="./tests/config/settings.json")
+        cls.Coinbase_Pro = Synapsis.CoinbasePro(portfolio_name="Sandbox Portfolio",
+                                               keys_path='./tests/config/keys.json',
+                                               settings_path="./tests/config/settings.json")
         cls.Coinbase_Pro_Interface = cls.Coinbase_Pro.get_interface()
 
     def test_get_exchange_type(self):

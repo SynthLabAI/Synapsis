@@ -19,14 +19,14 @@ import warnings
 
 from Synapsis.strategy.strategy_state import StrategyState
 from Synapsis.utils.utils import AttributeDict
-from Synapsis.exchanges.interfaces.Paper_Trade.backtest_result import BacktestResult
+from Synapsis.exchanges.interfaces.paper_trade.backtest_result import BacktestResult
 import typing
 import time
 
 import pandas as pd
 import datetime
 import Synapsis
-from Synapsis.exchanges.interfaces.Paper_Trade.backtest_controller import BackTestController
+from Synapsis.exchanges.interfaces.paper_trade.backtest_controller import BackTestController
 from Synapsis.exchanges.exchange import Exchange
 from Synapsis.utils.time_builder import time_interval_to_seconds
 

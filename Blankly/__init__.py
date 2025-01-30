@@ -16,20 +16,19 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
 
-from Synapsis.exchanges.interfaces.Coinbase_Pro.Coinbase_Pro import Coinbase_Pro as Coinbase_Pro
-from Synapsis.exchanges.interfaces.Binance.Binance import Binance as Binance
-from Synapsis.exchanges.interfaces.Alpaca.Alpaca import Alpaca as Alpaca
-from Synapsis.exchanges.interfaces.Paper_Trade.Paper_Trade import PaperTrade as PaperTrade
+from Synapsis.exchanges.interfaces.coinbase_pro.coinbase_pro import CoinbasePro
+from Synapsis.exchanges.interfaces.Binance.Binance import Binance
+from Synapsis.exchanges.interfaces.Alpaca.alpaca import Alpaca
+from Synapsis.exchanges.interfaces.paper_trade.paper_trade import PaperTrade
 from Synapsis.strategy import Strategy as Strategy
 from Synapsis.strategy import StrategyState as StrategyState
 
-from Synapsis.exchanges.managers.ticker_manager import TickerManager as TickerManager
-from Synapsis.exchanges.managers.orderbook_manager import OrderbookManger as OrderbookManager
-from Synapsis.exchanges.managers.general_stream_manager import GeneralManager as GeneralManager
-from Synapsis.exchanges.interfaces.abc_currency_interface import ICurrencyInterface as Interface
+from Synapsis.exchanges.managers.ticker_manager import TickerManager
+from Synapsis.exchanges.managers.orderbook_manager import OrderbookManger
+from Synapsis.exchanges.managers.general_stream_manager import GeneralManager
+from Synapsis.exchanges.interfaces.abc_exchange_interface import ABCExchangeInterface as Interface
 from Synapsis.strategy.synapsis_bot import SynapsisBot
 import Synapsis.utils.utils as utils
 from Synapsis.utils.scheduler import Scheduler
 import Synapsis.indicators as indicators
 from Synapsis.utils import time_builder
-
