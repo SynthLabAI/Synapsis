@@ -24,7 +24,7 @@ import warnings
 from Synapsis.exchanges.managers.orderbook_manager import OrderbookManager
 from Synapsis.exchanges.managers.ticker_manager import TickerManager
 from Synapsis.exchanges.interfaces.abc_exchange_interface import ABCExchangeInterface
-from Synapsis.exchanges.interfaces.coinbase_pro.coinbase_pro_api import API as Coinbase_Pro_API
+from Synapsis.exchanges.interfaces.coinbase_pro.coinbase_pro_api import API as CoinbaseProAPI
 from binance.client import Client as Binance_API
 
 
@@ -37,7 +37,7 @@ class SynapsisBot:
     Orderbook_Manager: OrderbookManager
     Ticker_Manager: TickerManager
     Interface: ABCExchangeInterface
-    coinbase_pro_direct: Coinbase_Pro_API
+    coinbase_pro_direct: CoinbaseProAPI
     binance_direct: Binance_API
 
     def __init__(self):
