@@ -31,7 +31,7 @@ Check out our [website](https://synapsis.finance) and our [docs](https://docs.sy
 
 ## Getting Started
 
-First install Synapsis using `pip`. Synapsis is hosted on [PyPi](https://pypi.org/project/Synapsis/)
+First install Synapsis using `pip`. Synapsis is hosted on [PyPi](https://pypi.org/project/Synapsis/).
 
 ```bash
 $ pip install synapsis
@@ -39,7 +39,7 @@ $ pip install synapsis
 
 Make sure you're using a supported version of python. The module is currently tested on these versions:
 
-- [Python](https://www.python.org/) 3.7+
+- Python 3.7+
 
 
 Next, add [`settings.json`](https://github.com/Synapsis-Finance/Synapsis/blob/development/Examples/settings.json) and [`keys.json`](https://github.com/Synapsis-Finance/Synapsis/blob/development/Examples/keys_example.json) to your root project directory. More information can be found on our [docs](https://docs.synapsis.finance)
@@ -47,6 +47,7 @@ Next, add [`settings.json`](https://github.com/Synapsis-Finance/Synapsis/blob/de
 From there, **insert your API keys** from your exchange into your `keys.json` file.
 
 The working directory format should look similar to this:
+
 ```
 Project
    |-script.py
