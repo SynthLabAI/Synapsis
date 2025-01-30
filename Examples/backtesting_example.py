@@ -1,7 +1,7 @@
 import Synapsis
 
 
-def price_event(price, product_id):
+def price_event(price, product_id, state):
     # Run this every "hour"
     interface = strategy.Interface
 
