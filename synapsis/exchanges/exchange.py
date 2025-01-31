@@ -21,6 +21,7 @@ from synapsis.exchanges.interfaces.coinbase_pro.coinbase_pro_interface import Co
 from synapsis.exchanges.interfaces.binance.binance_interface import BinanceInterface
 from synapsis.exchanges.auth.auth_factory import AuthFactory
 from synapsis.exchanges.interfaces.direct_calls_factory import DirectCallsFactory
+from synapsis.exchanges.auth.auth_constructor import write_auth_cache
 
 from synapsis.exchanges.interfaces.abc_exchange_interface import ABCExchangeInterface
 import time
@@ -37,6 +38,7 @@ class Exchange(ABCExchange, abc.ABC):
         self.__auth = self.__factory.create_auth(keys_path, self.__type, self.__name)
         self.__direct_calls_factory = DirectCallsFactory()
         self.calls, self.Interface = self.__direct_calls_factory.create(self.__type, self.__auth, preferences_path)
+        write_auth_cache(exchange_type, portfolio_name, self.calls)
 
         self.preferences = synapsis.utils.load_user_preferences(preferences_path)
 
