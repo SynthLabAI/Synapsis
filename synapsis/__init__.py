@@ -28,6 +28,7 @@ from synapsis.exchanges.managers.orderbook_manager import OrderbookManager
 from synapsis.exchanges.managers.general_stream_manager import GeneralManager
 from synapsis.exchanges.interfaces.abc_exchange_interface import ABCExchangeInterface as Interface
 from synapsis.strategy.synapsis_bot import SynapsisBot
+from synapsis.utils.utils import trunc
 import synapsis.utils.utils as utils
 from synapsis.utils.scheduler import Scheduler
 import synapsis.indicators as indicators
