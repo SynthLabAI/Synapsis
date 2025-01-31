@@ -1,10 +1,10 @@
-from synapsis.exchanges.interfaces.alpaca.alpaca_auth import AlpacaAuth
-from synapsis.exchanges.interfaces.direct_calls_factory import DirectCallsFactory
+from pathlib import Path
+
 import pytest
 from pytest_mock import MockerFixture
 
-from tests.helpers.comparisons import is_sub_dict
-from pathlib import Path
+from synapsis.exchanges.interfaces.alpaca.alpaca_auth import AlpacaAuth
+from synapsis.exchanges.interfaces.direct_calls_factory import DirectCallsFactory
 
 
 class mock_alpaca_direct_calls:
