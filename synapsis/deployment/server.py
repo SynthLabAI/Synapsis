@@ -18,10 +18,12 @@
 
 from __future__ import print_function
 
+import sys
+
+import zerorpc
+
 import synapsis
 from synapsis.utils.calc import calc as real_calc
-import sys
-import zerorpc
 
 
 # Tickers shouldn't be accessed from this class. Interfaces will not have access to them

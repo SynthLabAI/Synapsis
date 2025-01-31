@@ -17,11 +17,10 @@
 """
 
 
-from synapsis.indicators.utils import convert_to_numpy
-from synapsis.indicators.utils import check_series
-import numpy as np
 import pandas as pd
 import tulipy as ti
+
+from synapsis.indicators.utils import check_series, convert_to_numpy
 
 
 def bbands(data, period=14, stddev=2):
