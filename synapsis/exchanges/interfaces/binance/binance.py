@@ -17,11 +17,10 @@
 """
 
 
+from binance.client import Client
+
 from synapsis.exchanges.exchange import Exchange
 from synapsis.utils import utils
-import synapsis.exchanges.auth.auth_constructor
-
-from binance.client import Client
 
 
 class Binance(Exchange):

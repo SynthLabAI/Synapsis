@@ -17,27 +17,21 @@
 """
 
 
-from synapsis.exchanges.interfaces.exchange_interface import ExchangeInterface
-from synapsis.exchanges.interfaces.abc_exchange_interface import ABCExchangeInterface
-from synapsis.exchanges.interfaces.paper_trade.backtesting_wrapper import BacktestingWrapper
-
-
-from synapsis.utils.exceptions import InvalidOrder
-from synapsis.utils.exceptions import APIException
+import decimal
+import threading
+import time
+import traceback
+import warnings
 
 import synapsis.exchanges.interfaces.paper_trade.local_account.trade_local as trade_local
 import synapsis.exchanges.interfaces.paper_trade.utils as paper_trade
 import synapsis.utils.utils as utils
-
-
+from synapsis.exchanges.interfaces.abc_exchange_interface import ABCExchangeInterface
+from synapsis.exchanges.interfaces.exchange_interface import ExchangeInterface
+from synapsis.exchanges.interfaces.paper_trade.backtesting_wrapper import BacktestingWrapper
 from synapsis.exchanges.orders.limit_order import LimitOrder
 from synapsis.exchanges.orders.market_order import MarketOrder
-
-import warnings
-import time
-import threading
-import traceback
-import decimal
+from synapsis.utils.exceptions import APIException, InvalidOrder
 
 
 class PaperTradeInterface(ExchangeInterface, BacktestingWrapper):

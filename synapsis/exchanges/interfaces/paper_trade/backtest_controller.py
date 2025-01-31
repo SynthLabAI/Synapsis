@@ -17,22 +17,23 @@
 """
 
 
-from synapsis.exchanges.interfaces.paper_trade.paper_trade import PaperTrade
-from synapsis.exchanges.interfaces.paper_trade.paper_trade_interface import PaperTradeInterface
-from synapsis.utils.time_builder import time_interval_to_seconds
-from synapsis.utils.utils import load_backtest_preferences, write_backtest_preferences, update_progress
-import synapsis.exchanges.interfaces.paper_trade.metrics as metrics
-from synapsis.exchanges.interfaces.paper_trade.backtest_result import BacktestResult
-
-import typing
-import pandas as pd
-from datetime import datetime as dt
+import os
 import traceback
-from bokeh.plotting import figure, show, ColumnDataSource
+import typing
+from datetime import datetime as dt
+
+import pandas as pd
 from bokeh.layouts import column as bokeh_columns
 from bokeh.models import HoverTool
 from bokeh.palettes import Category10_10
-import os
+from bokeh.plotting import ColumnDataSource, figure, show
+
+import synapsis.exchanges.interfaces.paper_trade.metrics as metrics
+from synapsis.exchanges.interfaces.paper_trade.backtest_result import BacktestResult
+from synapsis.exchanges.interfaces.paper_trade.paper_trade import PaperTrade
+from synapsis.exchanges.interfaces.paper_trade.paper_trade_interface import PaperTradeInterface
+from synapsis.utils.time_builder import time_interval_to_seconds
+from synapsis.utils.utils import load_backtest_preferences, update_progress, write_backtest_preferences
 
 
 def to_string_key(separated_list):

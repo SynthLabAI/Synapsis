@@ -16,31 +16,24 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
 
-import warnings
-
-import dateparser
-import pytz
 import time
-from alpaca_trade_api.rest import TimeFrame
+import warnings
+from datetime import datetime as dt, timezone
+from typing import Union
 
-from synapsis.utils import utils as utils
+import alpaca_trade_api
+import dateparser
+import pandas as pd
+from alpaca_trade_api.rest import APIError as AlpacaAPIError, TimeFrame
+from dateutil import parser
+
 from synapsis.exchanges.interfaces.alpaca.alpaca_api import API
 from synapsis.exchanges.interfaces.exchange_interface import ExchangeInterface
 from synapsis.exchanges.orders.limit_order import LimitOrder
 from synapsis.exchanges.orders.market_order import MarketOrder
+from synapsis.utils import utils as utils
 from synapsis.utils.exceptions import APIException
-from synapsis.utils.time_builder import build_minute
-import pandas as pd
-import alpaca_trade_api
-from alpaca_trade_api.rest import APIError as AlpacaAPIError
-from dateutil import parser
-import datetime
-from datetime import datetime as dt
-from datetime import timezone
-from typing import Union
-
-from synapsis.utils.time import is_datetime_naive
-from synapsis.utils.time_builder import time_interval_to_seconds
+from synapsis.utils.time_builder import build_minute, time_interval_to_seconds
 
 NY = 'America/New_York'
 

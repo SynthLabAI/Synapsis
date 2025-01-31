@@ -24,9 +24,9 @@ import pandas as pd
 import synapsis.utils.exceptions as exceptions
 import synapsis.utils.utils
 import synapsis.utils.utils as utils
+from synapsis.exchanges.interfaces.exchange_interface import ExchangeInterface
 from synapsis.exchanges.orders.limit_order import LimitOrder
 from synapsis.exchanges.orders.market_order import MarketOrder
-from synapsis.exchanges.interfaces.exchange_interface import ExchangeInterface
 
 
 class BinanceInterface(ExchangeInterface):

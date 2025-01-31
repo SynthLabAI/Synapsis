@@ -19,18 +19,16 @@
 
 import time
 import warnings
+
 import pandas as pd
 
 import synapsis.utils.time_builder
 import synapsis.utils.utils as utils
-from synapsis.utils.exceptions import InvalidOrder
-from synapsis.utils.exceptions import APIException
+from synapsis.exchanges.interfaces.exchange_interface import ExchangeInterface
 from synapsis.exchanges.orders.limit_order import LimitOrder
 from synapsis.exchanges.orders.market_order import MarketOrder
 from synapsis.exchanges.orders.stop_limit import StopLimit
-
-
-from synapsis.exchanges.interfaces.exchange_interface import ExchangeInterface
+from synapsis.utils.exceptions import APIException, InvalidOrder
 
 
 class CoinbaseProInterface(ExchangeInterface):

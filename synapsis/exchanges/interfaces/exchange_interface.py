@@ -15,16 +15,17 @@
     You should have received a copy of the GNU Lesser General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
-import warnings
-
-import synapsis.utils.utils as utils
-from synapsis.utils.time_builder import time_interval_to_seconds
-from synapsis.exchanges.interfaces.abc_exchange_interface import ABCExchangeInterface
 import abc
 import time
-from typing import Union
-from dateutil import parser
+import warnings
 from datetime import datetime as dt
+from typing import Union
+
+from dateutil import parser
+
+import synapsis.utils.utils as utils
+from synapsis.exchanges.interfaces.abc_exchange_interface import ABCExchangeInterface
+from synapsis.utils.time_builder import time_interval_to_seconds
 
 
 # TODO: need to add a cancel all orders function

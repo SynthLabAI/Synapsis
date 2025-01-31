@@ -16,14 +16,16 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
 
-import websocket
-from synapsis.exchanges.abc_exchange_websocket import ABCExchangeWebsocket
-import synapsis.exchanges.interfaces.binance.binance_websocket_utils as websocket_utils
 import collections
 import json
-import synapsis
 import threading
 import traceback
+
+import websocket
+
+import synapsis
+import synapsis.exchanges.interfaces.binance.binance_websocket_utils as websocket_utils
+from synapsis.exchanges.abc_exchange_websocket import ABCExchangeWebsocket
 
 
 class Tickers(ABCExchangeWebsocket):

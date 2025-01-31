@@ -17,8 +17,9 @@
 """
 
 
-from synapsis.exchanges.exchange import Exchange
 import alpaca_trade_api
+
+from synapsis.exchanges.exchange import Exchange
 
 
 class Alpaca(Exchange):

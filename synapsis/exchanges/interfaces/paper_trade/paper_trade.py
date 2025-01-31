@@ -17,8 +17,8 @@
 """
 
 
-from synapsis.exchanges.interfaces.paper_trade.paper_trade_interface import PaperTradeInterface
 from synapsis.exchanges.exchange import Exchange
+from synapsis.exchanges.interfaces.paper_trade.paper_trade_interface import PaperTradeInterface
 
 
 class PaperTrade(Exchange):

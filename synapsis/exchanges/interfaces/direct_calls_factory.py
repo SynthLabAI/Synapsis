@@ -17,14 +17,15 @@
 """
 
 
-from synapsis.exchanges.auth.abc_auth import ABCAuth
-from synapsis.exchanges.interfaces.alpaca.alpaca_interface import AlpacaInterface
-from synapsis.exchanges.interfaces.coinbase_pro.coinbase_pro_api import API as CoinbaseProAPI
 from binance.client import Client
-from synapsis.exchanges.interfaces.alpaca.alpaca_api import create_alpaca_client
-from synapsis.exchanges.interfaces.coinbase_pro.coinbase_pro_interface import CoinbaseProInterface
-from synapsis.exchanges.interfaces.binance.binance_interface import BinanceInterface
+
 import synapsis.utils.utils as utils
+from synapsis.exchanges.auth.abc_auth import ABCAuth
+from synapsis.exchanges.interfaces.alpaca.alpaca_api import create_alpaca_client
+from synapsis.exchanges.interfaces.alpaca.alpaca_interface import AlpacaInterface
+from synapsis.exchanges.interfaces.binance.binance_interface import BinanceInterface
+from synapsis.exchanges.interfaces.coinbase_pro.coinbase_pro_api import API as CoinbaseProAPI
+from synapsis.exchanges.interfaces.coinbase_pro.coinbase_pro_interface import CoinbaseProInterface
 
 
 class DirectCallsFactory:

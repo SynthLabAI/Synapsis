@@ -18,11 +18,13 @@
 
 
 import abc
-from synapsis.exchanges.orders.limit_order import LimitOrder
-from synapsis.exchanges.orders.market_order import MarketOrder
-import pandas
 from datetime import datetime as dt
 from typing import Union
+
+import pandas
+
+from synapsis.exchanges.orders.limit_order import LimitOrder
+from synapsis.exchanges.orders.market_order import MarketOrder
 
 
 class ABCExchangeInterface(abc.ABC):

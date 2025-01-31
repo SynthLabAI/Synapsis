@@ -17,6 +17,7 @@
 """
 
 import time
+
 import synapsis.utils.utils as utils
 
 
