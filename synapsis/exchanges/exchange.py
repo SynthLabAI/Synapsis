@@ -29,6 +29,7 @@ from synapsis.exchanges.interfaces.direct_calls_factory import DirectCallsFactor
 
 
 class Exchange(ABCExchange, abc.ABC):
+    interface: ABCExchangeInterface
 
     def __init__(self, exchange_type, portfolio_name, keys_path, preferences_path):
         self.__type = exchange_type  # coinbase_pro, binance, alpaca
