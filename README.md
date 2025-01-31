@@ -26,7 +26,7 @@
 Synapsis is an elegant python library for interacting with many crypto and stock exchanges for automated portfolios in a consistent way. Synapsis offers a powerful feature-set, optimized for speed and ease of use. 
 
 We're bridging the gap between local development systems & live APIs by building a framework which allows backtesting, 
-paper trading, sandbox testing, and live deployment without modifying a single line of trading logic.
+paper trading, sandbox testing, and live cross-exchange deployment without modifying a single line of trading logic.
 
 Check out our [website](https://synapsis.finance) and our [docs](https://docs.synapsis.finance).
 
