@@ -18,6 +18,7 @@
 import synapsis.utils.utils
 from synapsis.exchanges.interfaces.coinbase_pro.coinbase_pro_websocket import Tickers as Coinbase_Pro_Websocket
 from synapsis.exchanges.interfaces.binance.binance_websocket import Tickers as Binance_Websocket
+from synapsis.exchanges.interfaces.alpaca.alpaca_websocket import Tickers as Alpaca_Websocket
 
 from synapsis.exchanges.managers.websocket_manager import WebsocketManager
 
@@ -77,6 +78,13 @@ class GeneralManager(WebsocketManager):
                 websocket = Binance_Websocket(asset_id_cache, channel, log)
             websocket.append_callback(callback)
 
+            self.__websockets[channel][exchange_cache][asset_id_cache] = websocket
+
+            return websocket
+
+        if exchange_cache == "alpaca":
+            # Alpaca doesn't really use a sandbox websocket feed
+            websocket = Alpaca_Websocket(asset_id_cache, channel, log)
             self.__websockets[channel][exchange_cache][asset_id_cache] = websocket
 
             return websocket
