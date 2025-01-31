@@ -15,17 +15,17 @@
     You should have received a copy of the GNU Lesser General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
+import abc
+import time
+
 import synapsis
 from synapsis.exchanges.abc_exchange import ABCExchange
-from synapsis.exchanges.interfaces.coinbase_pro.coinbase_pro_interface import CoinbaseProInterface
-from synapsis.exchanges.interfaces.binance.binance_interface import BinanceInterface
-from synapsis.exchanges.auth.auth_factory import AuthFactory
-from synapsis.exchanges.interfaces.direct_calls_factory import DirectCallsFactory
 from synapsis.exchanges.auth.auth_constructor import write_auth_cache
-
+from synapsis.exchanges.auth.auth_factory import AuthFactory
 from synapsis.exchanges.interfaces.abc_exchange_interface import ABCExchangeInterface
-import time
-import abc
+from synapsis.exchanges.interfaces.binance.binance_interface import BinanceInterface
+from synapsis.exchanges.interfaces.coinbase_pro.coinbase_pro_interface import CoinbaseProInterface
+from synapsis.exchanges.interfaces.direct_calls_factory import DirectCallsFactory
 
 
 class Exchange(ABCExchange, abc.ABC):

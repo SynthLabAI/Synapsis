@@ -16,11 +16,9 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
 import synapsis.utils.utils
-
-from synapsis.exchanges.interfaces.coinbase_pro.coinbase_pro_websocket import Tickers as Coinbase_Pro_Ticker
-from synapsis.exchanges.interfaces.binance.binance_websocket import Tickers as Binance_Ticker
 from synapsis.exchanges.interfaces.alpaca.alpaca_websocket import Tickers as Alpaca_Ticker
-
+from synapsis.exchanges.interfaces.binance.binance_websocket import Tickers as Binance_Ticker
+from synapsis.exchanges.interfaces.coinbase_pro.coinbase_pro_websocket import Tickers as Coinbase_Pro_Ticker
 from synapsis.exchanges.managers.websocket_manager import WebsocketManager
 
 

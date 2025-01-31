@@ -18,8 +18,9 @@
 
 
 import abc
-from synapsis.exchanges.auth.auth_constructor import load_auth
 import warnings
+
+from synapsis.exchanges.auth.auth_constructor import load_auth
 from synapsis.utils.exceptions import AuthError
 
 

@@ -15,17 +15,16 @@
     You should have received a copy of the GNU Lesser General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
+import traceback
 from typing import List
 
-import synapsis.utils.utils
-import synapsis.exchanges.auth.auth_constructor
 import requests
-import traceback
 
-from synapsis.exchanges.interfaces.coinbase_pro.coinbase_pro_websocket import Tickers as Coinbase_Pro_Orderbook
-from synapsis.exchanges.interfaces.binance.binance_websocket import Tickers as Binance_Orderbook
+import synapsis.exchanges.auth.auth_constructor
+import synapsis.utils.utils
 from synapsis.exchanges.interfaces.alpaca.alpaca_websocket import Tickers as Alpaca_Websocket
-
+from synapsis.exchanges.interfaces.binance.binance_websocket import Tickers as Binance_Orderbook
+from synapsis.exchanges.interfaces.coinbase_pro.coinbase_pro_websocket import Tickers as Coinbase_Pro_Orderbook
 from synapsis.exchanges.managers.websocket_manager import WebsocketManager
 
 
