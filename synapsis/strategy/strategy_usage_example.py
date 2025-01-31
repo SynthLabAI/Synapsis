@@ -1,4 +1,3 @@
-from synapsis.strategy.order import Order
 import synapsis
 from synapsis.strategy import Strategy, StrategyState
 

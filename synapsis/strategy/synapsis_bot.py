@@ -16,16 +16,17 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
 
-from multiprocessing import Process, Manager
-import synapsis
 import copy
 import warnings
+from multiprocessing import Manager, Process
 
-from synapsis.exchanges.managers.orderbook_manager import OrderbookManager
-from synapsis.exchanges.managers.ticker_manager import TickerManager
+from binance.client import Client as Binance_API
+
+import synapsis
 from synapsis.exchanges.interfaces.abc_exchange_interface import ABCExchangeInterface
 from synapsis.exchanges.interfaces.coinbase_pro.coinbase_pro_api import API as CoinbaseProAPI
-from binance.client import Client as Binance_API
+from synapsis.exchanges.managers.orderbook_manager import OrderbookManager
+from synapsis.exchanges.managers.ticker_manager import TickerManager
 
 
 class SynapsisBot:

@@ -17,8 +17,8 @@
 """
 
 
-from synapsis.utils.utils import AttributeDict
 from synapsis.exchanges.interfaces.abc_exchange_interface import ABCExchangeInterface as Interface
+from synapsis.utils.utils import AttributeDict
 
 
 class StrategyState:
