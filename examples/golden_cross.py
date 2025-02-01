@@ -1,4 +1,3 @@
-import synapsis
 from synapsis import Strategy, StrategyState, Interface
 from synapsis import Alpaca
 from synapsis.utils import trunc
@@ -10,7 +9,7 @@ def init(symbol, state: StrategyState):
     resolution = state.resolution
     variables = state.variables
     # initialize the historical data
-    variables['history'] = interface.history(symbol, 800, resolution, return_as='list')['close']
+    variables['history'] = interface.history(symbol, 800, resolution, end_date=state.time, return_as='deque')['close']
     variables['owns_position'] = False
 
 
