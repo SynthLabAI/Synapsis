@@ -25,6 +25,8 @@ from synapsis.exchanges.interfaces.alpaca.alpaca_interface import AlpacaInterfac
 from synapsis.exchanges.interfaces.binance.binance_interface import BinanceInterface
 from synapsis.exchanges.interfaces.coinbase_pro.coinbase_pro_api import API as CoinbaseProAPI
 from synapsis.exchanges.interfaces.coinbase_pro.coinbase_pro_interface import CoinbaseProInterface
+from synapsis.exchanges.interfaces.oanda.oanda_api import OandaAPI
+from synapsis.exchanges.interfaces.oanda.oanda_interface import OandaInterface
 
 
 class DirectCallsFactory:
@@ -55,7 +57,10 @@ class DirectCallsFactory:
             return calls, AlpacaInterface(calls, preferences_path)
 
         elif exchange_name == 'oanda':
-            calls = create_alpaca_client(auth, preferences["settings"]["use_sandbox"])
-            return calls, OandaInterface(calls, preferences_path)
+            calls = OandaAPI(auth, preferences["settings"]["use_sandbox"])
+
+            # TODO: CHANGE THIS BELOW
+            return calls, None
+
         elif exchange_name == 'paper_trade':
             return None, None
