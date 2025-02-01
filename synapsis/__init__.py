@@ -34,10 +34,11 @@ from synapsis.utils.scheduler import Scheduler
 import synapsis.indicators as indicators
 from synapsis.utils import time_builder
 
-
 from synapsis.deployment.reporter_headers import Reporter as __Reporter_Headers
+is_deployed = False
 try:
     from synapsis_external import Reporter as __Reporter
     reporter = __Reporter
+    is_deployed = True
 except ImportError:
     reporter = __Reporter_Headers()
