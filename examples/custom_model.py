@@ -1,7 +1,7 @@
 from synapsis import Strategy, StrategyState, Interface
 from synapsis import Alpaca
-from synapsis.indicators import sma
 
+# Example import
 from models import OrderPricingModel, OrderDecisionModel
 
 
