@@ -34,8 +34,10 @@ from synapsis.utils.scheduler import Scheduler
 import synapsis.indicators as indicators
 from synapsis.utils import time_builder
 
-# Check to see if there is a node process and connect to it
-from synapsis.deployment.server import Connection as __Connection
-from synapsis.deployment.reporter import Reporter as __Reporter
-__connection = __Connection()
-reporter = __Reporter(__connection)
+
+from synapsis.deployment.reporter_headers import Reporter as __Reporter_Headers
+try:
+    from synapsis_external import Reporter as __Reporter
+    reporter = __Reporter
+except ImportError:
+    reporter = __Reporter_Headers()
