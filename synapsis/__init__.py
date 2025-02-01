@@ -33,3 +33,7 @@ import synapsis.utils.utils as utils
 from synapsis.utils.scheduler import Scheduler
 import synapsis.indicators as indicators
 from synapsis.utils import time_builder
+
+# Check to see if there is a node process and connect to it
+from synapsis.deployment.server import Connection as __Connection
+__connection = __Connection()
