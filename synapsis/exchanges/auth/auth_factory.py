@@ -19,6 +19,7 @@
 from synapsis.exchanges.interfaces.alpaca.alpaca_auth import AlpacaAuth
 from synapsis.exchanges.interfaces.binance.binance_auth import BinanceAuth
 from synapsis.exchanges.interfaces.coinbase_pro.coinbase_pro_auth import CoinbaseProAuth
+from synapsis.exchanges.interfaces.oanda.oanda_auth import OandaAuth
 
 
 class AuthFactory:
@@ -30,6 +31,8 @@ class AuthFactory:
             return BinanceAuth(keys_file, portfolio_name)
         elif exchange_name == 'coinbase_pro':
             return CoinbaseProAuth(keys_file, portfolio_name)
+        elif exchange_name == 'oanda':
+            return OandaAuth(keys_file, portfolio_name)
         elif exchange_name == 'paper_trade':
             return None
         else:
