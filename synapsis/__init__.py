@@ -36,4 +36,6 @@ from synapsis.utils import time_builder
 
 # Check to see if there is a node process and connect to it
 from synapsis.deployment.server import Connection as __Connection
+from synapsis.deployment.reporter import Reporter as __Reporter
 __connection = __Connection()
+reporter = __Reporter(__connection)
