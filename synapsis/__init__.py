@@ -22,6 +22,8 @@ from synapsis.exchanges.interfaces.alpaca.alpaca import Alpaca
 from synapsis.exchanges.interfaces.paper_trade.paper_trade import PaperTrade
 from synapsis.strategy import Strategy as Strategy
 from synapsis.strategy import StrategyState as StrategyState
+from synapsis.strategy.signal import Signal
+from synapsis.strategy.signal_state import SignalState
 
 from synapsis.exchanges.managers.ticker_manager import TickerManager
 from synapsis.exchanges.managers.orderbook_manager import OrderbookManager
