@@ -22,8 +22,8 @@ import ssl
 from typing import Any
 
 from synapsis.utils.utils import load_notify_preferences
-from synapsis.strategy.strategy_base import Strategy
-from synapsis.strategy.signal import Signal
+from synapsis.framework.strategy import Strategy
+from synapsis.framework.signal.signal import Signal
 
 
 class Reporter:

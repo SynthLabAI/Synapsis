@@ -22,7 +22,7 @@ from typing import List
 
 import synapsis
 from synapsis.exchanges.exchange import Exchange
-from synapsis.strategy.signal_state import SignalState
+from synapsis.framework.signal.signal_state import SignalState
 from copy import deepcopy
 
 

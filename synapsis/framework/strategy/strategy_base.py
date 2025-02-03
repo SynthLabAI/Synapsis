@@ -28,7 +28,7 @@ import synapsis
 from synapsis.exchanges.exchange import Exchange
 from synapsis.exchanges.interfaces.paper_trade.backtest_controller import BackTestController
 from synapsis.exchanges.interfaces.paper_trade.backtest_result import BacktestResult
-from synapsis.strategy.strategy_state import StrategyState
+from synapsis.framework.strategy.strategy_state import StrategyState
 from synapsis.utils.time_builder import time_interval_to_seconds
 from synapsis.utils.utils import AttributeDict
 from synapsis.utils.utils import get_ohlcv_from_list
