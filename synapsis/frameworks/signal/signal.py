@@ -40,7 +40,7 @@ class Signal:
         Function Signatures:
         init(signal_state: synapsis.SignalState)
         evaluator(symbol: str, signal_state: synapsis.SignalState)
-        teardown(signalState: synapsis.SignalState)
+        final(signalState: synapsis.SignalState)
         formatter(raw_results: dict, signal_state: synapsis.SignalState)
 
         This heavily differs from Strategy objects. While a Strategy is optimized for the implementation of
