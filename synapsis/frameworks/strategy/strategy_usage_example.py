@@ -1,5 +1,5 @@
 import synapsis
-from synapsis.framework.strategy import Strategy, StrategyState
+from synapsis.frameworks.strategy import Strategy, StrategyState
 
 
 def golden_cross(price, ticker, state: StrategyState):

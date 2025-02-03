@@ -22,7 +22,7 @@ from typing import List
 
 import synapsis
 from synapsis.exchanges.exchange import Exchange
-from synapsis.framework.signal.signal_state import SignalState
+from synapsis.frameworks.signal.signal_state import SignalState
 from copy import deepcopy
 
 
@@ -139,3 +139,5 @@ class Signal:
             use_str = message
 
         synapsis.reporter.email(use_str)
+
+        synapsis.reporter.text(use_str)

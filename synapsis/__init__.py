@@ -20,16 +20,16 @@ from synapsis.exchanges.interfaces.coinbase_pro.coinbase_pro import CoinbasePro
 from synapsis.exchanges.interfaces.binance.binance import Binance
 from synapsis.exchanges.interfaces.alpaca.alpaca import Alpaca
 from synapsis.exchanges.interfaces.paper_trade.paper_trade import PaperTrade
-from synapsis.framework.strategy import Strategy as Strategy
-from synapsis.framework.strategy import StrategyState as StrategyState
-from synapsis.framework.signal.signal import Signal
-from synapsis.framework.signal.signal_state import SignalState
+from synapsis.frameworks.strategy import Strategy as Strategy
+from synapsis.frameworks.strategy import StrategyState as StrategyState
+from synapsis.frameworks.signal.signal import Signal
+from synapsis.frameworks.signal.signal_state import SignalState
 
 from synapsis.exchanges.managers.ticker_manager import TickerManager
 from synapsis.exchanges.managers.orderbook_manager import OrderbookManager
 from synapsis.exchanges.managers.general_stream_manager import GeneralManager
 from synapsis.exchanges.interfaces.abc_exchange_interface import ABCExchangeInterface as Interface
-from synapsis.framework.multiprocessing.synapsis_bot import SynapsisBot
+from synapsis.frameworks.multiprocessing.synapsis_bot import SynapsisBot
 from synapsis.utils.utils import trunc
 import synapsis.utils.utils as utils
 from synapsis.utils.scheduler import Scheduler
