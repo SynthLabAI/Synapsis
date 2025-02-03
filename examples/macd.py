@@ -1,3 +1,7 @@
+"""
+    This simulates a macd strategy running once a day across many stocks
+"""
+
 from synapsis import Strategy, StrategyState, Interface
 from synapsis import Alpaca
 from synapsis.utils import trunc

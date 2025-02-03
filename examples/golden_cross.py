@@ -1,3 +1,7 @@
+"""
+    This shows a simple golden cross example on MSFT, checking at a 1d resolution over two years
+"""
+
 from synapsis import Strategy, StrategyState, Interface
 from synapsis import Alpaca
 from synapsis.utils import trunc

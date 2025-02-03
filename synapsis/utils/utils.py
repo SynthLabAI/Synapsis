@@ -175,9 +175,8 @@ backtest_settings = __SynapsisSettings('./backtest.json', default_backtest_setti
 
 notify_settings = __SynapsisSettings('./notify.json', default_notify_settings,
                                     "To send emails locally, make sure a notify.json file is placed in the same folder "
-                                    "as the project working directory. You can also fill the synapsis.reporter.email "
-                                    "arguments to always use your SMTP server. This is not necessary when deployed on "
-                                    "synapsis cloud as it will use our own SMTP information.")
+                                    "as the project working directory. This is not necessary when deployed live on "
+                                    "synapsis cloud.")
 
 
 def load_user_preferences(override_path=None) -> dict:
