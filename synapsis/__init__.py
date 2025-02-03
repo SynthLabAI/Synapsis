@@ -38,6 +38,7 @@ from synapsis.utils import time_builder
 
 from synapsis.deployment.reporter_headers import Reporter as __Reporter_Headers
 is_deployed = False
+_signal_runner = None
 try:
     from synapsis_external import Reporter as __Reporter
     reporter = __Reporter
