@@ -16,7 +16,6 @@ build/
 develop-eggs/
 dist/
 # Also include the synapsis dist
-synapsis_dist/
 downloads/
 eggs/
 .eggs/
