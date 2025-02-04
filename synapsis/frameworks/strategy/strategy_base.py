@@ -37,6 +37,17 @@ from synapsis.exchanges.strategy_logger import StrategyLogger
 
 class Strategy:
     def __init__(self, exchange: Exchange, currency_pair='BTC-USD'):
+        """
+        Create a new strategy object. A strategy can be used to run your code live while be backtestable and modular
+         across exchanges.
+
+        Function Signatures:
+        init(symbol: str, state: synapsis.StrategyState)
+        price_event(price: float, symbol: str, state: synapsis.StrategyState)
+        orderbook_event(tick: dict, symbol: str, state: synapsis.StrategyState)
+        bar_event(bar: dict, symbol: str, state: synapsis.StrategyState)
+        teardown(synapsis.StrategyState)
+        """
         self.__exchange = exchange
         self.ticker_manager = synapsis.TickerManager(self.__exchange.get_type(), currency_pair)
         self.orderbook_manager = synapsis.OrderbookManager(self.__exchange.get_type(), currency_pair)
@@ -466,7 +477,8 @@ class Strategy:
                                                                     time_interval=i.get_interval(),
                                                                     state_object=kwargs['state_object'],
                                                                     ohlc=kwargs['ohlc'],
-                                                                    init=kwargs['init']
+                                                                    init=kwargs['init'],
+                                                                    teardown=kwargs['teardown']
                                                                     )
 
         # Run the backtest & return results

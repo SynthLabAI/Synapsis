@@ -1,8 +1,7 @@
 import synapsis
-from synapsis import StrategyState
 
 
-def price_event(price, symbol, state: StrategyState):
+def price_event(price, symbol, state: synapsis.StrategyState):
     """ This function will give an updated price every 15 seconds from our definition below """
     state.variables['history'].append(price)
     rsi = synapsis.indicators.rsi(state.variables['history'])
@@ -18,7 +17,7 @@ def price_event(price, symbol, state: StrategyState):
         print("no action...")
 
 
-def init(symbol, state: StrategyState):
+def init(symbol, state: synapsis.StrategyState):
     # Download price data to give context to the algo
     state.variables['history'] = state.interface.history(symbol, to='1y', return_as='list')['close']
 
