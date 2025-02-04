@@ -1,7 +1,7 @@
-from synapsis.deployment.deployment import sumTest
+from synapsis.deployment.hello import hello
 
 
 if __name__ == "__main__":
     print("before")
-    print(sumTest(1, 2, 3, 4))
+    print(hello("wassup"))
     print("after")
