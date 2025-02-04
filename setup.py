@@ -20,7 +20,7 @@ setup(
     long_description=long_description,
     long_description_content_type='text/markdown',
     ext_modules=[
-        Extension("synapsis.deployment.sumTest", [path.join("synapsis", "deployment", "sumTest.cpp")])
+        Extension("synapsis.deployment", [path.join("synapsis", "deployment", "sumTest.cpp")])
     ],
     author='synapsis',
     entry_points={'console_scripts': ['synapsis = synapsis.deployment.cli:main']},
