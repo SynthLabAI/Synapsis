@@ -1,38 +1,43 @@
+from synapsis.frameworks import strategy
 import synapsis
+from synapsis.utils import trunc
+
 
 
 def price_event(price, symbol, state: synapsis.StrategyState):
     """ This function will give an updated price every 15 seconds from our definition below """
     state.variables['history'].append(price)
     rsi = synapsis.indicators.rsi(state.variables['history'])
-    if rsi[-1] < 30:
+    if rsi[-1] < 30 and not state.variables['owns_position']:
         # Dollar cost average buy
-        print("buying...")
-        state.interface.market_order(symbol, side='buy', funds=10)
-    elif rsi[-1] > 70:
+        buy = trunc(state.interface.cash * 0.5, 2)
+        state.interface.market_order(symbol, side='buy', funds=buy)
+        state.variables['owns_position'] = True
+    elif rsi[-1] > 70 and state.variables['owns_position']:
         # Dollar cost average sell
-        print("selling...")
-        state.interface.market_order(symbol, side='sell', funds=10)
-    else:
-        print("no action...")
-
+        curr_value = trunc(state.interface.account[symbol].available * price, 2)
+        state.interface.market_order(symbol, side='sell', funds=curr_value)
+        state.variables['owns_position'] = False
 
 def init(symbol, state: synapsis.StrategyState):
     # Download price data to give context to the algo
-    state.variables['history'] = state.interface.history(symbol, to='1y', return_as='list')['close']
+    state.variables['history'] = state.interface.history(symbol, to=150, return_as='deque')['close']
+    state.variables['owns_position'] = False
 
 
 if __name__ == "__main__":
     # Authenticate coinbase pro strategy
-    coinbase_pro = synapsis.CoinbasePro()
+    alpaca = synapsis.Alpaca()
 
     # Use our strategy helper on coinbase pro
-    coinbase_strategy = synapsis.Strategy(coinbase_pro)
+    strategy = synapsis.Strategy(alpaca)
 
     # Run the price event function every time we check for a new price - by default that is 15 seconds
-    coinbase_strategy.add_price_event(price_event, symbol='BTC-USD', resolution='1h', init=init)
+    strategy.add_price_event(price_event, symbol='AAPL', resolution='1d', init=init)
+    strategy.add_price_event(price_event, symbol='MSFT', resolution='1d', init=init)
 
     # Start the strategy. This will begin each of the price event ticks
-    coinbase_strategy.start()
+    # strategy.start()
     # Or backtest using this
-    # coinbase_strategy.backtest(to='1y', initial_values={'USD': 100000, 'BTC': 2})
+    results = strategy.backtest(to='1y', initial_values={'USD': 100})
+    print(results)
