@@ -30,7 +30,7 @@ import tempfile
 import webbrowser
 
 from synapsis.deployment.api import API
-from synapsis.utils.utils import load_json_file
+from synapsis.utils.utils import load_json_file, info_print
 
 
 very_important_string = """
@@ -318,7 +318,7 @@ def main():
             if 'requirements' in deployment_dict and deployment_dict['requirements'] is not None:
                 warning_string = "Requirements specified but not installed in this test script. Install " \
                                  "manually if needed."
-                warnings.warn(warning_string)
+                info_print(warning_string)
 
             sys.path.append(synapsis_folder)
 
