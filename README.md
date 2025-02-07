@@ -21,6 +21,7 @@
    <a target="_blank" href="https://github.com/Synapsis-Finance/Synapsis/blob/main/LICENSE"><img src="https://img.shields.io/pypi/l/synapsis?color=gree"></a>
    <a target="_blank" href="https://github.com/Synapsis-Finance/Synapsis/stargazers"><img src="https://img.shields.io/github/stars/synapsis-finance/synapsis?style=social"></a>
    <a target="_blank" href="https://discord.gg/XWcmy7Y9bb"><img src="https://img.shields.io/discord/821563936297451530.svg?color=7289da&label=Synapsis%20Discord&logo=discord&style=flat"></a>
+   <a target="_blank" href="https://reddit.com/r/synapsis"><img src="https://badgen.net/reddit/subscribers/r/synapsis"></a>
 </p>
 <p align="center">
     <a target="_blank" href="https://docs.synapsis.finance">View Docs</a>
