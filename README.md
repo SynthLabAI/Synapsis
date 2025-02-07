@@ -11,6 +11,7 @@
 </div>
 <br />
 
+
 <p align="center">
    <a target="_blank" href="https://sonarcloud.io/dashboard?id=Synapsis-Finance_Synapsis"><img src="https://sonarcloud.io/api/project_badges/measure?project=Synapsis-Finance_Synapsis&metric=sqale_rating"></a>
    <a target="_blank" href="https://sonarcloud.io/dashboard?id=Synapsis-Finance_Synapsis"><img src="https://sonarcloud.io/api/project_badges/measure?project=Synapsis-Finance_Synapsis&metric=security_rating"></a>
@@ -19,9 +20,7 @@
    <a target="_blank" href="https://pepy.tech/project/synapsis"><img src="https://pepy.tech/badge/synapsis/month"></a>
    <a target="_blank" href="https://github.com/Synapsis-Finance/Synapsis/blob/main/LICENSE"><img src="https://img.shields.io/pypi/l/synapsis?color=gree"></a>
    <a target="_blank" href="https://github.com/Synapsis-Finance/Synapsis/stargazers"><img src="https://img.shields.io/github/stars/synapsis-finance/synapsis?style=social"></a>
-   
-
-
+   <a target="_blank" href="https://discord.gg/xDJDVVUA"><img src="https://img.shields.io/discord/821563936297451530.svg?color=7289da&label=Synapsis%20Discord&logo=discord&style=flat"></a>
 </p>
 <p align="center">
     <a target="_blank" href="https://docs.synapsis.finance">View Docs</a>
