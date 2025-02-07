@@ -25,7 +25,9 @@
 <p align="center">
     <a target="_blank" href="https://docs.synapsis.finance">View Docs</a>
     ·
-    <a href="https://synapsis.finance">Our Website</a>
+    <a target="_blank" href="https://synapsis.finance">Our Website</a>
+    ·
+    <a target="_blank" href="https://synapsis.substack.com">Join Our Newsletter</a>
     ·
     <a href="#quickstart">Getting Started</a>
   </p>
