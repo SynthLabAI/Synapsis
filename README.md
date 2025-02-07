@@ -20,7 +20,7 @@
    <a target="_blank" href="https://pepy.tech/project/synapsis"><img src="https://pepy.tech/badge/synapsis/month"></a>
    <a target="_blank" href="https://github.com/Synapsis-Finance/Synapsis/blob/main/LICENSE"><img src="https://img.shields.io/pypi/l/synapsis?color=gree"></a>
    <a target="_blank" href="https://github.com/Synapsis-Finance/Synapsis/stargazers"><img src="https://img.shields.io/github/stars/synapsis-finance/synapsis?style=social"></a>
-   <a target="_blank" href="https://discord.gg/xDJDVVUA"><img src="https://img.shields.io/discord/821563936297451530.svg?color=7289da&label=Synapsis%20Discord&logo=discord&style=flat"></a>
+   <a target="_blank" href="https://discord.gg/XWcmy7Y9bb"><img src="https://img.shields.io/discord/821563936297451530.svg?color=7289da&label=Synapsis%20Discord&logo=discord&style=flat"></a>
 </p>
 <p align="center">
     <a target="_blank" href="https://docs.synapsis.finance">View Docs</a>
@@ -204,7 +204,7 @@ def init(symbol, state: StrategyState):
 
 
 if __name__ == "__main__":
-    # Authenticate coinbase pro strategy
+    # Authenticate on alpaca to create a strategy
     alpaca = synapsis.Alpaca()
 
     # Use our strategy helper on coinbase pro

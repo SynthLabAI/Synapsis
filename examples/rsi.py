@@ -1,5 +1,4 @@
 import synapsis
-from synapsis.utils import trunc
 
 
 def price_event(price, symbol, state: synapsis.StrategyState):
