@@ -207,7 +207,7 @@ if __name__ == "__main__":
     # Authenticate on alpaca to create a strategy
     alpaca = synapsis.Alpaca()
 
-    # Use our strategy helper on coinbase pro
+    # Use our strategy helper on alpaca
     strategy = synapsis.Strategy(alpaca)
 
     # Run the price event function every time we check for a new price - by default that is 15 seconds
