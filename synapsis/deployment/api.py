@@ -17,9 +17,8 @@
 """
 
 import requests
-from synapsis.utils.utils import info_print
 
-synapsis_frontend_api_url = "http://localhost:3000"
+synapsis_frontend_api_url = "http://localhost:8081"
 
 
 class API:
