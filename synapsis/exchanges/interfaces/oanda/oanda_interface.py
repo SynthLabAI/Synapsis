@@ -16,24 +16,25 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
 
+import time
+import dateparser as dp
+from datetime import datetime as dt
+from typing import Union
+
+import pandas as pd
+
 from synapsis.exchanges.interfaces.exchange_interface import ExchangeInterface
 from synapsis.exchanges.interfaces.oanda.oanda_api import OandaAPI
 from synapsis.exchanges.orders.limit_order import LimitOrder
 from synapsis.exchanges.orders.market_order import MarketOrder
 from synapsis.utils import utils as utils
-import pandas as pd
-from datetime import datetime as dt
-from typing import Union
-import time
-import dateparser as dp
-
 from synapsis.utils.exceptions import APIException
 
 
 class OandaInterface(ExchangeInterface):
-    def __init__(self, authenticated_API: OandaAPI, preferences_path: str):
+    def __init__(self, authenticated_api: OandaAPI, preferences_path: str):
         self.default_trunc = None
-        super().__init__('oanda', authenticated_API, preferences_path, valid_resolutions=[5, 10, 15, 30, 60,
+        super().__init__('oanda', authenticated_api, preferences_path, valid_resolutions=[5, 10, 15, 30, 60,
                                                                                           60 * 2, 60 * 4, 60 * 5,
                                                                                           60 * 10, 60 * 15, 60 * 30,
                                                                                           60 * 60, 60 * 60 * 24,
