@@ -19,7 +19,8 @@ def price_event(price, symbol, state: synapsis.StrategyState):
 
 def init(symbol, state: synapsis.StrategyState):
     # Download price data to give context to the algo
-    state.variables['history'] = state.interface.history(symbol, to=150, return_as='deque')['close']
+    state.variables['history'] = state.interface.history(symbol, to=150, return_as='deque',
+                                                         resolution=state.resolution)['close']
     state.variables['owns_position'] = False
 
 
