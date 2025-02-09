@@ -10,6 +10,7 @@ from synapsis import trunc
 from synapsis import Strategy, StrategyState, Interface
 from synapsis import CoinbasePro
 from synapsis.indicators import rsi, sma
+# You may need to "pip install scikit-learn" if you do not have this installed
 from sklearn.neural_network import MLPClassifier
 from sklearn.datasets import make_classification
 from sklearn.preprocessing import MinMaxScaler
