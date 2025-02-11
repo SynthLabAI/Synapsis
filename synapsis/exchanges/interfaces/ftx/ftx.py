@@ -1,5 +1,5 @@
 from synapsis.exchanges.exchange import Exchange
-from synapsis.exchanges.interfaces.ftx.ftx_api import API as FTXAPI
+from synapsis.exchanges.interfaces.ftx.ftx_api import FTXAPI
 
 class FTX(Exchange):
     def __init__(self, portfolio_name=None, keys_path="keys.json", settings_path=None):
