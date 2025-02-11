@@ -15,7 +15,7 @@
     You should have received a copy of the GNU Lesser General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
-
+import synapsis.utils.utils
 from synapsis.exchanges.interfaces.coinbase_pro.coinbase_pro import CoinbasePro
 from synapsis.exchanges.interfaces.binance.binance import Binance
 from synapsis.exchanges.interfaces.alpaca.alpaca import Alpaca
@@ -42,6 +42,8 @@ from synapsis.utils import time_builder
 from synapsis.deployment.reporter_headers import Reporter as __Reporter_Headers
 is_deployed = False
 _signal_runner = None
+
+_backtesting = synapsis.utils.check_backtesting()
 try:
     from synapsis_external import Reporter as __Reporter
     reporter = __Reporter
