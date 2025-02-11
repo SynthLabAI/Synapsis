@@ -4,7 +4,6 @@
 
 from synapsis import Strategy, StrategyState, Interface
 from synapsis import Alpaca
-from synapsis.utils import trunc
 from synapsis.indicators import sma
 
 
