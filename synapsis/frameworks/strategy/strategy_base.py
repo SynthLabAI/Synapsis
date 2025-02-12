@@ -50,6 +50,9 @@ class Strategy:
         """
         self.__remote_backtesting = synapsis._backtesting
         self.__exchange = exchange
+
+        synapsis.reporter.export_used_exchange(self.__exchange.get_type())
+
         self.ticker_manager = synapsis.TickerManager(self.__exchange.get_type(), currency_pair)
         self.orderbook_manager = synapsis.OrderbookManager(self.__exchange.get_type(), currency_pair)
 
@@ -192,6 +195,9 @@ class Strategy:
                                   teardown=teardown,
                                   symbol=symbol)
             )
+
+        # Export a new symbol to the backend
+        synapsis.reporter.export_used_symbol(symbol)
 
     def __idle_event(self, *args, **kwargs):
         """
