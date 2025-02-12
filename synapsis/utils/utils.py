@@ -298,11 +298,11 @@ def __check_ending(full_string, checked_ending) -> bool:
 
 
 def to_exchange_symbol(synapsis_symbol, exchange):
-    if exchange == "binance" or exchange == "kucoin":
+    if exchange == "binance":
         return synapsis_symbol.replace('-', '')
     if exchange == "alpaca":
         return get_base_asset(synapsis_symbol)
-    if exchange == "coinbase_pro":
+    if exchange == "coinbase_pro" or exchange == "kucoin":
         return synapsis_symbol
     if exchange == 'ftx':
         return synapsis_symbol.replace("-", "/")
