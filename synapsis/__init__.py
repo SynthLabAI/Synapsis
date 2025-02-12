@@ -20,6 +20,8 @@ from synapsis.exchanges.interfaces.coinbase_pro.coinbase_pro import CoinbasePro
 from synapsis.exchanges.interfaces.binance.binance import Binance
 from synapsis.exchanges.interfaces.alpaca.alpaca import Alpaca
 from synapsis.exchanges.interfaces.oanda.oanda import Oanda
+from synapsis.exchanges.interfaces.ftx.ftx import FTX
+
 from synapsis.exchanges.interfaces.paper_trade.paper_trade import PaperTrade
 from synapsis.frameworks.strategy import Strategy as Strategy
 from synapsis.frameworks.strategy import StrategyState as StrategyState
