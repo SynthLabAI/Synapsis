@@ -308,7 +308,7 @@ def to_exchange_symbol(synapsis_symbol, exchange):
     if exchange == "coinbase_pro":
         return synapsis_symbol
     if exchange == 'ftx':
-        synapsis_symbol.replace("-", "/")
+        return synapsis_symbol.replace("-", "/")
 
 
 def get_base_asset(symbol):
