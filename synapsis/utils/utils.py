@@ -291,6 +291,9 @@ def to_synapsis_symbol(symbol, exchange, quote_guess=None) -> str:
     if exchange == "coinbase_pro":
         return symbol
 
+    if exchange == "ftx":
+        return symbol.replace("-", "/")
+
 
 def __check_ending(full_string, checked_ending) -> bool:
     check_length = len(checked_ending)
@@ -304,6 +307,8 @@ def to_exchange_symbol(synapsis_symbol, exchange):
         return get_base_asset(synapsis_symbol)
     if exchange == "coinbase_pro":
         return synapsis_symbol
+    if exchange == 'ftx':
+        synapsis_symbol.replace("-", "/")
 
 
 def get_base_asset(symbol):
