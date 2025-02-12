@@ -21,7 +21,7 @@ import json
 import requests
 from synapsis.utils.utils import info_print
 
-synapsis_deployment_url = "http://localhost"
+synapsis_deployment_url = 'https://deploy.synapsis.finance'
 
 
 class API:
@@ -99,10 +99,10 @@ class API:
         """
         Get the details route
         """
-        return self.__request('get', 'model/details', data={'modelId': model_id})
+        return self.__request('post', 'model/details', data={'modelId': model_id})
 
-    def get_status(self, model_id: str):
-        return self.__request('get', 'model/status', data={'modelId': model_id})
+    def get_status(self):
+        return self.__request('get', 'model/status')
 
     def list_projects(self):
         return self.__request('get', 'project/list')
@@ -112,7 +112,7 @@ class API:
         Args:
             type_: Can be 'backtesting' or 'live'
         """
-        return self.__request('get', 'project/plans', data={'type': type_})
+        return self.__request('post', 'project/plans', data={'type': type_})
 
     def create_project(self, name: str, description: str):
         return self.__request('post', 'project/create', data={'name': name,
