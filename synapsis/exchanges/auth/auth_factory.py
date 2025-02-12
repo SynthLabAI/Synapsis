@@ -21,6 +21,7 @@ from synapsis.exchanges.interfaces.binance.binance_auth import BinanceAuth
 from synapsis.exchanges.interfaces.coinbase_pro.coinbase_pro_auth import CoinbaseProAuth
 from synapsis.exchanges.interfaces.oanda.oanda_auth import OandaAuth
 from synapsis.exchanges.interfaces.ftx.ftx_auth import FTXAuth
+from synapsis.exchanges.interfaces.kucoin.kucoin_auth import KucoinAuth
 
 
 class AuthFactory:
@@ -36,6 +37,8 @@ class AuthFactory:
             return OandaAuth(keys_file, portfolio_name)
         elif exchange_name == 'ftx':
             return FTXAuth(keys_file, portfolio_name)
+        elif exchange_name == 'kucoin':
+            return KucoinAuth(keys_file, portfolio_name)
         elif exchange_name == 'paper_trade':
             return None
         else:
