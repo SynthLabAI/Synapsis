@@ -31,7 +31,8 @@ from synapsis.exchanges.interfaces.ftx.ftx_interface import FTXInterface
 
 from synapsis.exchanges.interfaces.oanda.oanda_api import OandaAPI
 from synapsis.exchanges.interfaces.oanda.oanda_interface import OandaInterface
-
+from synapsis.exchanges.interfaces.kucoin.kucoin_interface import KucoinInterface
+from kucoin import client as KucoinAPI
 
 class DirectCallsFactory:
     @staticmethod
@@ -73,6 +74,13 @@ class DirectCallsFactory:
         elif exchange_name == 'oanda':
             calls = OandaAPI(auth, preferences["settings"]["use_sandbox"])
             return calls, OandaInterface(calls, preferences_path)
+
+        elif exchange_name == 'kucoin':
+            sandbox = preferences["settings"]["use_sandbox"]
+            KucoinAPI.Market(auth.keys['API_KEY'], auth.keys['API_SECRET'], auth.keys['API_PASS'], sandbox)
+            KucoinAPI.User(auth.keys['API_KEY'], auth.keys['API_SECRET'], auth.keys['API_PASS'], sandbox)
+            KucoinAPI.Trade(auth.keys['API_KEY'], auth.keys['API_SECRET'], auth.keys['API_PASS'], sandbox)
+            return KucoinAPI, KucoinInterface("kucoin", preferences_path)
 
         elif exchange_name == 'paper_trade':
             return None, None
