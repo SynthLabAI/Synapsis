@@ -30,7 +30,7 @@ from synapsis.exchanges.interfaces.paper_trade.backtest_controller import BackTe
 from synapsis.exchanges.interfaces.paper_trade.backtest_result import BacktestResult
 from synapsis.frameworks.strategy.strategy_state import StrategyState
 from synapsis.utils.time_builder import time_interval_to_seconds
-from synapsis.utils.utils import AttributeDict, info_print, load_backtest_preferences
+from synapsis.utils.utils import AttributeDict, info_print
 from synapsis.utils.utils import get_ohlcv_from_list
 from synapsis.exchanges.strategy_logger import StrategyLogger
 
