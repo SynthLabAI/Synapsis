@@ -14,7 +14,6 @@
 
 <p align="center">
    <a target="_blank" href="https://sonarcloud.io/dashboard?id=Synapsis-Finance_Synapsis"><img src="https://sonarcloud.io/api/project_badges/measure?project=Synapsis-Finance_Synapsis&metric=sqale_rating"></a>
-   <a target="_blank" href="https://sonarcloud.io/dashboard?id=Synapsis-Finance_Synapsis"><img src="https://sonarcloud.io/api/project_badges/measure?project=Synapsis-Finance_Synapsis&metric=security_rating"></a>
    <a target="_blank" href="https://sonarcloud.io/dashboard?id=Synapsis-Finance_Synapsis"><img src="https://sonarcloud.io/api/project_badges/measure?project=Synapsis-Finance_Synapsis&metric=alert_status"></a>
    <a target="_blank" href="https://github.com/Synapsis-Finance/Synapsis/actions/workflows/test.yml"><img src="https://github.com/Synapsis-Finance/Synapsis/actions/workflows/test.yml/badge.svg?branch=main"></a> <br>
    <a target="_blank" href="https://pepy.tech/project/synapsis"><img src="https://pepy.tech/badge/synapsis/month"></a>

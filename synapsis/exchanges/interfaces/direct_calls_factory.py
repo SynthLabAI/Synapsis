@@ -25,6 +25,7 @@ from synapsis.exchanges.interfaces.alpaca.alpaca_interface import AlpacaInterfac
 from synapsis.exchanges.interfaces.binance.binance_interface import BinanceInterface
 from synapsis.exchanges.interfaces.coinbase_pro.coinbase_pro_api import API as CoinbaseProAPI
 from synapsis.exchanges.interfaces.coinbase_pro.coinbase_pro_interface import CoinbaseProInterface
+from synapsis.exchanges.interfaces.paper_trade.paper_trade_interface import PaperTradeInterface
 from synapsis.exchanges.interfaces.ftx.ftx_api import FTXAPI
 from synapsis.exchanges.interfaces.ftx.ftx_interface import FTXInterface
 
@@ -60,8 +61,14 @@ class DirectCallsFactory:
             return calls, AlpacaInterface(calls, preferences_path)
 
         elif exchange_name == 'ftx':
+            sandbox = preferences["settings"]["use_sandbox"]
             calls = FTXAPI(auth)
-            return calls, FTXInterface(calls, preferences_path)
+            if sandbox:
+                utils.info_print('The setting use_sandbox is enabled. FTX has been created as a paper trading '
+                                 'instance.')
+                return calls, PaperTradeInterface(FTXInterface(calls, preferences_path))
+            else:
+                return calls, FTXInterface(calls, preferences_path)
 
         elif exchange_name == 'oanda':
             calls = OandaAPI(auth, preferences["settings"]["use_sandbox"])
