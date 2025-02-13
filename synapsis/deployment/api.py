@@ -21,7 +21,7 @@ import json
 import requests
 from synapsis.utils.utils import info_print
 
-synapsis_deployment_url = 'http://localhost'  # 'https://deploy.synapsis.finance'
+synapsis_deployment_url = 'https://deploy.synapsis.finance'
 
 
 class API:
