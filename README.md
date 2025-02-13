@@ -36,7 +36,7 @@
 
 ## Why Synapsis? 
 
-​	Synapsis is a live trading engine, backtest runner and development framework wrapped into one powerful open source package. Models can be instantly backtested, paper traded, sandbox tested and run live by simply changing a single line. We built synapsis for every type of quant including training & running ML models in the same environment, cross-exchange/cross-symbol arbitrage, and even long/short positions on stocks.
+​	Synapsis is a live trading engine, backtest runner and development framework wrapped into one powerful open source package. Models can be instantly backtested, paper traded, sandbox tested and run live by simply changing a single line. We built synapsis for every type of quant including training & running ML models in the same environment, cross-exchange/cross-symbol arbitrage, and even long/short positions on stocks (all with built-in websockets).
 
 ​	Convert your existing model or build a new one - unlock the ability to run & optimize across all of our supported exchanges. Getting started is easy - just `pip install synapsis` and `synapsis init`.
 
