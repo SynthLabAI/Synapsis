@@ -27,7 +27,9 @@ from synapsis.exchanges.interfaces.keyless.keyless import KeylessExchange
 from synapsis.frameworks.strategy import Strategy as Strategy
 from synapsis.frameworks.strategy import StrategyState as StrategyState
 from synapsis.frameworks.screener.screener import Screener
+from synapsis.frameworks.screener.screener import Screener as Signal
 from synapsis.frameworks.screener.screener_state import ScreenerState
+from synapsis.frameworks.screener.screener_state import ScreenerState as SignalState
 
 from synapsis.exchanges.managers.ticker_manager import TickerManager
 from synapsis.exchanges.managers.orderbook_manager import OrderbookManager
