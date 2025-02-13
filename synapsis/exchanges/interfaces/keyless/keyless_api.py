@@ -47,7 +47,7 @@ class KeylessAPI(ExchangeInterface):
 
     def __invalid_live(self):
         raise RuntimeError("Cannot use a keyless exchange in live trading. Please insert keys and begin using exchanges"
-                           "such as synapsis.Alpaca() or synapsis.CoinbasePro().")
+                           " such as synapsis.Alpaca() or synapsis.CoinbasePro().")
 
     def get_exchange_type(self):
         return 'keyless'
