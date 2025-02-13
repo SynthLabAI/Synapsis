@@ -27,6 +27,7 @@ from synapsis.exchanges.interfaces.oanda.oanda_interface import OandaInterface
 from synapsis.exchanges.interfaces.ftx.ftx_interface import FTXInterface
 from synapsis.exchanges.interfaces.alpaca.alpaca_interface import AlpacaInterface
 from synapsis.exchanges.interfaces.binance.binance_interface import BinanceInterface
+from synapsis.exchanges.interfaces.kucoin.kucoin_interface import KucoinInterface
 
 
 class Exchange(ABCExchange, abc.ABC):
@@ -62,6 +63,8 @@ class Exchange(ABCExchange, abc.ABC):
             self.interface = FTXInterface(self.__type, calls)
         elif self.__type == "oanda":
             self.interface = OandaInterface(self.__type, calls)
+        elif self.__type == "kucoin":
+            self.interface = KucoinInterface(self.__type, calls)
 
         write_auth_cache(self.__type, self.__name, calls)
 
