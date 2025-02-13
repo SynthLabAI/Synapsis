@@ -302,7 +302,7 @@ def to_exchange_symbol(synapsis_symbol, exchange):
         return synapsis_symbol.replace('-', '')
     if exchange == "alpaca":
         return get_base_asset(synapsis_symbol)
-    if exchange == "coinbase_pro":
+    if exchange == "coinbase_pro" or exchange == "kucoin":
         return synapsis_symbol
     if exchange == 'ftx':
         return synapsis_symbol.replace("-", "/")
