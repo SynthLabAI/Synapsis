@@ -20,32 +20,50 @@ import time
 
 import synapsis
 from synapsis.exchanges.abc_exchange import ABCExchange
-from synapsis.exchanges.auth.auth_constructor import write_auth_cache
-from synapsis.exchanges.auth.auth_factory import AuthFactory
+from synapsis.exchanges.auth.utils import write_auth_cache
 from synapsis.exchanges.interfaces.abc_exchange_interface import ABCExchangeInterface
 from synapsis.exchanges.interfaces.coinbase_pro.coinbase_pro_interface import CoinbaseProInterface
-from synapsis.exchanges.interfaces.direct_calls_factory import DirectCallsFactory
+from synapsis.exchanges.interfaces.oanda.oanda_interface import OandaInterface
+from synapsis.exchanges.interfaces.ftx.ftx_interface import FTXInterface
+from synapsis.exchanges.interfaces.alpaca.alpaca_interface import AlpacaInterface
 from synapsis.exchanges.interfaces.binance.binance_interface import BinanceInterface
 
 
 class Exchange(ABCExchange, abc.ABC):
     interface: ABCExchangeInterface
 
-    def __init__(self, exchange_type, portfolio_name, keys_path, preferences_path):
+    def __init__(self, exchange_type, portfolio_name, preferences_path):
         self.__type = exchange_type  # coinbase_pro, binance, alpaca, oanda, ftx
         self.__name = portfolio_name  # my_cool_portfolio
-        self.__factory = AuthFactory()
 
-        self.__auth = self.__factory.create_auth(keys_path, self.__type, self.__name)
-        self.__direct_calls_factory = DirectCallsFactory()
-
-        self.calls, self.interface = self.__direct_calls_factory.create(self.__type, self.__auth, preferences_path)
-        write_auth_cache(exchange_type, portfolio_name, self.calls)
+        # Make a public version of portfolio name
+        self.portfolio_name = self.__name
 
         self.preferences = synapsis.utils.load_user_preferences(preferences_path)
 
-        # Create the model container
         self.models = {}
+
+        # Fill this in the method below
+        self.calls = None
+
+    def construct_interface_and_cache(self, calls):
+        """
+        If you are a contributor, you need to modify this function to add exchanges
+        The core functions that creates the interface based on the exchange type & automatically caches
+        """
+        self.calls = calls
+        if self.__type == "coinbase_pro":
+            self.interface = CoinbaseProInterface(self.__type, calls)
+        elif self.__type == "binance":
+            self.interface = BinanceInterface(self.__type, calls)
+        elif self.__type == "alpaca":
+            self.interface = AlpacaInterface(self.__type, calls)
+        elif self.__type == "ftx":
+            self.interface = FTXInterface(self.__type, calls)
+        elif self.__type == "oanda":
+            self.interface = OandaInterface(self.__type, calls)
+
+        write_auth_cache(self.__type, self.__name, calls)
 
     def get_name(self):
         return self.__name
@@ -55,13 +73,6 @@ class Exchange(ABCExchange, abc.ABC):
 
     def get_preferences(self):
         return self.preferences
-
-    # Can be removed?
-    def construct_interface(self, calls):
-        if self.__type == "coinbase_pro":
-            self.interface = CoinbaseProInterface(self.__type, calls)
-        elif self.__type == "binance":
-            self.interface = BinanceInterface(self.__type, calls)
 
     def get_interface(self) -> ABCExchangeInterface:
         """

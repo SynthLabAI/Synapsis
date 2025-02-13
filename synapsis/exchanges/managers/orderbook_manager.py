@@ -21,7 +21,7 @@ from typing import List
 
 import requests
 
-import synapsis.exchanges.auth.auth_constructor
+import synapsis.exchanges.auth.utils
 import synapsis.utils.utils
 from synapsis.exchanges.interfaces.alpaca.alpaca_websocket import Tickers as Alpaca_Websocket
 from synapsis.exchanges.interfaces.binance.binance_websocket import Tickers as Binance_Orderbook

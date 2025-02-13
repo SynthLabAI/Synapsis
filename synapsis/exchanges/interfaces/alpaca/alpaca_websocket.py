@@ -28,7 +28,7 @@ from websocket import create_connection
 import synapsis
 from synapsis.utils.utils import info_print
 from synapsis.exchanges.abc_exchange_websocket import ABCExchangeWebsocket
-from synapsis.exchanges.auth.auth_constructor import load_auth
+from synapsis.exchanges.auth.utils import load_auth
 from synapsis.exchanges.interfaces.alpaca.alpaca_websocket_utils import parse_alpaca_timestamp, switch_type
 
 
