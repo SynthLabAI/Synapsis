@@ -14,7 +14,6 @@
 
 <p align="center">
    <a target="_blank" href="https://sonarcloud.io/dashboard?id=Synapsis-Finance_Synapsis"><img src="https://sonarcloud.io/api/project_badges/measure?project=Synapsis-Finance_Synapsis&metric=sqale_rating"></a>
-   <a target="_blank" href="https://sonarcloud.io/dashboard?id=Synapsis-Finance_Synapsis"><img src="https://sonarcloud.io/api/project_badges/measure?project=Synapsis-Finance_Synapsis&metric=security_rating"></a>
    <a target="_blank" href="https://sonarcloud.io/dashboard?id=Synapsis-Finance_Synapsis"><img src="https://sonarcloud.io/api/project_badges/measure?project=Synapsis-Finance_Synapsis&metric=alert_status"></a>
    <a target="_blank" href="https://github.com/Synapsis-Finance/Synapsis/actions/workflows/test.yml"><img src="https://github.com/Synapsis-Finance/Synapsis/actions/workflows/test.yml/badge.svg?branch=main"></a> <br>
    <a target="_blank" href="https://pepy.tech/project/synapsis"><img src="https://pepy.tech/badge/synapsis/month"></a>
@@ -37,12 +36,15 @@
 
 ## Why Synapsis? 
 
-Synapsis is an elegant python library for interacting with crypto, stocks, and forex for in a consistent and streamlined way. Now, no more reading API or struggling to get data. Synapsis offers a powerful feature-set, optimized for speed and ease of use, better backtesting, and ultimately better models. 
+​	Synapsis is a live trading engine, backtest runner and development framework wrapped into one powerful open source package. Models can be instantly backtested, paper traded, sandbox tested and run live by simply changing a single line. We built synapsis for every type of quant including training & running ML models in the same environment, cross-exchange/cross-symbol arbitrage, and even long/short positions on stocks (all with built-in websockets).
 
-We're bridging the gap between local development systems & live APIs by building a framework which allows backtesting, 
-paper trading, sandbox testing, and live cross-exchange deployment without modifying a single line of trading logic.
+​	Convert your existing model or build a new one - unlock the ability to run & optimize across all of our supported exchanges. Getting started is easy - just `pip install synapsis` and `synapsis init`.
 
 Check out our [website](https://synapsis.finance) and our [docs](https://docs.synapsis.finance).
+
+[YouTube - Under 25 Lines Build an Alpaca RSI Trading Bot](https://youtu.be/pcm0h63rhUU)
+<a target="_blank" href="https://youtu.be/pcm0h63rhUU"><img src="https://firebasestorage.googleapis.com/v0/b/synapsis-6ada5.appspot.com/o/github%2Fbuild_a_bot_readme_thumbnail.png?alt=media&token=5193b40b-c949-46df-b385-8214474dc26a" style="border-radius:10px"></a>
+
 
 ### Trade Stocks, Crypto, and Forex Seamlessly
 
@@ -84,7 +86,7 @@ strategy.backtest(to='1y')
 #### Accurate Backtest Holdings
 
 <div align="center">
-  <img style="margin: 0 auto; padding-bottom: 15px; padding-top: 30px" width=100%" src="https://firebasestorage.googleapis.com/v0/b/synapsis-6ada5.appspot.com/o/screely-1631725027541.png?alt=media&token=1446fcf0-680b-4ee9-afcf-fbaea044eba7">
+    <a><img src="https://firebasestorage.googleapis.com/v0/b/synapsis-6ada5.appspot.com/o/screely-1631725027541.png?alt=media&token=1446fcf0-680b-4ee9-afcf-fbaea044eba7" style="border-radius:10px"></a>
 </div>
 
 #### Useful Metrics
@@ -131,7 +133,7 @@ $ synapsis init
 ```
 This will initialize your working directory.
 
-The command will create the files `keys.json`, `settings.json`, `backtest.json`, `deploy.json` and an example script called `bot.py`.
+The command will create the files `keys.json`, `settings.json`, `backtest.json`, `synapsis.json` and an example script called `bot.py`.
 
 If you don't want to use our `init` command, you can find the same files in the `examples` folder under [`settings.json`](https://github.com/Synapsis-Finance/Synapsis/blob/main/examples/settings.json) and [`keys_example.json`](https://github.com/Synapsis-Finance/Synapsis/blob/main/examples/keys_example.json)
 
@@ -141,7 +143,7 @@ More information can be found on our [docs](https://docs.synapsis.finance)
 
 ### Directory format
 
-The working directory format should have at least these files:
+The working directory format should have *at least* these files:
 ```
 Project
    |-bot.py
@@ -162,16 +164,18 @@ For more info, and ways to do more advanced things, check out our [getting start
 
 ## Supported Exchanges
 
-| Exchange     | Integrate | Websockets  | Paper Trading | Backtesting |
-| ------------ | ------------ | ---------------- | ---------- | --------- |
-| Coinbase Pro | 🟢           | 🟢               | 🟢        | 🟢        |
-| Binance      | 🟢           | 🟢               | 🟢        | 🟢       |
-| Alpaca       | 🟢         | 🟢             | 🟢      | 🟢        |
-| OANDA | 🟢 | 🟡 | 🟢 | 🟢 |
-| FTX | 🔴 | 🔴 | 🔴 | 🔴 |
-| TD Ameritrade | 🔴 | 🔴 | 🔴 | 🔴 |
-| Webull | 🔴 | 🔴 | 🔴 | 🔴 |
-| Robinhood | 🔴 | 🔴 | 🔴 | 🔴 |
+| Exchange      | Live Trading | Websockets | Paper Trading | Backtesting |
+| ------------- | ------------ | ---------- | ------------- | ----------- |
+| Coinbase Pro  | 🟢            | 🟢          | 🟢             | 🟢           |
+| Binance       | 🟢            | 🟢          | 🟢             | 🟢           |
+| Alpaca        | 🟢            | 🟢          | 🟢             | 🟢           |
+| OANDA         | 🟢            | 🟡          | 🟢             | 🟢           |
+| FTX           | 🟢            | 🟢          | 🟢             | 🟢           |
+| KuCoin        | 🟢            | 🟡          | 🟢             | 🟢           |
+| Kraken        | 🟡            | 🟡          | 🟡             | 🟡           |
+| TD Ameritrade | 🔴            | 🔴          | 🔴             | 🔴           |
+| Webull        | 🔴            | 🔴          | 🔴             | 🔴           |
+| Robinhood     | 🔴            | 🔴          | 🔴             | 🔴           |
 
 
 🟢  = working
@@ -179,8 +183,6 @@ For more info, and ways to do more advanced things, check out our [getting start
 🟡  = in development, some or most features are working
 
 🔴  = planned but not yet in development
-
-* Interface calls take ~300 µs extra to homogenize the exchange data.
 
 ## RSI Example
 
