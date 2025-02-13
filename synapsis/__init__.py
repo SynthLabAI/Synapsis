@@ -23,6 +23,7 @@ from synapsis.exchanges.interfaces.oanda.oanda import Oanda
 from synapsis.exchanges.interfaces.kucoin.kucoin import Kucoin
 from synapsis.exchanges.interfaces.ftx.ftx import FTX
 from synapsis.exchanges.interfaces.paper_trade.paper_trade import PaperTrade
+from synapsis.exchanges.interfaces.keyless.keyless import KeylessExchange
 from synapsis.frameworks.strategy import Strategy as Strategy
 from synapsis.frameworks.strategy import StrategyState as StrategyState
 from synapsis.frameworks.signal.signal import Signal
