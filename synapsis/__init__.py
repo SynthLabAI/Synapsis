@@ -26,6 +26,9 @@ from synapsis.exchanges.interfaces.paper_trade.paper_trade import PaperTrade
 from synapsis.exchanges.interfaces.keyless.keyless import KeylessExchange
 from synapsis.frameworks.strategy import Strategy as Strategy
 from synapsis.frameworks.strategy import StrategyState as StrategyState
+from synapsis.exchanges.interfaces.binance_futures.binance_futures import BinanceFutures
+from synapsis.frameworks.strategy import FuturesStrategy
+from synapsis.frameworks.strategy import FuturesStrategyState
 from synapsis.frameworks.screener.screener import Screener
 from synapsis.frameworks.screener.screener_state import ScreenerState
 
