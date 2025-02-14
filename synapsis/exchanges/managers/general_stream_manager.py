@@ -24,6 +24,7 @@ from synapsis.exchanges.interfaces.alpaca.alpaca_websocket import Tickers as Alp
 from synapsis.exchanges.interfaces.binance.binance_websocket import Tickers as Binance_Websocket
 from synapsis.exchanges.interfaces.coinbase_pro.coinbase_pro_websocket import Tickers as Coinbase_Pro_Websocket
 from synapsis.exchanges.interfaces.kucoin.kucoin_websocket import Tickers as Kucoin_Websocket
+from synapsis.exchanges.interfaces.ftx.ftx_websocket import Tickers as Ftx_Websocket
 from synapsis.exchanges.managers.websocket_manager import WebsocketManager
 
 
@@ -93,7 +94,17 @@ class GeneralManager(WebsocketManager):
             self.__websockets[channel][exchange_cache][asset_id_cache] = websocket
 
             return websocket
+        elif exchange_cache == "ftx":
+            if use_sandbox:
+                raise ValueError("Error: FTX does not have a sandbox mode")
+            else:
+                websocket = Ftx_Websocket(override_symbol, asset_id_cache, channel, log)
 
+            websocket.append_callback(callback)
+
+            self.__websockets[channel][exchange_cache][asset_id_cache] = websocket
+
+            return websocket
         elif exchange_cache == "binance":
             # Lower this to subscribe
             asset_id_cache = synapsis.utils.to_exchange_symbol(asset_id_cache, "binance").lower()

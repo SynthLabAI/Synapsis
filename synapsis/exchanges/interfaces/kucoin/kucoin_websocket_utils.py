@@ -1,6 +1,6 @@
 import time
 
-from synapsis.utils.utils import isolate_specific, rename_to
+from synapsis.utils.utils import isolate_specific
 
 
 def switch_type(stream):
