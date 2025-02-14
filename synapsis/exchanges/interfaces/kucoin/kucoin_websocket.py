@@ -4,7 +4,6 @@ import traceback
 
 import requests
 
-from synapsis.utils.utils import epoch_from_iso8601
 import synapsis.exchanges.interfaces.kucoin.kucoin_websocket_utils as websocket_utils
 from synapsis.exchanges.interfaces.websocket import Websocket
 from synapsis.utils.utils import info_print
