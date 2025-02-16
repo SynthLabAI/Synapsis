@@ -1,6 +1,6 @@
 """
-    FTX definition & setup
-    Copyright (C) 2021 Synapsis Finance
+    Keyless exchange definition & setup
+    Copyright (C) 2022 Emerson Dove
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU Lesser General Public License as published
@@ -16,36 +16,23 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
 
-
+import synapsis
 from synapsis.exchanges.exchange import Exchange
-from synapsis.exchanges.interfaces.ftx.ftx_api import FTXAPI
-from synapsis.exchanges.auth.auth_constructor import AuthConstructor
 from synapsis.exchanges.interfaces.paper_trade.paper_trade_interface import PaperTradeInterface
-from synapsis.exchanges.interfaces.ftx.ftx_interface import FTXInterface
-from synapsis.utils import utils
+from synapsis.exchanges.interfaces.abc_exchange_interface import ABCExchangeInterface
+from synapsis.exchanges.interfaces.keyless.keyless_api import KeylessAPI
 
 
-class FTX(Exchange):
-    def __init__(self, portfolio_name=None, keys_path="keys.json", settings_path=None):
-        Exchange.__init__(self, "ftx", portfolio_name, settings_path)
+class KeylessExchange(Exchange):
+    def __init__(self, dataset_path: str, initial_account_values: dict, portfolio_name=None, settings_path=None):
+        Exchange.__init__(self, "keyless", portfolio_name, settings_path)
 
-        # Load the auth from the keys file
-        auth = AuthConstructor(keys_path, portfolio_name, 'ftx', ['API_KEY', 'API_SECRET', 'sandbox'])
+        self.calls = KeylessAPI(dataset_path)
 
-        keys = auth.keys
-        sandbox = super().evaluate_sandbox(auth)
+        self.interface = PaperTradeInterface(self.calls, initial_account_values=initial_account_values)
 
-        calls = FTXAPI(keys['API_KEY'], keys['API_SECRET'],
-                       tld=self.preferences["settings"]["ftx"]["ftx_tld"])
-
-        # Always finish the method with this function
-        super().construct_interface_and_cache(calls)
-
-        # FTX is unique because we can continue by wrapping the interface in paper trade
-        if sandbox:
-            utils.info_print('The sandbox setting is enabled for this key. FTX has been created as a '
-                             'paper trading instance.')
-            self.interface = PaperTradeInterface(FTXInterface('ftx', calls))
+        # This one must be exported manually
+        synapsis.reporter.export_used_exchange("keyless")
 
     """
     Builds information about the asset on this exchange by making particular API calls
@@ -66,5 +53,5 @@ class FTX(Exchange):
         # TODO Populate this with useful information
         return self.interface.get_fees()
 
-    def get_direct_calls(self) -> FTXAPI:
+    def get_direct_calls(self) -> ABCExchangeInterface:
         return self.calls

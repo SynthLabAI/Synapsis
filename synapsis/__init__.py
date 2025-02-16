@@ -23,10 +23,11 @@ from synapsis.exchanges.interfaces.oanda.oanda import Oanda
 from synapsis.exchanges.interfaces.kucoin.kucoin import Kucoin
 from synapsis.exchanges.interfaces.ftx.ftx import FTX
 from synapsis.exchanges.interfaces.paper_trade.paper_trade import PaperTrade
+from synapsis.exchanges.interfaces.keyless.keyless import KeylessExchange
 from synapsis.frameworks.strategy import Strategy as Strategy
 from synapsis.frameworks.strategy import StrategyState as StrategyState
-from synapsis.frameworks.signal.signal import Signal
-from synapsis.frameworks.signal.signal_state import SignalState
+from synapsis.frameworks.screener.screener import Screener
+from synapsis.frameworks.screener.screener_state import ScreenerState
 
 from synapsis.exchanges.managers.ticker_manager import TickerManager
 from synapsis.exchanges.managers.orderbook_manager import OrderbookManager
@@ -41,7 +42,7 @@ from synapsis.utils import time_builder
 
 from synapsis.deployment.reporter_headers import Reporter as __Reporter_Headers
 is_deployed = False
-_signal_runner = None
+_screener_runner = None
 
 _backtesting = synapsis.utils.check_backtesting()
 try:
