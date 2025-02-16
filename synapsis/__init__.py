@@ -27,6 +27,7 @@ from synapsis.exchanges.interfaces.keyless.keyless import KeylessExchange
 from synapsis.frameworks.strategy import Strategy as Strategy
 from synapsis.frameworks.strategy import StrategyState as StrategyState
 from synapsis.exchanges.interfaces.binance_futures.binance_futures import BinanceFutures
+from synapsis.exchanges.interfaces.ftx_futures.ftx_futures import FTXFutures
 from synapsis.frameworks.strategy import FuturesStrategy
 from synapsis.frameworks.strategy import FuturesStrategyState
 from synapsis.frameworks.screener.screener import Screener

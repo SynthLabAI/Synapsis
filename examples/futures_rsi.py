@@ -39,8 +39,9 @@ def close_position(symbol, state: synapsis.FuturesStrategyState):
 def init(symbol, state: synapsis.FuturesStrategyState):
     close_position(symbol, state)
 
-    state.interface.set_hedge_mode(HedgeMode.ONEWAY)
+    # Set initial leverage and margin type
     state.interface.set_leverage(symbol, 1)
+
     state.interface.set_margin_type(symbol, MarginType.ISOLATED)
 
     state.variables['history'] = state.interface.history(
@@ -49,7 +50,8 @@ def init(symbol, state: synapsis.FuturesStrategyState):
 
 
 if __name__ == "__main__":
-    exchange = synapsis.BinanceFutures()
+    exchange = synapsis.FTXFutures()
+
     strategy = synapsis.FuturesStrategy(exchange)
     strategy.add_price_event(price_event,
                              init=init,
