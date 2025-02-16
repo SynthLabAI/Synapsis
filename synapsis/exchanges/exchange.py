@@ -28,7 +28,7 @@ from synapsis.exchanges.interfaces.ftx.ftx_interface import FTXInterface
 from synapsis.exchanges.interfaces.alpaca.alpaca_interface import AlpacaInterface
 from synapsis.exchanges.interfaces.binance.binance_interface import BinanceInterface
 from synapsis.exchanges.interfaces.kucoin.kucoin_interface import KucoinInterface
-from synapsis.exchanges.interfaces.okex.okex_interface import OkexInterface
+from synapsis.exchanges.interfaces.okx.okx_interface import OkexInterface
 
 
 
@@ -67,7 +67,7 @@ class Exchange(ABCExchange, abc.ABC):
             self.interface = OandaInterface(self.__type, calls)
         elif self.__type == "kucoin":
             self.interface = KucoinInterface(self.__type, calls)
-        elif self.__type == "okex":
+        elif self.__type == "okx":
             self.interface = OkexInterface(self.__type, calls)
 
         synapsis.reporter.export_used_exchange(self.__type)
