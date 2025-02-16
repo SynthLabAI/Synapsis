@@ -9,6 +9,7 @@ import synapsis
 from synapsis.exchanges.exchange import Exchange
 from synapsis.exchanges.interfaces.paper_trade.backtest_controller import BackTestController
 from synapsis.exchanges.interfaces.paper_trade.backtest_result import BacktestResult
+from synapsis.exchanges.strategy_logger import StrategyLogger
 from synapsis.frameworks.strategy import StrategyBase
 from synapsis.utils.time_builder import time_interval_to_seconds
 from synapsis.utils.utils import info_print
@@ -18,7 +19,7 @@ class Strategy(StrategyBase):
     _exchange: Exchange
 
     def __init__(self, exchange: Exchange):
-        super().__init__(exchange)
+        super().__init__(exchange, StrategyLogger(exchange.get_interface(), strategy=self))
         self._paper_trade_exchange = synapsis.PaperTrade(self._exchange)
 
     def backtest(self,

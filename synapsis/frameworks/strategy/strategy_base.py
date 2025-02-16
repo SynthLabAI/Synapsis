@@ -38,11 +38,12 @@ from synapsis.utils.utils import get_ohlcv_from_list
 from synapsis.exchanges.strategy_logger import StrategyLogger
 
 
+# TODO this entire class needs to be fixed it's all fucked
 class StrategyBase:
     _exchange: ABCBaseExchange
     interface: ABCBaseExchangeInterface
 
-    def __init__(self, exchange):
+    def __init__(self, exchange, interface):
         """
         Create a new strategy object. A strategy can be used to run your code live while be backtestable and modular
          across exchanges.
@@ -58,14 +59,14 @@ class StrategyBase:
         """
         self._remote_backtesting = synapsis._backtesting
         self._exchange = exchange
+        self.interface = interface
 
         self.ticker_manager = synapsis.TickerManager(self._exchange.get_type(), '')
         self.orderbook_manager = synapsis.OrderbookManager(self._exchange.get_type(), '')
 
         self._scheduling_pair = []  # Object to hold a currency and the resolution it's pulled at: ["BTC-USD", 60]
-        self.interface = StrategyLogger(interface=exchange.get_interface(), strategy=self)
 
-        # Create a cache for the current interface, and a wrapped paper trade object for user backtesting
+        # Create a cache for the current interface
         self._interface_cache = self.interface
         self._schedulers = []
         self.__variables = {}

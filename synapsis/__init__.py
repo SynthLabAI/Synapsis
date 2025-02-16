@@ -43,6 +43,8 @@ from synapsis.utils.scheduler import Scheduler
 import synapsis.indicators as indicators
 from synapsis.utils import time_builder
 
+from synapsis.enums import *
+
 from synapsis.deployment.reporter_headers import Reporter as __Reporter_Headers
 is_deployed = False
 _screener_runner = None
