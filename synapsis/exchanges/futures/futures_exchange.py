@@ -21,7 +21,6 @@ import time
 import synapsis
 from synapsis.exchanges.abc_base_exchange import ABCBaseExchange
 from synapsis.exchanges.auth.utils import write_auth_cache
-from synapsis.exchanges.interfaces.binance_futures.binance_futures_interface import BinanceFuturesInterface
 from synapsis.exchanges.interfaces.futures_exchange_interface import FuturesExchangeInterface
 
 
