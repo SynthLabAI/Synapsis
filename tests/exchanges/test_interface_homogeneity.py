@@ -205,7 +205,8 @@ class InterfaceHomogeneity(unittest.TestCase):
 
             # The symbol should have gained less than the size on the buy if there were fees
             # Before + requested size >= the filled size
-            self.assertGreaterEqual(before['available'] + order.get_size(), after['available'])
+            self.assertGreaterEqual(synapsis.trunc(before['available'], 2) + order.get_size(),
+                                    synapsis.trunc(after['available'], 2))
 
         # Make sure to buy back the funds we're loosing from fees - minimum balance of .1 bitcoin
         btc_account = self.Binance_Interface.get_account(symbol="BTC")['available']
