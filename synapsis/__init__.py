@@ -26,10 +26,6 @@ from synapsis.exchanges.interfaces.paper_trade.paper_trade import PaperTrade
 from synapsis.exchanges.interfaces.keyless.keyless import KeylessExchange
 from synapsis.frameworks.strategy import Strategy as Strategy
 from synapsis.frameworks.strategy import StrategyState as StrategyState
-from synapsis.exchanges.interfaces.binance_futures.binance_futures import BinanceFutures
-from synapsis.exchanges.interfaces.ftx_futures.ftx_futures import FTXFutures
-from synapsis.frameworks.strategy import FuturesStrategy
-from synapsis.frameworks.strategy import FuturesStrategyState
 from synapsis.frameworks.screener.screener import Screener
 from synapsis.frameworks.screener.screener_state import ScreenerState
 
@@ -44,7 +40,7 @@ from synapsis.utils.scheduler import Scheduler
 import synapsis.indicators as indicators
 from synapsis.utils import time_builder
 
-from synapsis.enums import *
+from synapsis.enums import Side, OrderType, OrderStatus, TimeInForce
 
 from synapsis.deployment.reporter_headers import Reporter as __Reporter_Headers
 is_deployed = False
