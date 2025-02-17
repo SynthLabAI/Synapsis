@@ -34,7 +34,7 @@ from binance.client import Client
 from binance.exceptions import BinanceAPIException
 
 import synapsis
-import synapsis.utils.exceptions
+from synapsis.utils.exceptions as exceptions
 from synapsis.utils import utils, time_builder
 from synapsis.enums import MarginType, PositionMode, Side, TimeInForce, HedgeMode, OrderType, ContractType, OrderStatus
 from synapsis.exchanges.interfaces.futures_exchange_interface import FuturesExchangeInterface
