@@ -21,8 +21,9 @@ from operator import itemgetter
 
 import pytest
 
-from synapsis import BinanceFutures, Side, OrderStatus, OrderType
+from synapsis import Side, OrderStatus, OrderType
 from synapsis.exchanges.interfaces.binance_futures.binance_futures_interface import BinanceFuturesInterface
+from synapsis.exchanges.interfaces.binance_futures.binance_futures import BinanceFutures
 
 
 @pytest.fixture
