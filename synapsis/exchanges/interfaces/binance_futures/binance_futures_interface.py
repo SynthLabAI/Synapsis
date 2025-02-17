@@ -26,8 +26,8 @@ from binance.client import Client
 from binance.exceptions import BinanceAPIException
 
 import synapsis
-import synapsis.utils.exceptions as exceptions
-import synapsis.utils.utils as utils
+import synapsis.utils.exceptions
+from synapsis.utils import utils, time_builder
 from synapsis.enums import MarginType, PositionMode, Side, TimeInForce, HedgeMode, OrderType, ContractType, OrderStatus
 from synapsis.exchanges.interfaces.futures_exchange_interface import FuturesExchangeInterface
 from synapsis.exchanges.orders.futures.futures_order import FuturesOrder
@@ -508,4 +508,4 @@ class BinanceFuturesInterface(FuturesExchangeInterface):
         return history
 
     def get_funding_rate_resolution(self) -> int:
-        return 60 * 60 * 8  # 8 hours
+        return time_builder.build_hour() * 8  # 8 hours
