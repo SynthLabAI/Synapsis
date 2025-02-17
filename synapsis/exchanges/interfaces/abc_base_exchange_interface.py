@@ -26,7 +26,7 @@ from typing import Union
 import numpy
 import pandas
 import pandas as pd
-from dateutil.parser import parser
+from dateutil import parser
 
 from synapsis import utils
 from synapsis.utils import time_interval_to_seconds
