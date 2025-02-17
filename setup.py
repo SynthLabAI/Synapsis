@@ -23,8 +23,8 @@ setup(
         # Extension("synapsis.deployment.hello", [path.join("synapsis", "deployment", "hello.cpp")])  # Disabled extension
     ],
     author='synapsis',
-    entry_points={'console_scripts': ['synapsis = synapsis.deployment.cli:main',
-                                      'synapsis_new = synapsis.deployment.new_cli:main']},
+    entry_points={'console_scripts': ['synapsis_old = synapsis.deployment.cli:main',
+                                      'synapsis = synapsis.deployment.new_cli:main']},
     author_email='contact@synapsis.finance',
     url='https://github.com/Synapsis-Finance/Synapsis',  # Could be github or website
     # download_url='https://github.com/EmersonDove/Synapsis/archive/v0.1.1-alpha.tar.gz',
