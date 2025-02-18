@@ -10,7 +10,7 @@ import pkgutil
 
 from questionary import Choice
 
-from synapsis.deployment.api import API
+from synapsis.deployment.api import API, synapsis_deployment_url
 from synapsis.deployment.deploy import zip_dir, get_python_version
 from synapsis.deployment.keys import add_key, load_keys, write_keys
 from synapsis.deployment.login import logout, poll_login, get_token
@@ -24,7 +24,7 @@ TEMPLATES = {
                  'rsi_screener': 'rsi_screener.py'}
 }
 
-AUTH_URL = 'https://app.synapsis.finance/auth/signin?redirectUrl=/deploy'
+AUTH_URL = f'{synapsis_deployment_url}/auth/signin?redirectUrl=/deploy'
 
 
 def validate_non_empty(text):
