@@ -21,8 +21,10 @@ import json
 import requests
 from synapsis.utils.utils import info_print
 
-# synapsis_deployment_url = 'https://deploy.synapsis.finance'
-synapsis_deployment_url = 'http://localhost:8080'
+synapsis_deployment_url = 'https://deploy.synapsis.finance'
+
+
+# synapsis_deployment_url = 'http://localhost:8080'
 
 
 class API:
@@ -186,3 +188,11 @@ class API:
         return self.__request('post', 'project/generate-project-token', data={
             'projectId': project_id
         })
+
+
+if __name__ == '__main__':
+    from synapsis.deployment import new_cli as cli
+    import code
+
+    api = cli.ensure_login()
+    code.interact(local=dict(globals(), **locals()))  # drop to interactive
