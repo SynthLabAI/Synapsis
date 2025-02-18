@@ -296,8 +296,12 @@ def synapsis_logout(args):
 
 def ensure_model(api: API):
     # create model if it doesn't exist
-    with open('synapsis.json', 'r') as file:
-        data = json.load(file)
+    try:
+        with open('synapsis.json', 'r') as file:
+            data = json.load(file)
+    except FileNotFoundError:
+        print_failure('There was no model detected in this directory. Try running `synapsis init` to create one')
+        sys.exit(1)
 
     if 'plan' not in data:
         data['plan'] = select('Select a plan:', [Choice(f'{name} - CPU: {info["cpu"]} RAM: {info["ram"]}', name)
