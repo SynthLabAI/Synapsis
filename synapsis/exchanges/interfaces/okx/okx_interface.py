@@ -1,13 +1,11 @@
 import time
-import matplotlib.pyplot as plt
 import pandas as pd
 import synapsis.utils.time_builder
 import synapsis.utils.utils as utils
 from synapsis.exchanges.interfaces.exchange_interface import ExchangeInterface
-from synapsis.exchanges.interfaces.okx.okx_api import Client as OkxAPI, MarketAPI, AccountAPI, TradeAPI, ConvertAPI, FundingAPI, PublicAPI
+from synapsis.exchanges.interfaces.okx.okx_api import MarketAPI, AccountAPI, TradeAPI, ConvertAPI, FundingAPI, PublicAPI
 from synapsis.exchanges.orders.limit_order import LimitOrder
 from synapsis.exchanges.orders.market_order import MarketOrder
-from synapsis.exchanges.orders.stop_limit import StopLimit
 from synapsis.utils.exceptions import APIException, InvalidOrder
 
 
