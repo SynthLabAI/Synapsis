@@ -60,10 +60,10 @@ class StrategyTest(unittest.TestCase):
                   'settings_path': "./tests/config/settings.json"}
 
         self.exchanges = [
-            # synapsis.Kucoin(**kwargs),
+            synapsis.Kucoin(**kwargs),
             synapsis.FTX(**kwargs),
             synapsis.CoinbasePro(**kwargs),
-            synapsis.Binance(**kwargs),
+            synapsis.Binance(**kwargs, portfolio_name='Data Key'),
             synapsis.Oanda(**kwargs),
             synapsis.Alpaca(**kwargs)
         ]
