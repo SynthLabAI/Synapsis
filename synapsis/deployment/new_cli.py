@@ -22,7 +22,7 @@ TEMPLATES = {'strategy': {'none': 'none.py',
              'screener': {'none': 'none_screener.py',
                           'rsi_screener': 'rsi_screener.py'}}
 
-AUTH_URL = f'https://app.synapsis.finance/auth/signin?redirectUrl=/deploy'
+AUTH_URL = 'https://app.synapsis.finance/auth/signin?redirectUrl=/deploy'
 
 
 def validate_non_empty(text):
@@ -276,12 +276,7 @@ def synapsis_logout(args):
         spinner.ok('Logged out')
 
 
-def synapsis_deploy(args):
-    api = ensure_login()
-    # TODO ensure project exists
-
-    description = text('Enter a description for this version of the model:').unsafe_ask()
-
+def ensure_model(api: API):
     # create model if it doesn't exist
     with open('synapsis.json', 'r') as file:
         data = json.load(file)
@@ -299,17 +294,38 @@ def synapsis_deploy(args):
     with open('synapsis.json', 'w') as file:
         json.dump(data, file, indent=4)
 
+    return data
+
+
+def missing_deployment_files() -> list:
+    paths = ['bot.py', 'synapsis.json', 'keys.json', 'backtest.json', 'requirements.txt', 'settings.json']
+    return [path for path in paths if not Path(path).is_file()]
+
+
+def synapsis_deploy(args):
+    api = ensure_login()
+
+    data = ensure_model(api)
+    for path in missing_deployment_files():
+        if not confirm(f'{path} is missing. Are you sure you want to continue?',
+                       default=False).unsafe_ask():
+            print_failure('Deployment cancelled')
+            print_failure(f'You can try `synapsis init` to regenerate the {path} file.')
+            return
+
+    description = text('Enter a description for this version of the model:').unsafe_ask()
+
     with show_spinner('Uploading model') as spinner:
         model_path = zip_dir('.', data['ignore_files'])
 
         params = {
             'file_path': model_path,
-            'project_id': data['project_id'],
-            'model_id': data['model_id'],
+            'project_id': data['project_id'],  # set by ensure_model
+            'model_id': data['model_id'],  # set by ensure_model
             'version_description': description,
             'python_version': get_python_version(),
-            'type_': data['type'],
-            'plan': data['plan']
+            'type_': data.get('type', 'strategy'),
+            'plan': data['plan']  # set by ensure_model
         }
         if data['type'] == 'screener':
             params['schedule'] = data['screener']['schedule']
@@ -322,8 +338,8 @@ def synapsis_deploy(args):
 
 
 def synapsis_add_key(args):
-    exchanges = select('What exchange would you like to add a key for?', EXCHANGE_CHOICES).unsafe_ask()
-    add_key_interactive(exchanges)
+    exchange = select('What exchange would you like to add a key for?', EXCHANGE_CHOICES).unsafe_ask()
+    add_key_interactive(exchange)
 
 
 def synapsis_list_key(args):
