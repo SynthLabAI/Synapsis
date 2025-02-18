@@ -16,6 +16,7 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
 import synapsis.utils.utils
+import synapsis.data as data
 from synapsis.exchanges.interfaces.coinbase_pro.coinbase_pro import CoinbasePro
 from synapsis.exchanges.interfaces.binance.binance import Binance
 from synapsis.exchanges.interfaces.alpaca.alpaca import Alpaca
