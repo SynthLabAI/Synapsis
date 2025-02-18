@@ -16,6 +16,7 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
 import synapsis.utils.utils
+import synapsis.data as data
 from synapsis.exchanges.interfaces.coinbase_pro.coinbase_pro import CoinbasePro
 from synapsis.exchanges.interfaces.binance.binance import Binance
 from synapsis.exchanges.interfaces.alpaca.alpaca import Alpaca
@@ -39,6 +40,8 @@ import synapsis.utils.utils as utils
 from synapsis.utils.scheduler import Scheduler
 import synapsis.indicators as indicators
 from synapsis.utils import time_builder
+
+from synapsis.enums import Side, OrderType, OrderStatus, TimeInForce
 
 from synapsis.deployment.reporter_headers import Reporter as __Reporter_Headers
 is_deployed = False
