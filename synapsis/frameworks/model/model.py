@@ -23,7 +23,6 @@ from synapsis.exchanges.interfaces.paper_trade.abc_backtest_controller import AB
 from synapsis.exchanges.interfaces.paper_trade.paper_trade import PaperTrade
 from synapsis.exchanges.exchange import Exchange
 import time
-import synapsis
 
 
 class Model:
@@ -62,7 +61,6 @@ class Model:
         self.__exchange = self.__exchange_cache
         self.has_data = True
 
-        synapsis.reporter.export_backtest_result(backtest)
         return backtest
 
     def run(self, args: typing.Any = None):
