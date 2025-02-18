@@ -25,6 +25,7 @@ import synapsis
 from synapsis.exchanges.exchange import Exchange
 from synapsis.exchanges.interfaces.abc_exchange_interface import ABCExchangeInterface
 from synapsis.exchanges.interfaces.paper_trade.backtest_result import BacktestResult
+from synapsis.exchanges.interfaces.paper_trade.paper_trade_interface import PaperTradeInterface
 from synapsis.exchanges.strategy_logger import StrategyLogger
 from synapsis.frameworks.model.model import Model
 from synapsis.frameworks.strategy.strategy_base import StrategyBase, EventType
@@ -81,7 +82,6 @@ class StrategyStructure(Model):
             else:
                 # If we are backtesting always just grab the last point and hope for the best of course
                 data = self.interface.history(symbol=symbol, to=1, resolution=resolution).iloc[-1].to_dict()
-            data['price'] = self.interface.get_price(symbol)
         else:
             data = self.interface.get_price(symbol)
 
