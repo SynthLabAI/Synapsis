@@ -47,6 +47,8 @@ from synapsis.deployment.reporter_headers import Reporter as __Reporter_Headers
 is_deployed = False
 _screener_runner = None
 
+
+
 _backtesting = synapsis.utils.check_backtesting()
 try:
     from synapsis_external import Reporter as __Reporter
