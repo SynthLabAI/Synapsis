@@ -14,7 +14,7 @@ setup(
     name='synapsis',  # How you named your package folder (MyLib)
     packages=find_packages(),
     # packages=['synapsis'],  # Potentially should be the same thing as name
-    version='v1.16.5-beta',
+    version='v1.16.19-beta',
     license='lgpl-3.0',  # Licenses: https://help.github.com/articles/licensing-a-repository
     description='Rapidly build & deploy cross-exchange trading bots',  # Give a short description about your library
     long_description=long_description,
@@ -23,12 +23,15 @@ setup(
         # Extension("synapsis.deployment.hello", [path.join("synapsis", "deployment", "hello.cpp")])  # Disabled extension
     ],
     author='synapsis',
-    entry_points={'console_scripts': ['synapsis = synapsis.deployment.cli:main']},
+    entry_points={'console_scripts': ['synapsis_old = synapsis.deployment.cli:main',
+                                      'synapsis = synapsis.deployment.new_cli:main']},
     author_email='contact@synapsis.finance',
     url='https://github.com/Synapsis-Finance/Synapsis',  # Could be github or website
     # download_url='https://github.com/EmersonDove/Synapsis/archive/v0.1.1-alpha.tar.gz',
     keywords=['Crypto', 'Stocks', 'Quantitative Finance', 'Exchanges', 'Bot'],  # Keywords
     install_requires=[
+        'questionary >= 1.10.0',
+        'yaspin >= 2.1.0',
         'alpaca-trade-api >= 1.4.2',
         'bokeh >= 2.4.2',
         'dateparser >= 1.1.0',
