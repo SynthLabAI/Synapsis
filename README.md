@@ -65,11 +65,9 @@ crypto.interface.market_order('BTC-USD', 'buy', 1)
 
 ```python
 import synapsis
-
 """
 This example shows how backtest over tweets
 """
-
 
 class TwitterBot(synapsis.Model):
     def main(self, args):
@@ -89,7 +87,7 @@ if __name__ == "__main__":
     model = TwitterBot(exchange)
 
     # Add the tweets json here
-    model.backtester.add_custom_events(synapsis.data.JsonEventReader('./tweets.json'))
+    model.backtester.add_custom_events(synapsis.data.EventReader('./tweets.json'))
     # Now add some underlying prices at 1 month
     model.backtester.add_prices('TSLA', '1h', start_date='3/20/22', stop_date='4/15/22')
 
