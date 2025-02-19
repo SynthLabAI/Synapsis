@@ -200,7 +200,11 @@ class StrategyBase:
         )
 
         # Export a new symbol to the backend
-        synapsis.reporter.export_used_symbol(symbol)
+        if isinstance(symbol, list):
+            for i in symbol:
+                synapsis.reporter.export_used_symbol(i)
+        else:
+            synapsis.reporter.export_used_symbol(i)
 
     @staticmethod
     def __websocket_callback(tick, symbol, user_callback, state_object):
