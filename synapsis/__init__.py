@@ -27,6 +27,7 @@ from synapsis.exchanges.interfaces.okx.okx import Okx
 from synapsis.exchanges.interfaces.paper_trade.paper_trade import PaperTrade
 from synapsis.exchanges.interfaces.keyless.keyless import KeylessExchange
 from synapsis.frameworks.strategy import Strategy as Strategy
+from synapsis.frameworks.model.model import Model as Model
 from synapsis.frameworks.strategy import StrategyState as StrategyState
 from synapsis.frameworks.screener.screener import Screener
 from synapsis.frameworks.screener.screener_state import ScreenerState
