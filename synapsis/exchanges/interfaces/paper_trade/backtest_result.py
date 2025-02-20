@@ -17,7 +17,7 @@
 """
 
 from pandas import DataFrame, to_datetime, Timestamp
-from synapsis.utils.utils import time_interval_to_seconds as _time_interval_to_seconds, info_print
+from synapsis.utils import time_interval_to_seconds as _time_interval_to_seconds, info_print
 
 
 class BacktestResult:
