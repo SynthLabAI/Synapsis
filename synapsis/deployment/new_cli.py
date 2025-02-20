@@ -486,7 +486,7 @@ def synapsis_key(args):
 
 
 def main():
-    parser = argparse.ArgumentParser(description='Synapsis CLI & deployment tool')
+    parser = argparse.ArgumentParser(prog='synapsis', description='Synapsis CLI & deployment tool')
     subparsers = parser.add_subparsers(required=True)
 
     init_parser = subparsers.add_parser('init', help='Initialize a new model in the current directory')

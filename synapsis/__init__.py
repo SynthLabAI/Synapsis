@@ -43,12 +43,13 @@ from synapsis.utils.scheduler import Scheduler
 import synapsis.indicators as indicators
 from synapsis.utils import time_builder
 
+import synapsis.deployment.new_cli
+
 from synapsis.enums import Side, OrderType, OrderStatus, TimeInForce
 
 from synapsis.deployment.reporter_headers import Reporter as __Reporter_Headers
 is_deployed = False
 _screener_runner = None
-
 
 
 _backtesting = synapsis.utils.check_backtesting()
