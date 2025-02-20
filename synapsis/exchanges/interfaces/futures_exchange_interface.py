@@ -20,13 +20,6 @@
 import abc
 from typing import Union, Optional, List
 
-import numpy
-import pandas
-
-from datetime import datetime as dt
-
-from dateutil.parser import parser
-
 import synapsis.utils.utils as utils
 from synapsis.enums import MarginType, HedgeMode, PositionMode, OrderType, Side, TimeInForce, ContractType
 from synapsis.exchanges.interfaces.abc_base_exchange_interface import ABCBaseExchangeInterface
