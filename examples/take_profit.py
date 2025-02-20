@@ -1,8 +1,5 @@
-import sys
-
 import synapsis
 from synapsis import Side
-from synapsis.utils import time
 
 
 def price_event(price, symbol, state: synapsis.StrategyState):
