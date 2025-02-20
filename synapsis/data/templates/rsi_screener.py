@@ -1,3 +1,4 @@
+import synapsis
 from synapsis import Screener, EXCHANGE_CLASS, ScreenerState
 from synapsis.indicators import rsi
 
