@@ -341,6 +341,8 @@ def to_synapsis_symbol(symbol, exchange, quote_guess=None) -> str:
     if exchange == "ftx":
         return symbol.replace("/", "-")
 
+    return symbol
+
 
 def __check_ending(full_string, checked_ending) -> bool:
     check_length = len(checked_ending)
@@ -356,6 +358,7 @@ def to_exchange_symbol(synapsis_symbol, exchange):
         return synapsis_symbol
     if exchange == 'ftx':
         return synapsis_symbol.replace("-", "/")
+    return synapsis_symbol
 
 
 def get_base_asset(symbol):
