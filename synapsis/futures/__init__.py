@@ -4,3 +4,4 @@ from synapsis.frameworks.strategy import FuturesStrategy
 from synapsis.frameworks.strategy import FuturesStrategyState
 
 from synapsis.enums import MarginType, HedgeMode
+

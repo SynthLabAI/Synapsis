@@ -1,6 +1,7 @@
 import synapsis
 from synapsis import futures, Side
 from synapsis.futures import FuturesStrategyState
+from synapsis.futures.utils import close_position
 
 
 def price_event(price, symbol, state: FuturesStrategyState):
