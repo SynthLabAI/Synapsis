@@ -18,8 +18,7 @@
 
 import synapsis
 from synapsis import Side
-from synapsis.exchanges.interfaces.binance_futures.binance_futures import BinanceFutures
-from synapsis.futures import FuturesStrategyState, FuturesStrategy
+from synapsis.futures import FuturesStrategyState, FuturesStrategy, BinanceFutures
 
 from synapsis.futures.utils import close_position
 
