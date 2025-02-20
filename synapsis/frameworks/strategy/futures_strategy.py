@@ -27,4 +27,6 @@ from synapsis.frameworks.strategy.strategy import Strategy
 
 
 class FuturesStrategy(Strategy):
-    pass
+
+    def teardown(self):
+        pass
