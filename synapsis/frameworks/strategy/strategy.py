@@ -22,6 +22,7 @@ import typing
 import warnings
 
 import synapsis
+from synapsis.exchanges.abc_base_exchange import ABCBaseExchange
 from synapsis.exchanges.exchange import Exchange
 from synapsis.exchanges.interfaces.abc_exchange_interface import ABCExchangeInterface
 from synapsis.exchanges.interfaces.paper_trade.backtest_result import BacktestResult
@@ -219,7 +220,7 @@ class Strategy(StrategyBase):
     __exchange: Exchange
     interface: ABCExchangeInterface
 
-    def __init__(self, exchange: Exchange):
+    def __init__(self, exchange: ABCBaseExchange):
         self.model = StrategyStructure(exchange)
         super().__init__(exchange, StrategyLogger(exchange.get_interface(), strategy=self), model=self.model)
         self._paper_trade_exchange = synapsis.PaperTrade(exchange)
