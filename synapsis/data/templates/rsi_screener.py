@@ -1,4 +1,5 @@
-from synapsis import Screener, Alpaca, ScreenerState
+import synapsis
+from synapsis import Screener, ScreenerState
 from synapsis.indicators import rsi
 
 tickers = SYMBOL_LIST  # any stocks that you may want
@@ -24,7 +25,7 @@ def formatter(results, state: ScreenerState):
 
 
 if __name__ == '__main__':
-    exchange = EXCHANGE_CLASS()  # initialize our exchange
+    exchange = synapsis.EXCHANGE_CLASS()  # initialize our exchange
     screener = Screener(exchange, is_stock_buy, symbols=tickers, formatter=formatter)  # find oversold
 
     print(screener.formatted_results)
