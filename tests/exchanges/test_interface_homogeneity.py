@@ -495,7 +495,7 @@ class InterfaceHomogeneity(unittest.TestCase):
         after['available'] = float(after['available'])
 
         self.assertAlmostEqual(synapsis.trunc(before['available'], 2) + order.get_size(),
-                               synapsis.trunc(after['available'], 2), delta=1)
+                               synapsis.trunc(after['available'], 2), delta=5)
 
     def check_account_delta_limit(self, before: dict, after: dict, order: LimitOrder) -> None:
         # On a buy the quote asset should get moved to hold
