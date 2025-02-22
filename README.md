@@ -37,9 +37,9 @@
 
 ## Why Synapsis? 
 
-​	Synapsis is a live trading engine, backtest runner and development framework wrapped into one powerful open source package. Models can be instantly backtested, paper traded, sandbox tested and run live by simply changing a single line. We built synapsis for every type of quant including training & running ML models in the same environment, cross-exchange/cross-symbol arbitrage, and even long/short positions on stocks (all with built-in websockets).
+Synapsis is an ecosystem for algotraders enabling anyone to build, monetize and scale their trading algorithms. The same code can be backtested, paper traded, sandbox tested and run live by simply changing a single line.
 
-​	Convert your existing model or build a new one - unlock the ability to run & optimize across all of our supported exchanges. Getting started is easy - just `pip install synapsis` and `synapsis init`.
+Add simulated latency, social media & websocket backtests to existing models or build a new one using live data natively. Getting started is easy - just `pip install synapsis` and `synapsis init`.
 
 Check out our [website](https://synapsis.finance) and our [docs](https://docs.synapsis.finance).
 
@@ -155,6 +155,20 @@ If you don't want to use our `init` command, you can find the same files in the 
 3. From there, **insert your API keys** from your exchange into the generated `keys.json` file or take advantage of the CLI keys prompt.
 
 More information can be found on our [docs](https://docs.synapsis.finance)
+
+### Docker
+
+1. Pull a python docker container
+
+```bash
+$ docker pull python
+```
+
+2. Move to a directory to initialize and run
+
+```bash
+$ synapsis init
+```
 
 ### Directory format
 
