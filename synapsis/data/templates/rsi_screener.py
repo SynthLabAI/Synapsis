@@ -1,4 +1,5 @@
-from synapsis import Screener, Alpaca, ScreenerState
+import synapsis
+from synapsis import Screener, EXCHANGE_CLASS, ScreenerState
 from synapsis.indicators import rsi
 
 tickers = SYMBOL_LIST  # any stocks that you may want

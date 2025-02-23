@@ -44,16 +44,20 @@ import synapsis.indicators as indicators
 from synapsis.utils import time_builder
 
 from synapsis.enums import Side, OrderType, OrderStatus, TimeInForce
+from synapsis.exchanges.interfaces.binance_futures.binance_futures import BinanceFutures
+from synapsis.exchanges.interfaces.ftx_futures.ftx_futures import FTXFutures
+from synapsis.frameworks.strategy import FuturesStrategy
+from synapsis.frameworks.strategy import FuturesStrategyState
 
 from synapsis.deployment.reporter_headers import Reporter as __Reporter_Headers
+
 is_deployed = False
 _screener_runner = None
-
-
 
 _backtesting = synapsis.utils.check_backtesting()
 try:
     from synapsis_external import Reporter as __Reporter
+
     reporter = __Reporter
     is_deployed = True
 except ImportError:

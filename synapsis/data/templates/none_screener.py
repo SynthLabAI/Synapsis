@@ -1,4 +1,4 @@
-from synapsis import Screener, ScreenerState
+from synapsis import Screener, EXCHANGE_CLASS, ScreenerState
 
 
 def evaluator(symbol, state: ScreenerState):

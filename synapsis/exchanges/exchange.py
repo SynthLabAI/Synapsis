@@ -31,7 +31,6 @@ from synapsis.exchanges.interfaces.kucoin.kucoin_interface import KucoinInterfac
 from synapsis.exchanges.interfaces.okx.okx_interface import OkxInterface
 
 
-
 class Exchange(ABCExchange, abc.ABC):
     interface: ABCExchangeInterface
 
