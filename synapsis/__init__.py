@@ -33,6 +33,7 @@ from synapsis.frameworks.screener.screener import Screener
 from synapsis.frameworks.screener.screener_state import ScreenerState
 
 from synapsis.exchanges.managers.ticker_manager import TickerManager
+from synapsis.exchanges.interfaces.websocket import WebsocketTick
 from synapsis.exchanges.managers.orderbook_manager import OrderbookManager
 from synapsis.exchanges.managers.general_stream_manager import GeneralManager
 from synapsis.exchanges.interfaces.abc_exchange_interface import ABCExchangeInterface as Interface
