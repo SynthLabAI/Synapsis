@@ -18,21 +18,12 @@
 import abc
 import collections
 import threading
-from typing import TypedDict
 
 import websocket
 
 import synapsis.utils.utils
 from synapsis.exchanges.abc_exchange_websocket import ABCExchangeWebsocket
 from synapsis.utils.utils import info_print
-
-
-class WebsocketTick(TypedDict):
-    symbol: str
-    price: float
-    time: float
-    trade_id: int
-    size: float
 
 
 class Websocket(ABCExchangeWebsocket, abc.ABC):
