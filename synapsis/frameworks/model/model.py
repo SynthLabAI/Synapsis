@@ -22,6 +22,7 @@ import typing
 from synapsis.exchanges.abc_base_exchange import ABCBaseExchange
 from synapsis.exchanges.futures.futures_exchange import FuturesExchange
 from synapsis.exchanges.interfaces.paper_trade.backtest_controller import BackTestController, BacktestResult
+from synapsis.exchanges.interfaces.abc_exchange_interface import ABCExchangeInterface
 from synapsis.exchanges.interfaces.paper_trade.abc_backtest_controller import ABCBacktestController
 from synapsis.exchanges.interfaces.paper_trade.futures.futures_paper_trade import FuturesPaperTrade
 from synapsis.exchanges.interfaces.paper_trade.paper_trade import PaperTrade
@@ -36,7 +37,9 @@ class Model(abc.ABC):
         self.__exchange_cache = self.__exchange
         self.is_backtesting = False
 
-        self.interface = exchange.get_interface()
+        # TODO every instance usage of this uses spot, this should be refactored to give linting for futures or spot
+        #  depending on what people are running
+        self.interface: ABCExchangeInterface = exchange.get_interface()
 
         self.has_data = True
 
