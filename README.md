@@ -17,11 +17,10 @@
    <a target="_blank" href="https://sonarcloud.io/dashboard?id=Synapsis-Finance_Synapsis"><img src="https://sonarcloud.io/api/project_badges/measure?project=Synapsis-Finance_Synapsis&metric=sqale_rating"></a>
    <a target="_blank" href="https://sonarcloud.io/dashboard?id=Synapsis-Finance_Synapsis"><img src="https://sonarcloud.io/api/project_badges/measure?project=Synapsis-Finance_Synapsis&metric=alert_status"></a>
    <a target="_blank" href="https://github.com/Synapsis-Finance/Synapsis/actions/workflows/test.yml"><img src="https://github.com/Synapsis-Finance/Synapsis/actions/workflows/test.yml/badge.svg?branch=main"></a> <br>
-   <a target="_blank" href="https://pepy.tech/project/synapsis"><img src="https://pepy.tech/badge/synapsis/month"></a>
+   <a target="_blank" href="https://static.pepy.tech/badge/synapsis"><img src="https://static.pepy.tech/badge/synapsis"></a>
    <a target="_blank" href="https://github.com/Synapsis-Finance/Synapsis/blob/main/LICENSE"><img src="https://img.shields.io/pypi/l/synapsis?color=gree"></a>
    <a target="_blank" href="https://github.com/Synapsis-Finance/Synapsis/stargazers"><img src="https://img.shields.io/github/stars/synapsis-finance/synapsis?style=social"></a>
    <a target="_blank" href="https://discord.gg/XWcmy7Y9bb"><img src="https://img.shields.io/discord/821563936297451530.svg?color=7289da&label=Synapsis%20Discord&logo=discord&style=flat"></a>
-   <a target="_blank" href="https://reddit.com/r/synapsis"><img src="https://badgen.net/reddit/subscribers/r/synapsis"></a>
 </p>
 <p align="center">
     <a target="_blank" href="https://docs.synapsis.finance">View Docs</a>
