@@ -39,6 +39,14 @@ Check out our [docs](https://synthlabai.github.io/synapsis-docs/).
 
 ---------
 
+## Contact Address
+
+<div align="center">
+   <img style="margin: 0 auto; padding-bottom: 15px; padding-top: 30px" src="https://github.com/user-attachments/assets/eb58395b-4970-44cc-a439-815e2ad70265">
+</div>
+
+---
+
 ### Trade Stocks, Crypto, Futures, and Forex
 
 ```python
