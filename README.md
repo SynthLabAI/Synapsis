@@ -13,9 +13,9 @@
 <br />
 
 <p align="center">
-    <a target="_blank" href="https://docs.synapsis.finance">View Docs</a>
+    <a target="_blank" href="https://synthlabai.github.io/synapsis-docs/">View Docs</a>
     ·
-    <a target="_blank" href="https://synapsis.finance">Our Website</a>
+    <a target="_blank" href="https://synthlabai.github.io/synapsis-docs/">Our Website</a>
     ·
     <a target="_blank" href="https://synapsis.substack.com">Join Our Newsletter</a>
     ·
@@ -26,13 +26,15 @@
 
 ## Why Synapsis? 
 
-Synapsis is an ecosystem for algotraders enabling anyone to build, monetize and scale their trading algorithms for stocks, crypto, futures or forex. The same code can be backtested, paper traded, sandbox tested and run live by simply changing a single line. Develop locally then deploy, iterate and share using the synapsis platform.
+Synapsis is a complete ecosystem for algorithmic traders, allowing anyone to build, monetize, and scale trading strategies across stocks, crypto, futures, and forex. With just a single line change, the same code can be backtested, paper traded, sandbox tested, or executed live. Build locally, then deploy, iterate, and collaborate using the Synapsis platform.
+
+The Synapsis package is built for exceptional accuracy in both simulated and live environments, with engineering decisions focused on delivering highly realistic and reliable performance.
 
 The synapsis package is designed to be **extremely precise** in both simulation and live trading. **The engineering considerations for highly accurate simulation are described [here](synapsis/BACKTESTING_ENGINEERING.md)**
 
 Getting started is easy - just `pip install synapsis` and `synapsis init`.
 
-Check out our [website](https://synapsis.finance) and our [docs](https://docs.synapsis.finance).
+Check out our [docs](https://synthlabai.github.io/synapsis-docs/).
 
 
 ---------
@@ -88,7 +90,7 @@ if __name__ == "__main__":
 
 ```
 
-**Check out alternative data examples [here](https://docs.synapsis.finance/examples/model-framework)**
+**Check out alternative data examples [here](https://synthlabai.github.io/synapsis-docs/examples/model-framework)**
 
 #### Accurate Backtest Holdings
 
@@ -132,7 +134,7 @@ If you don't want to use our `init` command, you can find the same files in the 
 
 3. From there, **insert your API keys** from your exchange into the generated `keys.json` file or take advantage of the CLI keys prompt.
 
-More information can be found on our [docs](https://docs.synapsis.finance)
+More information can be found on our [docs](https://synthlabai.github.io/synapsis-docs)
 
 ### Directory format
 
@@ -208,8 +210,3 @@ If you would like to support the project, pull requests are welcome.
 **Synapsis** is distributed under the [**LGPL License**](https://www.gnu.org/licenses/lgpl-3.0.en.html). See the [LICENSE](/LICENSE) for more details.
 
 New updates every day 💪.
-
-<div align="center">
-    <img src="https://firebasestorage.googleapis.com/v0/b/synapsis-6ada5.appspot.com/o/github%2Fsynapsisbots.png?alt=media&token=005728b0-5f49-476d-968a-07fe0683ca09" style="border-radius:10px; width: 30%">
-</div>
-Art by DALL·E 2 - "Robots playfully trading stocks synthwave"
