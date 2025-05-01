@@ -3,7 +3,7 @@
 <br />
 
 <div align="center">
-   <img style="margin: 0 auto; padding-bottom: 15px; padding-top: 30px" width=70%" src="https://firebasestorage.googleapis.com/v0/b/synapsis-6ada5.appspot.com/o/synapsis-github-logo.png?alt=media&token=8f436cd2-3d28-432c-867a-afef780f4260">
+   <img style="margin: 0 auto; padding-bottom: 15px; padding-top: 30px" width=30%" src="https://github.com/user-attachments/assets/64cad6eb-4372-449a-8546-79e6a1e4db1a">
 </div>
 <br />
 
@@ -12,16 +12,6 @@
 </div>
 <br />
 
-
-<p align="center">
-   <a target="_blank" href="https://sonarcloud.io/dashboard?id=Synapsis-Finance_Synapsis"><img src="https://sonarcloud.io/api/project_badges/measure?project=Synapsis-Finance_Synapsis&metric=sqale_rating"></a>
-   <a target="_blank" href="https://sonarcloud.io/dashboard?id=Synapsis-Finance_Synapsis"><img src="https://sonarcloud.io/api/project_badges/measure?project=Synapsis-Finance_Synapsis&metric=alert_status"></a>
-   <a target="_blank" href="https://github.com/Synapsis-Finance/Synapsis/actions/workflows/test.yml"><img src="https://github.com/Synapsis-Finance/Synapsis/actions/workflows/test.yml/badge.svg?branch=main"></a> <br>
-   <a target="_blank" href="https://static.pepy.tech/badge/synapsis"><img src="https://static.pepy.tech/badge/synapsis"></a>
-   <a target="_blank" href="https://github.com/Synapsis-Finance/Synapsis/blob/main/LICENSE"><img src="https://img.shields.io/pypi/l/synapsis?color=gree"></a>
-   <a target="_blank" href="https://github.com/Synapsis-Finance/Synapsis/stargazers"><img src="https://img.shields.io/github/stars/synapsis-finance/synapsis?style=social"></a>
-   <a target="_blank" href="https://discord.gg/XWcmy7Y9bb"><img src="https://img.shields.io/discord/821563936297451530.svg?color=7289da&label=Synapsis%20Discord&logo=discord&style=flat"></a>
-</p>
 <p align="center">
     <a target="_blank" href="https://docs.synapsis.finance">View Docs</a>
     ·
@@ -44,9 +34,6 @@ Getting started is easy - just `pip install synapsis` and `synapsis init`.
 
 Check out our [website](https://synapsis.finance) and our [docs](https://docs.synapsis.finance).
 
-<div align="center">
-<a target="_blank" href="https://youtu.be/pcm0h63rhUU"><img src="https://firebasestorage.googleapis.com/v0/b/synapsis-6ada5.appspot.com/o/github%2Fbuild_a_bot_readme_thumbnail.jpg?alt=media&token=a9dd030a-805c-447f-a970-2bc8e1815662" style="border-radius:10px; width: 50%"></a>
-</div>
 
 ---------
 
@@ -106,7 +93,7 @@ if __name__ == "__main__":
 #### Accurate Backtest Holdings
 
 <div align="center">
-    <a><img src="https://firebasestorage.googleapis.com/v0/b/synapsis-6ada5.appspot.com/o/github%2FScreen%20Shot%202022-04-17%20at%202.37.58%20PM.png?alt=media&token=d5738617-e197-4da2-850d-8fbbfda05275" style="border-radius:10px"></a>
+    <a><img src="https://github.com/user-attachments/assets/4f87c4d7-ae72-4081-8768-ed5103bb899a" style="border-radius:10px"></a>
 </div>
 
 
