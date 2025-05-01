@@ -17,8 +17,6 @@
     ·
     <a target="_blank" href="https://synthlabai.github.io/synapsis-docs/">Our Website</a>
     ·
-    <a target="_blank" href="https://synapsis.substack.com">Join Our Newsletter</a>
-    ·
     <a href="#quickstart">Getting Started</a>
   </p>
 
@@ -196,9 +194,6 @@ For more info, and ways to do more advanced things, check out our [getting start
 We have a pre-built cookbook examples that implement strategies such as RSI, MACD, and the Golden Cross found in our [examples](https://docs.synapsis.finance/examples/golden-cross).
 
 Other Info
-
-### Subscribe to our news!
-https://synapsis.substack.com/p/coming-soon
 
 ### Bugs
 
