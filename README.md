@@ -3,7 +3,7 @@
 <br />
 
 <div align="center">
-   <img style="margin: 0 auto; padding-bottom: 15px; padding-top: 30px" width=70%" src="https://github.com/user-attachments/assets/c3d1cdb1-2fac-454e-877e-5f3c906ace95">
+   <img style="margin: 0 auto; padding-bottom: 15px; padding-top: 30px" width=90%" src="https://github.com/user-attachments/assets/7c58a627-2709-4751-808d-38f7703dd34f">
 </div>
 <br />
 
@@ -40,7 +40,7 @@ Check out our [docs](https://synthlabai.github.io/synapsis-docs/).
 ## Contact Address
 
 <div align="center">
-   <img style="margin: 0 auto; padding-bottom: 15px; padding-top: 30px" src="https://github.com/user-attachments/assets/eb58395b-4970-44cc-a439-815e2ad70265">
+   <img style="margin: 0 auto; padding-bottom: 15px; padding-top: 30px" src="https://github.com/user-attachments/assets/6dc7ba24-300e-495c-934a-56cd83979c90">
 </div>
 
 ---
