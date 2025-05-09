@@ -13,9 +13,9 @@
 <br />
 
 <p align="center">
-    <a target="_blank" href="https://synthlabai.github.io/synapsis-docs/">View Docs</a>
+    <a target="_blank" href="https://trysynapsis.com/">View Docs</a>
     ·
-    <a target="_blank" href="https://synthlabai.github.io/synapsis-docs/">Our Website</a>
+    <a target="_blank" href="https://trysynapsis.com/">Our Website</a>
     ·
     <a href="#quickstart">Getting Started</a>
   </p>
@@ -32,7 +32,7 @@ The synapsis package is designed to be **extremely precise** in both simulation 
 
 Getting started is easy - just `pip install synapsis` and `synapsis init`.
 
-Check out our [docs](https://synthlabai.github.io/synapsis-docs/).
+Check out our [docs](https://trysynapsis.com/).
 
 
 ---------
@@ -96,7 +96,7 @@ if __name__ == "__main__":
 
 ```
 
-**Check out alternative data examples [here](https://synthlabai.github.io/synapsis-docs/examples/model-framework)**
+**Check out alternative data examples [here](https://trysynapsis.com/examples/model-framework)**
 
 #### Accurate Backtest Holdings
 
@@ -140,7 +140,7 @@ If you don't want to use our `init` command, you can find the same files in the 
 
 3. From there, **insert your API keys** from your exchange into the generated `keys.json` file or take advantage of the CLI keys prompt.
 
-More information can be found on our [docs](https://synthlabai.github.io/synapsis-docs)
+More information can be found on our [docs](https://trysynapsis.com)
 
 ### Directory format
 
@@ -161,7 +161,7 @@ Make sure you're using a supported version of python. The module is currently te
 - Python 3.9
 - Python 3.10
 
-For more info, and ways to do more advanced things, check out our [getting started docs](https://docs.synapsis.finance).
+For more info, and ways to do more advanced things, check out our [getting started docs](https://trysynapsis.com).
 
 ## Supported Exchanges
 
