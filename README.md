@@ -191,7 +191,7 @@ For more info, and ways to do more advanced things, check out our [getting start
 
 ## RSI Example
 
-We have a pre-built cookbook examples that implement strategies such as RSI, MACD, and the Golden Cross found in our [examples](https://docs.synapsis.finance/examples/golden-cross).
+We have a pre-built cookbook examples that implement strategies such as RSI, MACD, and the Golden Cross found in our [examples](https://trysynapsis.com/examples/golden-cross).
 
 Other Info
 
